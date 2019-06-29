@@ -1,38 +1,44 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody playerRB;
-    public float forwardForce = 1000f;
-    public float backForce = 700f;
-    public float sideForce = 500f;
-    public float sensitivity = 3f;
+    private float moveSpeed;
 
-    // Update is called once per frame
+    /// <summary>
+    /// Start is called on the frame when a script is enabled just before
+    /// any of the Update methods is called the first time.
+    /// </summary>
+    void Start()
+    {
+        playerRB = GetComponent<Rigidbody>();
+    }
+    
+    /// <summary>
+    /// Update is called every frame, if the MonoBehaviour is enabled.
+    /// </summary>
     void FixedUpdate()
     {
-        float yRotation = Input.GetAxis("Mouse X");
-        Vector3 rotation = new Vector3 (0, yRotation, 0) * sensitivity;
-        //playerRB.MoveRotation(transform.rotation * Quaternion.Euler(rotation));
+        moveSpeed = 8f;
+        checkSprint();
+    }
 
-        if (Input.GetKey("w"))
-        {
-            playerRB.AddForce(0,0,forwardForce * Time.deltaTime);
-        }
+    public void MovePlayer(Vector3 direction)
+    {
+        playerRB.transform.position += direction * moveSpeed * Time.deltaTime;
+    }
 
-        if (Input.GetKey("s"))
-        {
-            playerRB.AddForce(0,0,-backForce * Time.deltaTime);
-        }
+    public void RotatePlayer(Vector3 rotation)
+    {
+        playerRB.MoveRotation(transform.rotation * Quaternion.Euler(rotation));
+    }
 
-        if (Input.GetKey("a"))
+    private void checkSprint()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
         {
-            playerRB.AddForce(-sideForce * Time.deltaTime,0,0);
-        }
-
-        if (Input.GetKey("d"))
-        {
-            playerRB.AddForce(sideForce * Time.deltaTime,0,0);
+            moveSpeed *= 1.5f;
         }
     }
 }

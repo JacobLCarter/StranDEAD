@@ -233,10 +233,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2085955321}
     m_Modifications:
-    - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
-      propertyPath: m_Name
-      value: Conifer_Desktop (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -182.76294
@@ -281,6 +277,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
+      propertyPath: m_Name
+      value: Conifer_Desktop (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
 --- !u!4 &297458757 stripped
@@ -308,10 +308,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2085955321}
     m_Modifications:
-    - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
-      propertyPath: m_Name
-      value: Conifer_Desktop (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -246.87598
@@ -355,6 +351,10 @@ PrefabInstance:
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
+      propertyPath: m_Name
+      value: Conifer_Desktop (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
@@ -681,7 +681,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400170, guid: abfe6fc5a9b390a488839c1fc3b58dcd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25
+      value: 0.27
       objectReference: {fileID: 0}
     - target: {fileID: 400170, guid: abfe6fc5a9b390a488839c1fc3b58dcd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -705,7 +705,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400170, guid: abfe6fc5a9b390a488839c1fc3b58dcd, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400170, guid: abfe6fc5a9b390a488839c1fc3b58dcd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -746,7 +746,7 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: abfe6fc5a9b390a488839c1fc3b58dcd, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 9100000, guid: e2cf68ff4b1ffda45a77f7307dd789b9, type: 2}
     - target: {fileID: 9500000, guid: abfe6fc5a9b390a488839c1fc3b58dcd, type: 3}
       propertyPath: m_Avatar
       value: 
@@ -772,10 +772,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2085955321}
     m_Modifications:
-    - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
-      propertyPath: m_Name
-      value: Conifer_Desktop
-      objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -209.38742
@@ -819,6 +815,10 @@ PrefabInstance:
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
+      propertyPath: m_Name
+      value: Conifer_Desktop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
@@ -1033,7 +1033,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &726404137
 PrefabInstance:
@@ -1189,7 +1189,7 @@ RectTransform:
   m_Children:
   - {fileID: 1158820492}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1486,10 +1486,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2085955321}
     m_Modifications:
-    - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
-      propertyPath: m_Name
-      value: Conifer_Desktop (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -199.96674
@@ -1534,6 +1530,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
+      propertyPath: m_Name
+      value: Conifer_Desktop (5)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
 --- !u!1001 &890345941
@@ -1543,10 +1543,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2085955321}
     m_Modifications:
-    - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
-      propertyPath: m_Name
-      value: Conifer_Desktop (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -235.88063
@@ -1590,6 +1586,10 @@ PrefabInstance:
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
+      propertyPath: m_Name
+      value: Conifer_Desktop (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
@@ -1744,11 +1744,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.10552921, y: -0, z: -0, w: 0.99441624}
-  m_LocalPosition: {x: -1, y: 8.3, z: -88.4}
+  m_LocalPosition: {x: 0, y: 5, z: -6.199997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 1847885166}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 12.115001, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
@@ -1762,10 +1762,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8828302bd5e1264aaad9934fe58c5ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1847885166}
-  offset: {x: -1.44, y: 7.66, z: -10.1}
-  sensitivity: 3
-  cam: {fileID: 963194227}
 --- !u!1001 &1029502277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1773,10 +1769,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 199016946}
     m_Modifications:
-    - target: {fileID: 173562, guid: 2e2b536c1e70e25439c002b287b3627b, type: 3}
-      propertyPath: m_Name
-      value: old_pole (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 423770, guid: 2e2b536c1e70e25439c002b287b3627b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -114.17536
@@ -1833,6 +1825,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 173562, guid: 2e2b536c1e70e25439c002b287b3627b, type: 3}
+      propertyPath: m_Name
+      value: old_pole (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2b536c1e70e25439c002b287b3627b, type: 3}
 --- !u!1001 &1044574167
@@ -1842,10 +1838,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 199016946}
     m_Modifications:
-    - target: {fileID: 173562, guid: 2e2b536c1e70e25439c002b287b3627b, type: 3}
-      propertyPath: m_Name
-      value: old_pole (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 423770, guid: 2e2b536c1e70e25439c002b287b3627b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -113.6
@@ -1902,6 +1894,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 173562, guid: 2e2b536c1e70e25439c002b287b3627b, type: 3}
+      propertyPath: m_Name
+      value: old_pole (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2b536c1e70e25439c002b287b3627b, type: 3}
 --- !u!1001 &1087042767
@@ -1911,10 +1907,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2085955321}
     m_Modifications:
-    - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
-      propertyPath: m_Name
-      value: Conifer_Desktop (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -218.50696
@@ -1959,6 +1951,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
+      propertyPath: m_Name
+      value: Conifer_Desktop (3)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
 --- !u!1001 &1100942763
@@ -1968,10 +1964,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 199016946}
     m_Modifications:
-    - target: {fileID: 173562, guid: 2e2b536c1e70e25439c002b287b3627b, type: 3}
-      propertyPath: m_Name
-      value: old_pole
-      objectReference: {fileID: 0}
     - target: {fileID: 423770, guid: 2e2b536c1e70e25439c002b287b3627b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -114.1754
@@ -2027,6 +2019,10 @@ PrefabInstance:
     - target: {fileID: 423770, guid: 2e2b536c1e70e25439c002b287b3627b, type: 3}
       propertyPath: m_LocalScale.z
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 173562, guid: 2e2b536c1e70e25439c002b287b3627b, type: 3}
+      propertyPath: m_Name
+      value: old_pole
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2b536c1e70e25439c002b287b3627b, type: 3}
@@ -2219,10 +2215,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 199016946}
     m_Modifications:
-    - target: {fileID: 173562, guid: 2e2b536c1e70e25439c002b287b3627b, type: 3}
-      propertyPath: m_Name
-      value: old_pole (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 423770, guid: 2e2b536c1e70e25439c002b287b3627b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -114.1754
@@ -2278,6 +2270,10 @@ PrefabInstance:
     - target: {fileID: 423770, guid: 2e2b536c1e70e25439c002b287b3627b, type: 3}
       propertyPath: m_LocalScale.z
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 173562, guid: 2e2b536c1e70e25439c002b287b3627b, type: 3}
+      propertyPath: m_Name
+      value: old_pole (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2b536c1e70e25439c002b287b3627b, type: 3}
@@ -2700,7 +2696,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1543109887
 GameObject:
@@ -2848,10 +2844,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 199016946}
     m_Modifications:
-    - target: {fileID: 198674, guid: 790a175c5ecfdf9438c65e53296e5d2f, type: 3}
-      propertyPath: m_Name
-      value: abandoned_house
-      objectReference: {fileID: 0}
     - target: {fileID: 430960, guid: 790a175c5ecfdf9438c65e53296e5d2f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -74.42
@@ -2908,6 +2900,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 7.0212
       objectReference: {fileID: 0}
+    - target: {fileID: 198674, guid: 790a175c5ecfdf9438c65e53296e5d2f, type: 3}
+      propertyPath: m_Name
+      value: abandoned_house
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 790a175c5ecfdf9438c65e53296e5d2f, type: 3}
 --- !u!1 &1622794286
@@ -2942,7 +2938,7 @@ Transform:
   - {fileID: 795041122}
   - {fileID: 199016946}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1623150219
 PrefabInstance:
@@ -2951,10 +2947,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2085955321}
     m_Modifications:
-    - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
-      propertyPath: m_Name
-      value: Conifer_Desktop (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -239.76955
@@ -2998,6 +2990,10 @@ PrefabInstance:
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
+      propertyPath: m_Name
+      value: Conifer_Desktop (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
@@ -3069,10 +3065,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2085955321}
     m_Modifications:
-    - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
-      propertyPath: m_Name
-      value: Conifer_Desktop (10)
-      objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -204.21803
@@ -3116,6 +3108,10 @@ PrefabInstance:
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
+      propertyPath: m_Name
+      value: Conifer_Desktop (10)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
@@ -3334,10 +3330,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2085955321}
     m_Modifications:
-    - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
-      propertyPath: m_Name
-      value: Conifer_Desktop (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -186.82184
@@ -3382,6 +3374,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
+      propertyPath: m_Name
+      value: Conifer_Desktop (8)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
 --- !u!4 &1773346651 stripped
@@ -3409,10 +3405,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2085955321}
     m_Modifications:
-    - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
-      propertyPath: m_Name
-      value: Conifer_Desktop (9)
-      objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -153.91592
@@ -3457,6 +3449,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
+      propertyPath: m_Name
+      value: Conifer_Desktop (9)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
 --- !u!1001 &1819999536
@@ -3466,10 +3462,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 199016946}
     m_Modifications:
-    - target: {fileID: 173562, guid: 2e2b536c1e70e25439c002b287b3627b, type: 3}
-      propertyPath: m_Name
-      value: old_pole (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 423770, guid: 2e2b536c1e70e25439c002b287b3627b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -114.9
@@ -3526,6 +3518,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 173562, guid: 2e2b536c1e70e25439c002b287b3627b, type: 3}
+      propertyPath: m_Name
+      value: old_pole (4)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2b536c1e70e25439c002b287b3627b, type: 3}
 --- !u!4 &1825878584 stripped
@@ -3540,6 +3536,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 580137907}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1847885165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847885164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8828302bd5e1264aaad9934fe58c5ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1847885166 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400170, guid: abfe6fc5a9b390a488839c1fc3b58dcd,
@@ -3571,7 +3579,7 @@ BoxCollider:
   m_GameObject: {fileID: 1847885164}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 0.5052624, z: 1}
   m_Center: {x: 0, y: 0.24736881, z: 0}
@@ -3588,23 +3596,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRB: {fileID: 1847885167}
-  forwardForce: 1000
-  backForce: 700
-  sideForce: 500
-  sensitivity: 3
---- !u!114 &1847885170
-MonoBehaviour:
+--- !u!136 &1847885170
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847885164}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db6b4e3e72479b94dab7b008ccc68a7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerRB: {fileID: 1847885167}
+  m_Radius: 0.5
+  m_Height: 5.3159237
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.6607256, z: 0}
 --- !u!1 &1875259556
 GameObject:
   m_ObjectHideFlags: 0
@@ -3774,10 +3779,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2085955321}
     m_Modifications:
-    - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
-      propertyPath: m_Name
-      value: Conifer_Desktop (11)
-      objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -231.45297
@@ -3821,6 +3822,10 @@ PrefabInstance:
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
+      propertyPath: m_Name
+      value: Conifer_Desktop (11)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
@@ -3897,10 +3902,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2085955321}
     m_Modifications:
-    - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
-      propertyPath: m_Name
-      value: Conifer_Desktop (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -257.59338
@@ -3944,6 +3945,10 @@ PrefabInstance:
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
+      propertyPath: m_Name
+      value: Conifer_Desktop (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}

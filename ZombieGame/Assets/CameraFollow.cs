@@ -1,22 +1,39 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(PlayerMovement))]
 public class CameraFollow : MonoBehaviour
 {
-    public Transform player;
-    public Vector3 offset = new Vector3(-1.44f,7.66f,-10.1f);
-    public float sensitivity = 3f;
-    [SerializeField]
-    private Camera cam;
-    // Update is called once per frame
-    void Update()
+    //private Transform player;
+    //private Vector3 offset = new Vector3(0f,5f,-6f);
+    //public float sensitivity = 3f;
+    private Transform cam;
+    private Vector3 forwardCam;
+    private Vector3 calculatedMove;
+    private float sensitivity = 3f;
+    private PlayerMovement movement;
+    /// <summary>
+    /// Start is called on the frame when a script is enabled just before
+    /// any of the Update methods is called the first time.
+    /// </summary>
+    void Start()
     {
-        float xRotation = Input.GetAxis("Mouse Y");
-        Vector3 cameraXRotation = new Vector3 (xRotation, 0, 0) * sensitivity;
-        float yRotation = Input.GetAxis("Mouse X");
-        Vector3 cameraYRotation = new Vector3 (0, yRotation, 0) * sensitivity;
-        cam.transform.Rotate(-cameraXRotation);
-        cam.transform.Rotate(cameraYRotation);
+        movement = GameObject.FindObjectOfType<PlayerMovement>();
+        cam = Camera.main.transform;
+    }
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
 
-        transform.position = player.position + offset;
+        forwardCam = Vector3.Scale(cam.forward, new Vector3(1, 0, 1)).normalized;
+        calculatedMove = horizontal * cam.right + vertical * forwardCam;
+        
+        movement.MovePlayer(calculatedMove);
+
+        float camRotation = Input.GetAxis("Mouse X");
+        Vector3 rotation = new Vector3 (0, camRotation, 0) * sensitivity;
+
+        movement.RotatePlayer(rotation);
     }
 }

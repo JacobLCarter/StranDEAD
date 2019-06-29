@@ -10,10 +10,9 @@ public class PlayerCollision : MonoBehaviour
     /// <param name="other">The Collision data associated with this collision.</param>
     void OnCollisionEnter(Collision other)
     {
-        if (other.collider.tag == "tree")
+        if (other.collider.tag == "antigrav")
         {
             playerRB.useGravity = false;
-            playerRB.AddForce(0,5000f * Time.deltaTime, 0);
         }
     }
 }
