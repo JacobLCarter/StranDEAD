@@ -7,6 +7,6 @@ public class LevelDeath : MonoBehaviour
 {
     private void OnTriggerEnter()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
