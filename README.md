@@ -15,4 +15,4 @@ Usage:
 After cloning or downloading, navigate to the new folder and run StranDEAD.exe
 ```
 
-To view repo: [Goto GitHub](https://github.com/JacobLCarter/)
+To view repo: [Goto GitHub](https://github.com/JacobLCarter/Capstone)
