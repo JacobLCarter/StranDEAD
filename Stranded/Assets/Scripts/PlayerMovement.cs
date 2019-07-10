@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     void FixedUpdate()
     {
-        moveSpeed = 8f;
+        moveSpeed = 4f;
         checkSprint();
     }
 
@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            moveSpeed *= 1.5f;
+            moveSpeed *= 1.3f;
         }
     }
 
