@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
-  lastUpdatedAtString: 2019-07-09T11:29:08.599-04:00
-  initializedAtString: 2019-07-09T11:29:08.599-04:00
+  lastUpdatedAtString: 2019-07-09T19:22:11.159-04:00
+  initializedAtString: 2019-07-09T19:22:11.159-04:00
   currentGitRemote:
     name: origin
     url: https://github.com/JacobLCarter/Capstone.git
@@ -25,13 +25,13 @@ MonoBehaviour:
     token: 
   currentGitBranch:
     name: characterCreation
-    tracking: 
+    tracking: origin/characterCreation
   currentConfigBranch:
     name: characterCreation
     remote:
-      name: 
-      url: 
-    trackingBranch: 
+      name: origin
+      url: https://github.com/JacobLCarter/Capstone.git
+    trackingBranch: characterCreation
   currentConfigRemote:
     name: origin
     url: https://github.com/JacobLCarter/Capstone.git

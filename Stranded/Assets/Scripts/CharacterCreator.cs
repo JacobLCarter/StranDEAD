@@ -11,14 +11,10 @@ public class CharacterCreator : MonoBehaviour
 {
     public DynamicCharacterAvatar player;
     private Dictionary<string, DnaSetter> dna;
-    public Slider height;
-    public Slider weight;
-    public Slider headSz;
     public Transform sliders;
     public List<string> maleHairOptions = new List<string>();
     public List<string> femaleHairOptions = new List<string>();
     private int hairIndex;
-
     public string customChar;
 
     /// This function is called when the object becomes enabled and active.
@@ -26,9 +22,11 @@ public class CharacterCreator : MonoBehaviour
     void OnEnable()
     {
         player.CharacterUpdated.AddListener(PlayerUpdated);
-        height.onValueChanged.AddListener(ChangeHeight);
-        weight.onValueChanged.AddListener(ChangeWeight);
-        headSz.onValueChanged.AddListener(ChangeHeadSize);
+
+        foreach (Transform child in sliders.transform)
+        {
+            child.gameObject.GetComponent<Slider>().onValueChanged.AddListener(OnSliderChanged);
+        }
     }
 
     /// This function is called when the behaviour becomes disabled or inactive.
@@ -36,22 +34,21 @@ public class CharacterCreator : MonoBehaviour
     void OnDisable()
     {
         player.CharacterUpdated.RemoveListener(PlayerUpdated);
-        height.onValueChanged.RemoveListener(ChangeHeight);
-        weight.onValueChanged.RemoveListener(ChangeWeight);
-        headSz.onValueChanged.RemoveListener(ChangeHeadSize);
-        
+
+        foreach (Transform child in sliders.transform)
+        {
+            child.gameObject.GetComponent<Slider>().onValueChanged.RemoveListener(OnSliderChanged);
+        }
     }
 
     void PlayerUpdated(UMAData data)
     {
         dna = player.GetDNA();
-        height.value = dna["height"].Get();
-        weight.value = dna["belly"].Get();
-        headSz.value = dna["headSize"].Get();
-        // foreach (Transform child in sliders.transform)
-        // {
-        //     child.gameObject.GetComponent<Slider>().value = dna[child.gameObject.name].Get();
-        // }
+
+        foreach (Transform child in sliders.transform)
+        {
+            child.gameObject.GetComponent<Slider>().value = dna[child.gameObject.name].Get();
+        }
     }
 
     public void changeGender(bool female)
@@ -66,27 +63,21 @@ public class CharacterCreator : MonoBehaviour
         }
     }
 
-    public void ChangeHeight(float val)
-    {
-        dna["height"].Set(val);
-        player.BuildCharacter();
-    }
-
-    public void ChangeWeight(float val)
-    {
-        dna["belly"].Set(val);
-        player.BuildCharacter();
-    }
-
-    public void ChangeHeadSize(float val)
-    {
-        dna["headSize"].Set(val);
-        player.BuildCharacter();
-    }
-
     public void ChangeSkinColor(Color color)
     {
         player.SetColor("Skin", color);
+        player.UpdateColors(true);
+    }
+
+    public void ChangeHairColor(Color color)
+    {
+        player.SetColor("Hair", color);
+        player.UpdateColors(true);
+    }
+
+    public void ChangeEyeColor(Color color)
+    {
+        player.SetColor("Eyes", color);
         player.UpdateColors(true);
     }
 
@@ -140,12 +131,6 @@ public class CharacterCreator : MonoBehaviour
         player.BuildCharacter();
     }
 
-    public void ChangeHairColor(Color color)
-    {
-        player.SetColor("Hair", color);
-        player.UpdateColors(true);
-    }
-
     public void SaveChar()
     {
         customChar = player.GetCurrentRecipe();
@@ -160,22 +145,23 @@ public class CharacterCreator : MonoBehaviour
         player.LoadFromRecipeString(customChar);
     }
     
-    // public void OnSliderChanged(float val)
-    // {
-    //     var currentObject = EventSystem.current.currentSelectedGameObject;
+    public void OnSliderChanged(float val)
+    {
+        var co = EventSystem.current.currentSelectedGameObject;
 
-    //     if (currentObject == null)
-    //     {
-    //         return;
-    //     }
+        if (co == null)
+        {
+            return;
+        }
 
-    //     Slider currentSlider = currentObject.GetComponent(typeof(Slider)) as Slider;
+        Slider currentSlider = co.GetComponent(typeof(Slider)) as Slider;
 
-    //     if (currentSlider != null)
-    //     {
-    //         dna[EventSystem.current.currentSelectedGameObject.name].Set(val);
-    //     }
+        if (currentSlider != null)
+        {
+            //Debug.Log("Slider name: " + co.name);
+            dna[co.name].Set(val);
+        }
 
-    //     player.BuildCharacter();
-    // }
+        player.BuildCharacter();
+    }
 }

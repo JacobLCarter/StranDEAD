@@ -13,15 +13,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-  lastUpdatedAtString: 2019-07-09T11:29:20.974-04:00
-  initializedAtString: 2019-07-09T11:29:20.967-04:00
+  lastUpdatedAtString: 2019-07-09T20:26:00.967-04:00
+  initializedAtString: 2019-07-09T20:26:00.955-04:00
   localBranches:
-  - name: characterCreation
-    tracking: 
   - name: master
     tracking: origin/master
   remoteBranches:
+  - name: origin/characterCreation
+    tracking: '[None]'
   - name: origin/HEAD
+    tracking: '[None]'
+  - name: origin/master
+    tracking: '[None]'
+  - name: origin/Model-Update
     tracking: '[None]'
   remotes:
   - name: origin
@@ -33,14 +37,8 @@ MonoBehaviour:
     token: 
   localConfigBranches:
     keys:
-    - characterCreation
     - master
     values:
-    - name: characterCreation
-      remote:
-        name: 
-        url: 
-      trackingBranch: 
     - name: master
       remote:
         name: origin
@@ -51,10 +49,28 @@ MonoBehaviour:
     - origin
     subKeys:
     - Values:
+      - characterCreation
       - HEAD
+      - master
+      - Model-Update
     subKeyValues:
     - Values:
+      - name: characterCreation
+        remote:
+          name: origin
+          url: https://github.com/JacobLCarter/Capstone.git
+        trackingBranch: 
       - name: HEAD
+        remote:
+          name: origin
+          url: https://github.com/JacobLCarter/Capstone.git
+        trackingBranch: 
+      - name: master
+        remote:
+          name: origin
+          url: https://github.com/JacobLCarter/Capstone.git
+        trackingBranch: 
+      - name: Model-Update
         remote:
           name: origin
           url: https://github.com/JacobLCarter/Capstone.git
