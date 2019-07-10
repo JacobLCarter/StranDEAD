@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class LevelDeath : MonoBehaviour
 {
+    //recognize player collision with deathzone on cliffs/water
     private void OnTriggerEnter()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //starts loading screen
+        SceneManager.LoadScene(2);
     }
 }

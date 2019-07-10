@@ -13,23 +13,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-  lastUpdatedAtString: 2019-07-09T20:26:00.967-04:00
-  initializedAtString: 2019-07-09T20:26:00.955-04:00
+  lastUpdatedAtString: 2019-07-10T12:20:34.167-04:00
+  initializedAtString: 2019-07-10T12:20:34.140-04:00
   localBranches:
+  - name: Main-Menu
+    tracking: 
+  - name: Main-Menu-Rebase
+    tracking: 
   - name: master
     tracking: origin/master
+  - name: Menu-Updated
+    tracking: 
   remoteBranches:
-  - name: origin/characterCreation
-    tracking: '[None]'
   - name: origin/HEAD
+    tracking: '[None]'
+  - name: origin/Main-Menu
     tracking: '[None]'
   - name: origin/master
     tracking: '[None]'
   - name: origin/Model-Update
     tracking: '[None]'
+  - name: Jacob/characterCreation
+    tracking: '[None]'
+  - name: Jacob/master
+    tracking: '[None]'
+  - name: Jacob/Model-Update
+    tracking: '[None]'
   remotes:
   - name: origin
-    url: https://github.com/JacobLCarter/Capstone.git
+    url: https://github.com/woodbr/Capstone
+    login: 
+    user: 
+    host: 
+    function: 0
+    token: 
+  - name: Jacob
+    url: https://github.com/JacobLCarter/Capstone
     login: 
     user: 
     host: 
@@ -37,47 +56,89 @@ MonoBehaviour:
     token: 
   localConfigBranches:
     keys:
+    - Main-Menu
+    - Main-Menu-Rebase
     - master
+    - Menu-Updated
     values:
+    - name: Main-Menu
+      remote:
+        name: 
+        url: 
+      trackingBranch: 
+    - name: Main-Menu-Rebase
+      remote:
+        name: 
+        url: 
+      trackingBranch: 
     - name: master
       remote:
         name: origin
-        url: https://github.com/JacobLCarter/Capstone.git
+        url: https://github.com/woodbr/Capstone
       trackingBranch: master
+    - name: Menu-Updated
+      remote:
+        name: 
+        url: 
+      trackingBranch: 
   remoteConfigBranches:
     keys:
     - origin
+    - Jacob
     subKeys:
     - Values:
-      - characterCreation
       - HEAD
+      - Main-Menu
+      - master
+      - Model-Update
+    - Values:
+      - characterCreation
       - master
       - Model-Update
     subKeyValues:
     - Values:
-      - name: characterCreation
-        remote:
-          name: origin
-          url: https://github.com/JacobLCarter/Capstone.git
-        trackingBranch: 
       - name: HEAD
         remote:
           name: origin
-          url: https://github.com/JacobLCarter/Capstone.git
+          url: https://github.com/woodbr/Capstone
+        trackingBranch: 
+      - name: Main-Menu
+        remote:
+          name: origin
+          url: https://github.com/woodbr/Capstone
         trackingBranch: 
       - name: master
         remote:
           name: origin
-          url: https://github.com/JacobLCarter/Capstone.git
+          url: https://github.com/woodbr/Capstone
         trackingBranch: 
       - name: Model-Update
         remote:
           name: origin
-          url: https://github.com/JacobLCarter/Capstone.git
+          url: https://github.com/woodbr/Capstone
+        trackingBranch: 
+    - Values:
+      - name: characterCreation
+        remote:
+          name: Jacob
+          url: https://github.com/JacobLCarter/Capstone
+        trackingBranch: 
+      - name: master
+        remote:
+          name: Jacob
+          url: https://github.com/JacobLCarter/Capstone
+        trackingBranch: 
+      - name: Model-Update
+        remote:
+          name: Jacob
+          url: https://github.com/JacobLCarter/Capstone
         trackingBranch: 
   configRemotes:
     keys:
     - origin
+    - Jacob
     values:
     - name: origin
-      url: https://github.com/JacobLCarter/Capstone.git
+      url: https://github.com/woodbr/Capstone
+    - name: Jacob
+      url: https://github.com/JacobLCarter/Capstone
