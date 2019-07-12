@@ -7236,7 +7236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -433, y: 0.024963379}
+  m_AnchoredPosition: {x: -433, y: 0.024902344}
   m_SizeDelta: {x: -866.2, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1186737960
@@ -24123,12 +24123,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.8
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -34649,26 +34649,6 @@ PrefabInstance:
       propertyPath: preloadWardrobeRecipes.recipes.Array.data[7]._compatibleRaces.Array.data[1]
       value: HumanFemale
       objectReference: {fileID: 0}
-    - target: {fileID: 5100517020468614554, guid: 54656059ee3d76d48adab7817e8366e0,
-        type: 3}
-      propertyPath: height
-      value: 
-      objectReference: {fileID: 3413296050694788932}
-    - target: {fileID: 5100517020468614554, guid: 54656059ee3d76d48adab7817e8366e0,
-        type: 3}
-      propertyPath: weight
-      value: 
-      objectReference: {fileID: 3413296050300628067}
-    - target: {fileID: 5100517020468614554, guid: 54656059ee3d76d48adab7817e8366e0,
-        type: 3}
-      propertyPath: headSz
-      value: 
-      objectReference: {fileID: 3413296049346593938}
-    - target: {fileID: 5100517020468614554, guid: 54656059ee3d76d48adab7817e8366e0,
-        type: 3}
-      propertyPath: sliders
-      value: 
-      objectReference: {fileID: 1320421610}
     - target: {fileID: 5100517020468614548, guid: 54656059ee3d76d48adab7817e8366e0,
         type: 3}
       propertyPath: m_Name
@@ -34729,6 +34709,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5100517020468614554, guid: 54656059ee3d76d48adab7817e8366e0,
+        type: 3}
+      propertyPath: height
+      value: 
+      objectReference: {fileID: 3413296050694788932}
+    - target: {fileID: 5100517020468614554, guid: 54656059ee3d76d48adab7817e8366e0,
+        type: 3}
+      propertyPath: weight
+      value: 
+      objectReference: {fileID: 3413296050300628067}
+    - target: {fileID: 5100517020468614554, guid: 54656059ee3d76d48adab7817e8366e0,
+        type: 3}
+      propertyPath: headSz
+      value: 
+      objectReference: {fileID: 3413296049346593938}
+    - target: {fileID: 5100517020468614554, guid: 54656059ee3d76d48adab7817e8366e0,
+        type: 3}
+      propertyPath: sliders
+      value: 
+      objectReference: {fileID: 1320421610}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54656059ee3d76d48adab7817e8366e0, type: 3}
 --- !u!33 &7149036646940053485

@@ -11,7 +11,8 @@ public class CameraFollow : MonoBehaviour
     private Vector3 calculatedMove;
     private float sensitivity = 3f;
     private PlayerMovement movement;
-    /// <summary>
+
+
     /// Start is called on the frame when a script is enabled just before
     /// any of the Update methods is called the first time.
     /// </summary>
@@ -19,7 +20,11 @@ public class CameraFollow : MonoBehaviour
     {
         movement = GameObject.FindObjectOfType<PlayerMovement>();
         cam = Camera.main.transform;
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
+
     // Update is called once per frame
     void FixedUpdate()
     {

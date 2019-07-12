@@ -2,15 +2,16 @@
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Animator))]
+
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody playerRB;
     private float moveSpeed;
-    private Animator Animator;
-    private float ForwardAmount;
-    private float TurnAmount;
-    private float RunCycleLegOffset;
-    private float k_Half;
+    private const float jumpForce = 1.1f;
+    private Animator animator;
+    private bool isGrounded = true;
+    private const float runCycleLegOffset = 0.3f;
+    private const float k_Half = 0.5f;
 
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
@@ -19,51 +20,103 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         playerRB = GetComponent<Rigidbody>();
-        Animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
     
-    /// <summary>
-    /// Update is called every frame, if the MonoBehaviour is enabled.
-    /// </summary>
     void FixedUpdate()
     {
-        moveSpeed = 4f;
+        moveSpeed = 2f;
         checkSprint();
     }
 
     public void MovePlayer(Vector3 direction)
     {
+        if (Input.GetKey(KeyCode.Space) && isGrounded)
+        {
+            direction.y = jumpForce;
+        }
+
         playerRB.transform.position += direction * moveSpeed * Time.deltaTime;
-        TurnAmount = Mathf.Atan2(direction.x, direction.z);
-		ForwardAmount = direction.z;
-        UpdateAnimator(direction);
+
+        UpdateAnimator(direction.z);
     }
 
     public void RotatePlayer(Vector3 rotation)
     {
-        playerRB.MoveRotation(transform.rotation * Quaternion.Euler(rotation));
+        playerRB.MoveRotation(playerRB.rotation * Quaternion.Euler(rotation));
     }
 
     private void checkSprint()
     {
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            moveSpeed *= 1.3f;
+            moveSpeed *= 1.2f;
         }
     }
 
-    void UpdateAnimator(Vector3 move)
-		{
-			// update the animator parameters
-			Animator.SetFloat("Forward", ForwardAmount, 0.1f, Time.deltaTime);
-			Animator.SetFloat("Turn", TurnAmount, 0.1f, Time.deltaTime);
+    void UpdateAnimator(float forward)
+    {
+        float runCycle = Mathf.Repeat(animator.GetCurrentAnimatorStateInfo(0).normalizedTime + runCycleLegOffset, 1);
+		float jumpLeg = (runCycle < k_Half ? 1 : -1) * forward;
 
-			// calculate which leg is behind, so as to leave that leg trailing in the jump animation
-			// (This code is reliant on the specific run cycle offset in our animations,
-			// and assumes one leg passes the other at the normalized clip times of 0.0 and 0.5)
-			float runCycle =
-				Mathf.Repeat(
-					Animator.GetCurrentAnimatorStateInfo(0).normalizedTime + RunCycleLegOffset, 1);
-			float jumpLeg = (runCycle < k_Half ? 1 : -1) * ForwardAmount;
-		}
+        if (Input.GetKey(KeyCode.W))
+        {
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                animator.Play("HumanoidRun");
+            }
+            else
+            {
+                animator.Play("WalkFWD");
+            }
+        }
+        else if (Input.GetKey (KeyCode.A))
+        {
+            animator.Play ("StrafeLeft");
+        }
+        else if (Input.GetKey (KeyCode.S))
+        {
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                animator.Play("HumanoidRun");
+            }
+            else
+            {
+                animator.Play("HumanoidWalk");
+            }
+        } 
+        else if (Input.GetKey (KeyCode.D))
+        {
+            animator.Play ("StrafeLeft");
+        }
+        else
+        {
+            animator.Play ("HumanoidIdle");
+        }
+
+        if (!isGrounded)
+        {
+            animator.Play("Fall");
+            // animator.Play("Fall");
+            // animator.Play("Land");
+        }
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.collider.tag == "Dam")
+        {
+            isGrounded = true;
+            animator.applyRootMotion = true;
+        }
+    }
+
+    void OnCollisionExit(Collision other)
+    {
+        if (other.collider.tag == "Dam")
+        {
+            isGrounded = false;
+            animator.applyRootMotion = false;
+        }
+    }
 }
