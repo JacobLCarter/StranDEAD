@@ -5,15 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour
 {
-    bool isLoaded;
-
+    /***************************************************************************
+    Name: PlayGame
+    Description: Loads a scene based on the index of the current scene.
+    Input: None
+    Output: None
+    ***************************************************************************/
     public void PlayGame()
     {
-        if (!isLoaded)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
-            isLoaded = true;
-        }
+        //loads the scene that comes directly after the current active scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

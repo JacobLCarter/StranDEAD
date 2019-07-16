@@ -7,11 +7,10 @@ public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody playerRB;
     private float moveSpeed;
-    private const float jumpForce = 1.1f;
+    private const float jumpForce = 3f;
     private Animator animator;
-    private bool isGrounded = true;
-    private const float runCycleLegOffset = 0.3f;
-    private const float k_Half = 0.5f;
+    private bool onGround = true;
+    private float playerHeight = 44.069f;
 
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
@@ -19,104 +18,149 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     void Start()
     {
+        //get references to the necessary player components
         playerRB = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
     }
     
     void FixedUpdate()
     {
-        moveSpeed = 2f;
+        moveSpeed = 1.7f;
         checkSprint();
+        onGround = isGrounded();
     }
 
-    public void MovePlayer(Vector3 direction)
+    /***************************************************************************
+    Name: MovePlayer
+    Description: Handles moving the player in the game space, with directions
+    and input taken from the keyboard.
+    Input: Vector3 for total movement, two floats for specific x and y movement.
+    Output: None
+    ***************************************************************************/
+    public void MovePlayer(Vector3 direction, float horiz, float vert)
     {
-        if (Input.GetKey(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && onGround)
         {
-            direction.y = jumpForce;
+            //add an impulsive jumpforce to the player's movement vector, in
+            //the y direction
+            playerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
 
+        //decrease movement speed if the player is crouching
+        if (Input.GetKey(KeyCode.C))
+        {
+            moveSpeed *= 0.7f;
+        }
+
+        //move the player's position by adding a new vector based on
+        //input to the current position
         playerRB.transform.position += direction * moveSpeed * Time.deltaTime;
 
-        UpdateAnimator(direction.z);
+        //handle player movement animations
+        UpdateAnimator(horiz, vert);
     }
 
+    /***************************************************************************
+    Name: RotatePlayer
+    Description: Handles rotating the player in the game space, with directions
+    taken from the mouse and based on the camera's position.
+    Input: Vector3 for total rotation.
+    Output: None
+    ***************************************************************************/
     public void RotatePlayer(Vector3 rotation)
     {
+        //rotate the player based on the passed vector from the camera
         playerRB.MoveRotation(playerRB.rotation * Quaternion.Euler(rotation));
     }
 
+    /***************************************************************************
+    Name: checkSprint
+    Description: Checks if the player is sprinting.
+    Input: None
+    Output: None
+    ***************************************************************************/
     private void checkSprint()
     {
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetAxis("Vertical") > 0)
         {
-            moveSpeed *= 1.2f;
+            moveSpeed *= 1.3f;
         }
     }
 
-    void UpdateAnimator(float forward)
+    /***************************************************************************
+    Name: UpdateAnimator
+    Description: Handles playing the various character movement animations,
+    based upon a number of conditionals that are set in the animation controller.
+    Input: Two floats for specific x and y movement.
+    Output: None
+    ***************************************************************************/
+    void UpdateAnimator(float x, float y)
     {
-        float runCycle = Mathf.Repeat(animator.GetCurrentAnimatorStateInfo(0).normalizedTime + runCycleLegOffset, 1);
-		float jumpLeg = (runCycle < k_Half ? 1 : -1) * forward;
+        animator.SetFloat("Horizontal_f", x);
+        animator.SetFloat("Vertical_f", y);
 
-        if (Input.GetKey(KeyCode.W))
+        //checks if the player is currently moving and presses the sprint key
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetAxis("Vertical") > 0)
         {
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                animator.Play("HumanoidRun");
-            }
-            else
-            {
-                animator.Play("WalkFWD");
-            }
-        }
-        else if (Input.GetKey (KeyCode.A))
-        {
-            animator.Play ("StrafeLeft");
-        }
-        else if (Input.GetKey (KeyCode.S))
-        {
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                animator.Play("HumanoidRun");
-            }
-            else
-            {
-                animator.Play("HumanoidWalk");
-            }
-        } 
-        else if (Input.GetKey (KeyCode.D))
-        {
-            animator.Play ("StrafeLeft");
+            //toggle "isRunning" in the animation controller
+            animator.SetBool("isRunning", true);
         }
         else
         {
-            animator.Play ("HumanoidIdle");
+            animator.SetBool("isRunning", false);
         }
 
-        if (!isGrounded)
+        if (Input.GetKey(KeyCode.C))
         {
-            animator.Play("Fall");
-            // animator.Play("Fall");
-            // animator.Play("Land");
+            animator.SetBool("isCrouched", true);
+        }
+        else
+        {
+            animator.SetBool("isCrouched", false);
+        }
+
+        if (onGround && Input.GetButtonDown("Jump"))
+        {
+            //set the below 3 variables in the animation controller
+            animator.SetFloat("velocityY", playerRB.velocity.y);
+            animator.SetTrigger("isJumping");
+            animator.SetBool("isGrounded", false);   
+        }
+
+        if (onGround)
+        {
+            animator.SetBool("isGrounded", true);
         }
     }
 
-    void OnCollisionEnter(Collision other)
-    {
-        if (other.collider.tag == "Dam")
-        {
-            isGrounded = true;
-            animator.applyRootMotion = true;
-        }
-    }
+    // void OnCollisionEnter(Collision other)
+    // {
+    //     if (other.collider.tag == "Dam")
+    //     {
+    //         isGrounded = true;
+    //         animator.applyRootMotion = true;
+    //     }
+    // }
 
-    void OnCollisionExit(Collision other)
+    // void OnCollisionExit(Collision other)
+    // {
+    //     if (other.collider.tag == "Dam")
+    //     {
+    //         isGrounded = false;
+    //         animator.applyRootMotion = false;
+    //     }
+    // }
+
+    /***************************************************************************
+    Name: isGrounded
+    Description: Checks if the player is currently touching a ground surface.
+    Input: None
+    Output: None
+    ***************************************************************************/
+    bool isGrounded()
     {
-        if (other.collider.tag == "Dam")
-        {
-            isGrounded = false;
-            animator.applyRootMotion = false;
-        }
+        //raycast directly downwards from the player's height, if the ray hits
+        //something the condition is true, else false
+        return Physics.Raycast(transform.position, Vector3.down, playerHeight);
     }
 }
