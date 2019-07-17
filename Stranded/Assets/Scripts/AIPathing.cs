@@ -14,6 +14,7 @@ public class AIPathing : MonoBehaviour
     private int stop;
     private bool playerFound = false;
     private bool alreadyFound = true;
+    private float sightDistance = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -80,11 +81,14 @@ public class AIPathing : MonoBehaviour
     {
         Vector3 direction = player.position - transform.position;
         Ray ray = new Ray(transform.position, direction);
-        RaycastHit raycastHit;
+        RaycastHit hit;
+        var rayColor = playerFound ? Color.red : Color.green;
 
-        if (Physics.Raycast(ray, out raycastHit))
+        Debug.DrawLine(transform.position, direction * sightDistance, rayColor);
+
+        if (Physics.Raycast(ray, out hit, sightDistance))
         {
-            if (raycastHit.collider.transform == player)
+            if (hit.collider.transform == player)
             {
                 return true;
             }

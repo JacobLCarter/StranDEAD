@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
+<<<<<<< Updated upstream
   lastUpdatedAtString: 2019-07-17T09:26:00.064-04:00
   initializedAtString: 2019-07-17T09:19:40.684-04:00
   localBranches:
@@ -22,14 +23,23 @@ MonoBehaviour:
     tracking: 
   - name: Main-Menu-Rebase
     tracking: 
+=======
+  lastUpdatedAtString: 2019-07-16T15:49:16.917-04:00
+  initializedAtString: 2019-07-16T15:49:16.907-04:00
+  localBranches:
+  - name: characterCreation
+    tracking: origin/characterCreation
+>>>>>>> Stashed changes
   - name: master
     tracking: origin/master
-  - name: Menu-Updated
+  - name: playerMovement
+    tracking: origin/playerMovement
+  - name: StealthSystem
     tracking: 
   remoteBranches:
-  - name: origin/HEAD
+  - name: origin/characterCreation
     tracking: '[None]'
-  - name: origin/Main-Menu
+  - name: origin/HEAD
     tracking: '[None]'
   - name: origin/master
     tracking: '[None]'
@@ -37,24 +47,13 @@ MonoBehaviour:
     tracking: '[None]'
   - name: origin/Model-Update
     tracking: '[None]'
-  - name: Jacob/characterCreation
-    tracking: '[None]'
-  - name: Jacob/master
-    tracking: '[None]'
-  - name: Jacob/Model-Update
+  - name: origin/playerMovement
     tracking: '[None]'
   - name: Jacob/playerMovement
     tracking: '[None]'
   remotes:
   - name: origin
-    url: https://github.com/woodbr/Capstone
-    login: 
-    user: 
-    host: 
-    function: 0
-    token: 
-  - name: Jacob
-    url: https://github.com/JacobLCarter/Capstone
+    url: https://github.com/JacobLCarter/Capstone.git
     login: 
     user: 
     host: 
@@ -62,12 +61,18 @@ MonoBehaviour:
     token: 
   localConfigBranches:
     keys:
+<<<<<<< Updated upstream
     - Level-2
     - Main-Menu
     - Main-Menu-Rebase
+=======
+    - characterCreation
+>>>>>>> Stashed changes
     - master
-    - Menu-Updated
+    - playerMovement
+    - StealthSystem
     values:
+<<<<<<< Updated upstream
     - name: Level-2
       remote:
         name: 
@@ -79,16 +84,24 @@ MonoBehaviour:
         url: 
       trackingBranch: 
     - name: Main-Menu-Rebase
+=======
+    - name: characterCreation
+>>>>>>> Stashed changes
       remote:
-        name: 
-        url: 
-      trackingBranch: 
+        name: origin
+        url: https://github.com/JacobLCarter/Capstone.git
+      trackingBranch: characterCreation
     - name: master
       remote:
         name: origin
-        url: https://github.com/woodbr/Capstone
+        url: https://github.com/JacobLCarter/Capstone.git
       trackingBranch: master
-    - name: Menu-Updated
+    - name: playerMovement
+      remote:
+        name: origin
+        url: https://github.com/JacobLCarter/Capstone.git
+      trackingBranch: playerMovement
+    - name: StealthSystem
       remote:
         name: 
         url: 
@@ -96,35 +109,38 @@ MonoBehaviour:
   remoteConfigBranches:
     keys:
     - origin
-    - Jacob
     subKeys:
     - Values:
+<<<<<<< Updated upstream
       - HEAD
       - Main-Menu
       - master
       - Menu-Updated
       - Model-Update
     - Values:
+=======
+>>>>>>> Stashed changes
       - characterCreation
+      - HEAD
       - master
       - Model-Update
       - playerMovement
     subKeyValues:
     - Values:
+      - name: characterCreation
+        remote:
+          name: origin
+          url: https://github.com/JacobLCarter/Capstone.git
+        trackingBranch: 
       - name: HEAD
         remote:
           name: origin
-          url: https://github.com/woodbr/Capstone
-        trackingBranch: 
-      - name: Main-Menu
-        remote:
-          name: origin
-          url: https://github.com/woodbr/Capstone
+          url: https://github.com/JacobLCarter/Capstone.git
         trackingBranch: 
       - name: master
         remote:
           name: origin
-          url: https://github.com/woodbr/Capstone
+          url: https://github.com/JacobLCarter/Capstone.git
         trackingBranch: 
       - name: Menu-Updated
         remote:
@@ -134,23 +150,12 @@ MonoBehaviour:
       - name: Model-Update
         remote:
           name: origin
-          url: https://github.com/woodbr/Capstone
+          url: https://github.com/JacobLCarter/Capstone.git
         trackingBranch: 
-    - Values:
-      - name: characterCreation
+      - name: playerMovement
         remote:
-          name: Jacob
-          url: https://github.com/JacobLCarter/Capstone
-        trackingBranch: 
-      - name: master
-        remote:
-          name: Jacob
-          url: https://github.com/JacobLCarter/Capstone
-        trackingBranch: 
-      - name: Model-Update
-        remote:
-          name: Jacob
-          url: https://github.com/JacobLCarter/Capstone
+          name: origin
+          url: https://github.com/JacobLCarter/Capstone.git
         trackingBranch: 
       - name: playerMovement
         remote:
@@ -160,9 +165,6 @@ MonoBehaviour:
   configRemotes:
     keys:
     - origin
-    - Jacob
     values:
     - name: origin
-      url: https://github.com/woodbr/Capstone
-    - name: Jacob
-      url: https://github.com/JacobLCarter/Capstone
+      url: https://github.com/JacobLCarter/Capstone.git
