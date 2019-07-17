@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
-  lastUpdatedAtString: 2019-07-16T11:30:49.317-04:00
-  initializedAtString: 2019-07-16T11:30:49.317-04:00
+  lastUpdatedAtString: 2019-07-17T15:31:41.666-04:00
+  initializedAtString: 2019-07-17T15:31:41.666-04:00
   currentGitRemote:
     name: origin
-    url: https://github.com/JacobLCarter/Capstone.git
+    url: https://github.com/phamt2/Capstone.git
     login: 
     user: 
     host: 
@@ -30,9 +30,9 @@ MonoBehaviour:
     name: playerMovement
     remote:
       name: origin
-      url: https://github.com/JacobLCarter/Capstone.git
+      url: https://github.com/phamt2/Capstone.git
     trackingBranch: playerMovement
   currentConfigRemote:
     name: origin
-    url: https://github.com/JacobLCarter/Capstone.git
+    url: https://github.com/phamt2/Capstone.git
   currentHead: 

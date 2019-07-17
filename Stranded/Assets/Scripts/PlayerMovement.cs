@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     private bool onGround = true;
     private float playerHeight = 44.069f;
 
+    public Inventory inventory;
+
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
     /// any of the Update methods is called the first time.
@@ -133,6 +135,23 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //Adding pickup destroy
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("what waht");
+        if (other.gameObject.CompareTag("key_silver"))
+        {
+            IInventoryItem item = other.gameObject.GetComponent<IInventoryItem>();
+            if (item != null)
+            {
+                Debug.Log("L:DSJKF:LKSJD:FLJKSD:FLKJSD");
+
+                inventory.AddItem(item);
+            }
+            other.gameObject.SetActive(false);
+
+        }
+    }
     // void OnCollisionEnter(Collision other)
     // {
     //     if (other.collider.tag == "Dam")

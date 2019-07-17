@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Collide
   - Dam
+  - Fire
+  - key_silver
   layers:
   - Default
   - TransparentFX
