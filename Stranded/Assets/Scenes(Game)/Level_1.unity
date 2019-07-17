@@ -15929,11 +15929,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: d33215fc339f51347b539c98045721bd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.84
+      value: 21.88
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: d33215fc339f51347b539c98045721bd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.08
+      value: -1.8
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: d33215fc339f51347b539c98045721bd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20580,6 +20580,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 160156, guid: fe29e3c90ef88194184c6f3656db5ec5, type: 3}
+      propertyPath: m_Name
+      value: UMA_DCS
+      objectReference: {fileID: 0}
     - target: {fileID: 433544, guid: fe29e3c90ef88194184c6f3656db5ec5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -20623,10 +20627,6 @@ PrefabInstance:
     - target: {fileID: 433544, guid: fe29e3c90ef88194184c6f3656db5ec5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 160156, guid: fe29e3c90ef88194184c6f3656db5ec5, type: 3}
-      propertyPath: m_Name
-      value: UMA_DCS
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe29e3c90ef88194184c6f3656db5ec5, type: 3}

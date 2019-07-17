@@ -56,7 +56,7 @@ Material:
     - _BumpMap_ST: {r: 1, g: 1, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Fresnel_ST: {r: 1, g: 1, b: 0, a: 0}
-    - _HorizonColor: {r: 0.10435208, g: 0.2344953, b: 0.3301887, a: 0}
+    - _HorizonColor: {r: 0.026254892, g: 0.06567234, b: 0.09433961, a: 0}
     - _MainTex_ST: {r: 1, g: 1, b: 0, a: 0}
     - _ReflectionTex_ST: {r: 1, g: 1, b: 0, a: 0}
     - _ReflectiveColorCube_ST: {r: 1, g: 1, b: 0, a: 0}
