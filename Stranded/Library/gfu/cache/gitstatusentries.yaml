@@ -13,117 +13,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 6
-  lastUpdatedAtString: 2019-07-17T10:45:38.403-04:00
-  initializedAtString: 2019-07-17T10:17:34.529-04:00
+  lastUpdatedAtString: 2019-07-18T12:00:49.357-04:00
+  initializedAtString: 2019-07-18T10:49:46.338-04:00
   entries:
+  - path: Stranded\Assets\Scenes(Game)\CharacterCreation.unity
+    fullPath: C:\Users\Bryce\Capstone\Stranded\Assets\Scenes(Game)\CharacterCreation.unity
+    projectPath: Assets\Scenes(Game)\CharacterCreation.unity
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Stranded\Assets\Scenes(Game)\Level_1.unity
+    fullPath: C:\Users\Bryce\Capstone\Stranded\Assets\Scenes(Game)\Level_1.unity
+    projectPath: Assets\Scenes(Game)\Level_1.unity
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Stranded\Assets\Scenes(Game)\Level_2.unity
     fullPath: C:\Users\Bryce\Capstone\Stranded\Assets\Scenes(Game)\Level_2.unity
     projectPath: Assets\Scenes(Game)\Level_2.unity
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Stranded\Assets\Scenes(Game)\Materials\SketchupModels\turbine(reduced).fbx
-    fullPath: C:\Users\Bryce\Capstone\Stranded\Assets\Scenes(Game)\Materials\SketchupModels\turbine(reduced).fbx
-    projectPath: Assets\Scenes(Game)\Materials\SketchupModels\turbine(reduced).fbx
+  - path: Stranded\Assets\Scenes(Game)\Loading_Screen.unity
+    fullPath: C:\Users\Bryce\Capstone\Stranded\Assets\Scenes(Game)\Loading_Screen.unity
+    projectPath: Assets\Scenes(Game)\Loading_Screen.unity
     originalPath: 
     indexStatus: 0
-    workTreeStatus: 5
-  - path: Stranded\Assets\Scenes(Game)\Materials\SketchupModels\turbine(reduced).fbx.meta
-    fullPath: C:\Users\Bryce\Capstone\Stranded\Assets\Scenes(Game)\Materials\SketchupModels\turbine(reduced).fbx.meta
-    projectPath: Assets\Scenes(Game)\Materials\SketchupModels\turbine(reduced).fbx.meta
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Stranded\Assets\Scenes(Game)\Materials\SketchupModels\turbine(reduced)building.fbx
-    fullPath: C:\Users\Bryce\Capstone\Stranded\Assets\Scenes(Game)\Materials\SketchupModels\turbine(reduced)building.fbx
-    projectPath: Assets\Scenes(Game)\Materials\SketchupModels\turbine(reduced)building.fbx
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Stranded\Assets\Scenes(Game)\Materials\SketchupModels\turbine(reduced)building.fbx.meta
-    fullPath: C:\Users\Bryce\Capstone\Stranded\Assets\Scenes(Game)\Materials\SketchupModels\turbine(reduced)building.fbx.meta
-    projectPath: Assets\Scenes(Game)\Materials\SketchupModels\turbine(reduced)building.fbx.meta
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Stranded\Assets\Scenes(Game)\Materials\SketchupModels\turbine(reduced)ctrlrm.fbx
-    fullPath: C:\Users\Bryce\Capstone\Stranded\Assets\Scenes(Game)\Materials\SketchupModels\turbine(reduced)ctrlrm.fbx
-    projectPath: Assets\Scenes(Game)\Materials\SketchupModels\turbine(reduced)ctrlrm.fbx
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Stranded\Assets\Scenes(Game)\Materials\SketchupModels\turbine(reduced)ctrlrm.fbx.meta
-    fullPath: C:\Users\Bryce\Capstone\Stranded\Assets\Scenes(Game)\Materials\SketchupModels\turbine(reduced)ctrlrm.fbx.meta
-    projectPath: Assets\Scenes(Game)\Materials\SketchupModels\turbine(reduced)ctrlrm.fbx.meta
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Stranded\Assets\Scenes(Game)\Materials\SketchupModels\turbine(reduced)machines.fbx
-    fullPath: C:\Users\Bryce\Capstone\Stranded\Assets\Scenes(Game)\Materials\SketchupModels\turbine(reduced)machines.fbx
-    projectPath: Assets\Scenes(Game)\Materials\SketchupModels\turbine(reduced)machines.fbx
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Stranded\Assets\Scenes(Game)\Materials\SketchupModels\turbine(reduced)machines.fbx.meta
-    fullPath: C:\Users\Bryce\Capstone\Stranded\Assets\Scenes(Game)\Materials\SketchupModels\turbine(reduced)machines.fbx.meta
-    projectPath: Assets\Scenes(Game)\Materials\SketchupModels\turbine(reduced)machines.fbx.meta
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    workTreeStatus: 3
   - path: Stranded\Library\ArtifactDB
     fullPath: C:\Users\Bryce\Capstone\Stranded\Library\ArtifactDB
     projectPath: Library\ArtifactDB
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Stranded\Library\Artifacts\Legacy\07\078c4f3d997815d44b1c9cbd882f0777
-    fullPath: C:\Users\Bryce\Capstone\Stranded\Library\Artifacts\Legacy\07\078c4f3d997815d44b1c9cbd882f0777
-    projectPath: Library\Artifacts\Legacy\07\078c4f3d997815d44b1c9cbd882f0777
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Stranded\Library\Artifacts\Legacy\07\078c4f3d997815d44b1c9cbd882f0777.info
-    fullPath: C:\Users\Bryce\Capstone\Stranded\Library\Artifacts\Legacy\07\078c4f3d997815d44b1c9cbd882f0777.info
-    projectPath: Library\Artifacts\Legacy\07\078c4f3d997815d44b1c9cbd882f0777.info
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Stranded\Library\Artifacts\Legacy\0c\0cb9bf5f18cc93746b39756fc26ff920
-    fullPath: C:\Users\Bryce\Capstone\Stranded\Library\Artifacts\Legacy\0c\0cb9bf5f18cc93746b39756fc26ff920
-    projectPath: Library\Artifacts\Legacy\0c\0cb9bf5f18cc93746b39756fc26ff920
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Stranded\Library\Artifacts\Legacy\0c\0cb9bf5f18cc93746b39756fc26ff920.info
-    fullPath: C:\Users\Bryce\Capstone\Stranded\Library\Artifacts\Legacy\0c\0cb9bf5f18cc93746b39756fc26ff920.info
-    projectPath: Library\Artifacts\Legacy\0c\0cb9bf5f18cc93746b39756fc26ff920.info
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Stranded\Library\Artifacts\Legacy\7d\7d0c6e587c15a0243a311838d51d27f6
-    fullPath: C:\Users\Bryce\Capstone\Stranded\Library\Artifacts\Legacy\7d\7d0c6e587c15a0243a311838d51d27f6
-    projectPath: Library\Artifacts\Legacy\7d\7d0c6e587c15a0243a311838d51d27f6
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Stranded\Library\Artifacts\Legacy\7d\7d0c6e587c15a0243a311838d51d27f6.info
-    fullPath: C:\Users\Bryce\Capstone\Stranded\Library\Artifacts\Legacy\7d\7d0c6e587c15a0243a311838d51d27f6.info
-    projectPath: Library\Artifacts\Legacy\7d\7d0c6e587c15a0243a311838d51d27f6.info
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Stranded\Library\Artifacts\Legacy\8d\8d1b973a3a90c5946b78ff1c9406504d
-    fullPath: C:\Users\Bryce\Capstone\Stranded\Library\Artifacts\Legacy\8d\8d1b973a3a90c5946b78ff1c9406504d
-    projectPath: Library\Artifacts\Legacy\8d\8d1b973a3a90c5946b78ff1c9406504d
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Stranded\Library\Artifacts\Legacy\8d\8d1b973a3a90c5946b78ff1c9406504d.info
-    fullPath: C:\Users\Bryce\Capstone\Stranded\Library\Artifacts\Legacy\8d\8d1b973a3a90c5946b78ff1c9406504d.info
-    projectPath: Library\Artifacts\Legacy\8d\8d1b973a3a90c5946b78ff1c9406504d.info
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
   - path: Stranded\Library\CurrentLayout-default.dwlt
     fullPath: C:\Users\Bryce\Capstone\Stranded\Library\CurrentLayout-default.dwlt
     projectPath: Library\CurrentLayout-default.dwlt
@@ -148,21 +70,9 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Stranded\Library\gfu\cache\branches.yaml
-    fullPath: C:\Users\Bryce\Capstone\Stranded\Library\gfu\cache\branches.yaml
-    projectPath: Library\gfu\cache\branches.yaml
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Stranded\Library\gfu\cache\gitlocks.yaml
     fullPath: C:\Users\Bryce\Capstone\Stranded\Library\gfu\cache\gitlocks.yaml
     projectPath: Library\gfu\cache\gitlocks.yaml
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Stranded\Library\gfu\cache\gitlog.yaml
-    fullPath: C:\Users\Bryce\Capstone\Stranded\Library\gfu\cache\gitlog.yaml
-    projectPath: Library\gfu\cache\gitlog.yaml
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -184,15 +94,15 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Stranded\Library\shadercompiler-UnityShaderCompiler.exe0.log
-    fullPath: C:\Users\Bryce\Capstone\Stranded\Library\shadercompiler-UnityShaderCompiler.exe0.log
-    projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Stranded\Library\SourceAssetDB
     fullPath: C:\Users\Bryce\Capstone\Stranded\Library\SourceAssetDB
     projectPath: Library\SourceAssetDB
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Stranded\Library\StateCache\Hierarchy\c5604e-mainStage.json
+    fullPath: C:\Users\Bryce\Capstone\Stranded\Library\StateCache\Hierarchy\c5604e-mainStage.json
+    projectPath: Library\StateCache\Hierarchy\c5604e-mainStage.json
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -202,6 +112,12 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: Stranded\Temp\__Backupscenes\0.backup
+    fullPath: C:\Users\Bryce\Capstone\Stranded\Temp\__Backupscenes\0.backup
+    projectPath: Temp\__Backupscenes\0.backup
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Stranded\Temp\UnityLockfile
     fullPath: C:\Users\Bryce\Capstone\Stranded\Temp\UnityLockfile
     projectPath: Temp\UnityLockfile
