@@ -7,10 +7,11 @@ public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody playerRB;
     private float moveSpeed;
-    private const float jumpForce = 3f;
+    private const float jumpForce = 0.6f;
     private Animator animator;
     private bool onGround = true;
-    private float playerHeight = 44.069f;
+    private float playerHeight = 0.45f;
+    private float downAccel = 0.5f;
 
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
@@ -39,12 +40,14 @@ public class PlayerMovement : MonoBehaviour
     ***************************************************************************/
     public void MovePlayer(Vector3 direction, float horiz, float vert)
     {
-        if (Input.GetKeyDown(KeyCode.Space) && onGround)
+        Jump(direction);
+        
+        /*if (Input.GetKeyDown(KeyCode.Space) && onGround)
         {
             //add an impulsive jumpforce to the player's movement vector, in
             //the y direction
             playerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        }
+        }*/
 
         //decrease movement speed if the player is crouching
         if (Input.GetKey(KeyCode.C))
@@ -100,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Vertical_f", y);
 
         //checks if the player is currently moving and presses the sprint key
-        if (Input.GetKey(KeyCode.LeftShift) && Input.GetAxis("Vertical") > 0)
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             //toggle "isRunning" in the animation controller
             animator.SetBool("isRunning", true);
@@ -119,7 +122,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isCrouched", false);
         }
 
-        if (onGround && Input.GetButtonDown("Jump"))
+        /*if (onGround && Input.GetButtonDown("Jump"))
         {
             //set the below 3 variables in the animation controller
             animator.SetFloat("velocityY", playerRB.velocity.y);
@@ -130,7 +133,7 @@ public class PlayerMovement : MonoBehaviour
         if (onGround)
         {
             animator.SetBool("isGrounded", true);
-        }
+        }*/
     }
 
     // void OnCollisionEnter(Collision other)
@@ -162,5 +165,27 @@ public class PlayerMovement : MonoBehaviour
         //raycast directly downwards from the player's height, if the ray hits
         //something the condition is true, else false
         return Physics.Raycast(transform.position, Vector3.down, playerHeight);
+    }
+
+    void Jump(Vector3 direction)
+    {
+        if (Input.GetKey(KeyCode.Space) && isGrounded())
+        {
+            //add an impulsive jump force to the player's movement vector, in
+            //the y direction
+            playerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            animator.SetTrigger("isJumping");
+            animator.SetBool("isGrounded", false);
+        }
+        else if (!Input.GetKey(KeyCode.Space) && isGrounded())
+        {
+            animator.SetBool("isFalling", false);
+            animator.SetBool("isGrounded", true);
+        }
+        else
+        {
+            direction.y -= downAccel;
+            animator.SetBool("isFalling", true);
+        }
     }
 }
