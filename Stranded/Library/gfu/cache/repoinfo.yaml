@@ -13,8 +13,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
+<<<<<<< Updated upstream
   lastUpdatedAtString: 2019-07-17T10:17:34.222-04:00
   initializedAtString: 2019-07-17T10:17:34.222-04:00
+=======
+  lastUpdatedAtString: 2019-07-16T16:50:09.007-04:00
+  initializedAtString: 2019-07-16T16:50:09.007-04:00
+>>>>>>> Stashed changes
   currentGitRemote:
     name: origin
     url: https://github.com/woodbr/Capstone
@@ -24,10 +29,17 @@ MonoBehaviour:
     function: 0
     token: 
   currentGitBranch:
+<<<<<<< Updated upstream
     name: Level-2
     tracking: 
   currentConfigBranch:
     name: Level-2
+=======
+    name: StealthSystem
+    tracking: 
+  currentConfigBranch:
+    name: StealthSystem
+>>>>>>> Stashed changes
     remote:
       name: 
       url: 

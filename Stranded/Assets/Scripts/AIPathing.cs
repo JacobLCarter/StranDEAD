@@ -5,21 +5,27 @@ using UnityEngine.AI;
 
 public class AIPathing : MonoBehaviour
 {
-    
     public Transform player;
-    //public Rigidbody player;
-    NavMeshAgent AI_navmesh;
+    public Transform enemyHead;
+    private NavMeshAgent AI_navmesh;
     private Animator animator;
     public Transform[] stops;
     private int stop;
     private bool playerFound = false;
     private bool alreadyFound = true;
+    private const float SightDistance = 10f;
+    private const float AttackRange = 1.7f;
+    private float stopTime = 4f;
+    private const float stalkTime = 5f;
+    private float currentStalk;
+    private Vector3 attackOffset = new Vector3(.3f, 0,0);
 
     // Start is called before the first frame update
     void Start()
     {
-        AI_navmesh = this.GetComponent<NavMeshAgent>();
-        animator = this.GetComponent<Animator>();
+        AI_navmesh = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
+        currentStalk = stalkTime;
 
         WalkPath();
     }
@@ -29,32 +35,42 @@ public class AIPathing : MonoBehaviour
     /// </summary>
     void Update()
     {
-        print("playerFound: " + playerFound);
-        print("alreadyFound: " + alreadyFound);
-
         if (playerFound)
         {
-            Chase();
-
-            if (alreadyFound)
+            if (Vector3.Distance(transform.position, player.position) < AttackRange)
             {
-                Invoke("stopChase", 3.0f);
+                Attack();
+                currentStalk = stalkTime;
             }
-            else if (!alreadyFound)
+            else
             {
-                alreadyFound = true;
+                Chase();
+                
+                currentStalk -= stalkTime;
+
+                if (currentStalk <= 0f)
+                {
+                    stopChase();
+                }
             }
         }
-        else if (isPlayerInSight() && rayCheck())
+        else if (isPlayerInSight())// && rayCheck())
         {
-            playerFound = true;
-            Chase();
+            startChase();
         }
         else
         {
-            if (!AI_navmesh.pathPending && AI_navmesh.remainingDistance < 0.5f)
+            if (!AI_navmesh.pathPending && AI_navmesh.remainingDistance < 0.2f)
             {
-                WalkPath();
+                if (stopTime <= 0)
+                {
+                    stopTime = 4f;
+                    WalkPath();
+                }
+                else
+                {
+                    stopTime -= Time.deltaTime;
+                }
             }
         }
 
@@ -68,32 +84,35 @@ public class AIPathing : MonoBehaviour
 
         if (angle < 80.0f)
         {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
+            Vector3 direction = player.position - enemyHead.position;
+            Ray ray = new Ray(enemyHead.position, direction);
+            RaycastHit hit;
+            var rayColor = playerFound ? Color.red : Color.green;
 
-    bool rayCheck()
-    {
-        Vector3 direction = player.position - transform.position;
-        Ray ray = new Ray(transform.position, direction);
-        RaycastHit raycastHit;
-
-        if (Physics.Raycast(ray, out raycastHit))
-        {
-            if (raycastHit.collider.transform == player)
+            //Debug.DrawLine(enemyHead.position, direction * SightDistance, rayColor);
+            
+            if (Physics.Raycast(ray, out hit, SightDistance))
             {
-                return true;
+                if (hit.collider.transform != null)
+                {
+                    Debug.DrawLine(enemyHead.position, hit.point, rayColor);
+                    
+                    if (hit.collider.transform == player)
+                    {
+                        return true;
+                    }
+                }
+                else
+                {
+                    Debug.DrawLine(enemyHead.position, direction * SightDistance, rayColor);
+                }
             }
         }
         
         return false;
     }
 
-    void WalkPath()
+    private void WalkPath()
     {
         AI_navmesh.speed = .75f;
 
@@ -104,10 +123,11 @@ public class AIPathing : MonoBehaviour
 
         AI_navmesh.destination = stops[stop].position;
 
-        stop = (stop + 1) % stops.Length;
+        //stop = (stop + 1) % stops.Length;
+        stop = Random.Range(0, stops.Length - 1);
     }
 
-    public void Chase()
+    private void Chase()
     {
         AI_navmesh.speed = 1.5f;
 
@@ -118,22 +138,33 @@ public class AIPathing : MonoBehaviour
         }
     }
 
-    void UpdateAnimator()
+    private void Attack()
+    {
+        //AI_navmesh.isStopped = true;
+        //transform.LookAt(player.position + attackOffset);
+        animator.SetTrigger("isAttacking");
+        //AI_navmesh.isStopped = false;
+    }
+
+    private void UpdateAnimator()
     {
         animator.SetFloat("Speed", AI_navmesh.velocity.magnitude);
-
-        if (playerFound && !alreadyFound)
-        {
-            animator.SetTrigger("playerIsSpotted");
-        }
     }
 
     private void stopChase()
     {
-        if (!isPlayerInSight() || !rayCheck())
+        if (!isPlayerInSight())
         {
             playerFound = false;
-            alreadyFound = false;
         }
+
+        currentStalk = stalkTime;
+    }
+
+    private void startChase()
+    {
+        playerFound = true;
+
+        Chase();
     }
 }
