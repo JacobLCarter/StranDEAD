@@ -8,7 +8,7 @@ public class KeyScript : MonoBehaviour, IInventoryItem
     {
         get
         {
-            return "pPlane3";
+            return "key_silver";
         }
     }
 

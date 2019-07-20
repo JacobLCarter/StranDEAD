@@ -8,6 +8,7 @@ TagManager:
   - Dam
   - Fire
   - key_silver
+  - Playertag
   layers:
   - Default
   - TransparentFX

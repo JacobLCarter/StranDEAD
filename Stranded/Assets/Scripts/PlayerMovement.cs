@@ -135,20 +135,22 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    //Adding pickup destroy
+    //Adding pickup deactivate items and place them into inventory
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("what waht");
         if (other.gameObject.CompareTag("key_silver"))
         {
+            //This is to place item into the inventory made.
             IInventoryItem item = other.gameObject.GetComponent<IInventoryItem>();
             if (item != null)
             {
-                Debug.Log("L:DSJKF:LKSJD:FLJKSD:FLKJSD");
+                //Testing to make sure object is called correctly.
+                Debug.Log("Item is successfully picked up.");
 
                 inventory.AddItem(item);
+                other.gameObject.SetActive(false);
             }
-            other.gameObject.SetActive(false);
+
 
         }
     }
