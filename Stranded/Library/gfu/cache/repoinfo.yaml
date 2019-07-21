@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
-  lastUpdatedAtString: 2019-07-19T16:51:24.288-04:00
-  initializedAtString: 2019-07-19T16:51:24.288-04:00
+  lastUpdatedAtString: 2019-07-20T15:45:31.967-04:00
+  initializedAtString: 2019-07-20T15:45:31.967-04:00
   currentGitRemote:
     name: origin
     url: https://github.com/phamt2/Capstone.git
@@ -24,14 +24,14 @@ MonoBehaviour:
     function: 0
     token: 
   currentGitBranch:
-    name: playerMovement
-    tracking: origin/playerMovement
+    name: items
+    tracking: origin/items
   currentConfigBranch:
-    name: playerMovement
+    name: items
     remote:
       name: origin
       url: https://github.com/phamt2/Capstone.git
-    trackingBranch: playerMovement
+    trackingBranch: items
   currentConfigRemote:
     name: origin
     url: https://github.com/phamt2/Capstone.git
