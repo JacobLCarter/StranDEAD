@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Collide
   - Dam
+  - Fire
+  - key_silver
+  - Playertag
+  - Dialogue1
   layers:
   - Default
   - TransparentFX

@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private bool onGround = true;
     private float playerHeight = 0.45f;
     private float downAccel = 0.5f;
+    public Inventory inventory;
 
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
@@ -134,6 +135,26 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("isGrounded", true);
         }*/
+    }
+
+    //Adding pickup deactivate items and place them into inventory
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("key_silver"))
+        {
+            //This is to place item into the inventory made.
+            IInventoryItem item = other.gameObject.GetComponent<IInventoryItem>();
+            if (item != null)
+            {
+                //Testing to make sure object is called correctly.
+                Debug.Log("Item is successfully picked up.");
+
+                inventory.AddItem(item);
+                other.gameObject.SetActive(false);
+            }
+
+
+        }
     }
 
     // void OnCollisionEnter(Collision other)
