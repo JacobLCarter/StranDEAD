@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using GeneralStateMachine;
+using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class AttackState : State<Enemy>
 {
     private static AttackState _instance;
+    private Vector3 animationOffset = new Vector3(.3f,0,0);
 
     private AttackState()
     {
@@ -30,17 +33,18 @@ public class AttackState : State<Enemy>
     
     public override void EnterState(Enemy enemy)
     {
-        enemy.navmesh.enabled = false;
+        enemy.navmesh.velocity = Vector3.zero;
     }
 
     public override void ExitState(Enemy enemy)
     {
-        enemy.navmesh.enabled = true;
+
     }
 
     public override void UpdateState(Enemy enemy)
     {
-        enemy.transform.LookAt(enemy.player.position + new Vector3(.3f,0,0));
+        //enemy.transform.LookAt(enemy.player.position + animationOffset);
+        enemy.navmesh.velocity = Vector3.zero;
         enemy.animator.SetTrigger("isAttacking");
     }
 }

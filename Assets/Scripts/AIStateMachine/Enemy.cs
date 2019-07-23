@@ -99,13 +99,15 @@ public class Enemy : MonoBehaviour
     
     private void UpdateAnimator()
     {
-        if (stateMachine.currentState != AttackState.Instance)
+        animator.SetFloat("Speed", navmesh.velocity.magnitude);
+        
+        /*if (stateMachine.currentState != AttackState.Instance)
         {
             animator.SetFloat("Speed", navmesh.velocity.magnitude);
         }
         else
         {
             animator.SetFloat("Speed", 0.0f);
-        }
+        }*/
     }
 }

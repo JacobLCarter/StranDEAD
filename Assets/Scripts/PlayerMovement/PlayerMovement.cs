@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     private float moveSpeed;
     private const float jumpForce = 0.6f;
     private Animator animator;
-    private bool onGround = true;
     private float playerHeight = 0.45f;
     private float downAccel = 0.5f;
     public Inventory inventory;
@@ -29,7 +28,6 @@ public class PlayerMovement : MonoBehaviour
     {
         moveSpeed = 1.7f;
         checkSprint();
-        onGround = isGrounded();
     }
 
     /***************************************************************************
@@ -42,13 +40,6 @@ public class PlayerMovement : MonoBehaviour
     public void MovePlayer(Vector3 direction, float horiz, float vert)
     {
         Jump(direction);
-        
-        /*if (Input.GetKeyDown(KeyCode.Space) && onGround)
-        {
-            //add an impulsive jumpforce to the player's movement vector, in
-            //the y direction
-            playerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        }*/
 
         //decrease movement speed if the player is crouching
         if (Input.GetKey(KeyCode.C))
@@ -122,19 +113,6 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("isCrouched", false);
         }
-
-        /*if (onGround && Input.GetButtonDown("Jump"))
-        {
-            //set the below 3 variables in the animation controller
-            animator.SetFloat("velocityY", playerRB.velocity.y);
-            animator.SetTrigger("isJumping");
-            animator.SetBool("isGrounded", false);   
-        }
-
-        if (onGround)
-        {
-            animator.SetBool("isGrounded", true);
-        }*/
     }
 
     //Adding pickup deactivate items and place them into inventory
@@ -152,28 +130,8 @@ public class PlayerMovement : MonoBehaviour
                 inventory.AddItem(item);
                 other.gameObject.SetActive(false);
             }
-
-
         }
     }
-
-    // void OnCollisionEnter(Collision other)
-    // {
-    //     if (other.collider.tag == "Dam")
-    //     {
-    //         isGrounded = true;
-    //         animator.applyRootMotion = true;
-    //     }
-    // }
-
-    // void OnCollisionExit(Collision other)
-    // {
-    //     if (other.collider.tag == "Dam")
-    //     {
-    //         isGrounded = false;
-    //         animator.applyRootMotion = false;
-    //     }
-    // }
 
     /***************************************************************************
     Name: isGrounded
@@ -190,23 +148,24 @@ public class PlayerMovement : MonoBehaviour
 
     void Jump(Vector3 direction)
     {
+        animator.SetBool("isGrounded", isGrounded());
+        
         if (Input.GetKey(KeyCode.Space) && isGrounded())
         {
             //add an impulsive jump force to the player's movement vector, in
             //the y direction
             playerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            animator.SetTrigger("isJumping");
-            animator.SetBool("isGrounded", false);
+            animator.SetBool("isJumping", true);
+            //animator.SetBool("isGrounded", false);
         }
-        else if (!Input.GetKey(KeyCode.Space) && isGrounded())
-        {
-            animator.SetBool("isFalling", false);
-            animator.SetBool("isGrounded", true);
-        }
+        //else if (!Input.GetKey(KeyCode.Space) && isGrounded())
+        //{
+            //animator.SetBool("isGrounded", true);
+        //}
         else
         {
+            animator.SetBool("isJumping", false);
             direction.y -= downAccel;
-            animator.SetBool("isFalling", true);
         }
     }
 }
