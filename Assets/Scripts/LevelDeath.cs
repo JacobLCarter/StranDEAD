@@ -9,6 +9,6 @@ public class LevelDeath : MonoBehaviour
     private void OnTriggerEnter()
     {
         //starts loading screen
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(5);
     }
 }
