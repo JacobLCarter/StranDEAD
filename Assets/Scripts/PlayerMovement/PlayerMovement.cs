@@ -65,19 +65,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
     /***************************************************************************
-    Name: RotatePlayer
-    Description: Handles rotating the player in the game space, with directions
-    taken from the mouse and based on the camera's position.
-    Input: Vector3 for total rotation.
-    Output: None
-    ***************************************************************************/
-    public void RotatePlayer(Vector3 rotation)
-    {
-        //rotate the player based on the passed vector from the camera
-        playerRB.MoveRotation(playerRB.rotation * Quaternion.Euler(rotation));
-    }
-
-    /***************************************************************************
     Name: checkSprint
     Description: Checks if the player is sprinting.
     Input: None
