@@ -43,8 +43,15 @@ public class AttackState : State<Enemy>
 
     public override void UpdateState(Enemy enemy)
     {
-        //enemy.transform.LookAt(enemy.player.position + animationOffset);
-        enemy.navmesh.velocity = Vector3.zero;
-        enemy.animator.SetTrigger("isAttacking");
+        if (enemy.isPlayerInSight())
+        {
+            enemy.transform.LookAt(enemy.player.position + animationOffset);
+            enemy.navmesh.velocity = Vector3.zero;
+            enemy.animator.SetTrigger("isAttacking");
+        }
+        else
+        {
+            enemy.stateMachine.switchState(StalkState.Instance);
+        }
     }
 }

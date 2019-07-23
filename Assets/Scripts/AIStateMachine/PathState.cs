@@ -40,9 +40,15 @@ public class PathState : State<Enemy>
 
     public override void UpdateState(Enemy enemy)
     {
-        enemy.isPlayerInSight();
-
-        if (!enemy.navmesh.pathPending && enemy.navmesh.remainingDistance < 0.2f)
+        if (enemy.isPlayerInSight())
+        {
+            enemy.stateMachine.switchState(ChaseState.Instance);
+        }
+        else if (enemy.isPlayerAudible())
+        {
+            enemy.stateMachine.switchState(StalkState.Instance);
+        }
+        else if (!enemy.navmesh.pathPending && enemy.navmesh.remainingDistance < 0.2f)
         {
             WalkPath(enemy);
         }

@@ -9,50 +9,23 @@ public class Enemy : MonoBehaviour
     public Transform enemyHead;
     public NavMeshAgent navmesh;
     public Animator animator;
+    public Animator playerAnimator;
     public Transform[] stops;
     public int stop;
-    private bool playerFound;
-    public const float SightDistance = 10f;
-    public const float AttackRange = 1.7f;
+    public const float SightDistance = 6f;
+    public const float HearingDistance = 10f;
+    public float AttackRange = 1.7f;
     public float currentStalk;
-    public float stalkTime = 8f;
+    public float stalkTime = 10f;
 
     private void Start()
     {
         stateMachine = new StateMachine<Enemy>(this);
         stateMachine.switchState(PathState.Instance);
-
-        currentStalk = stalkTime;
     }
 
     private void Update()
     {
-        if (playerFound)
-        {
-            if (Vector3.Distance(transform.position, player.position) < AttackRange && !isSameState(AttackState.Instance))
-            {
-                stateMachine.switchState(AttackState.Instance);
-            }
-            else if (!isSameState(ChaseState.Instance))
-            {
-                stateMachine.switchState(ChaseState.Instance);
-            }
-        }
-        else if (currentStalk > 0)
-        {
-            if (!isSameState(StalkState.Instance))
-            {
-                stateMachine.switchState(StalkState.Instance);
-            }
-        }
-        else
-        {
-            if (!isSameState(PathState.Instance))
-            {
-                stateMachine.switchState(PathState.Instance);
-            }
-        }
-
         UpdateAnimator();
         
         stateMachine.Update();
@@ -63,7 +36,7 @@ public class Enemy : MonoBehaviour
         return stateMachine.currentState == nextState;
     }
     
-    public void isPlayerInSight()
+    public bool isPlayerInSight()
     {
         Vector3 target = player.position - transform.position;
         float angle = Vector3.Angle(target, transform.forward);
@@ -73,30 +46,35 @@ public class Enemy : MonoBehaviour
             Vector3 direction = player.position - enemyHead.position;
             Ray ray = new Ray(enemyHead.position, direction);
             RaycastHit hit;
-            var rayColor = playerFound ? Color.red : Color.green;
 
             if (Physics.Raycast(ray, out hit, SightDistance))
             {
                 if (hit.collider.transform != null)
                 {
-                    Debug.DrawLine(enemyHead.position, hit.point, rayColor);
-                    
                     if (hit.collider.transform == player)
                     {
-                        playerFound = true;
-                        return;
+                        return true;
                     }
-                }
-                else
-                {
-                    Debug.DrawLine(enemyHead.position, direction * SightDistance, rayColor);
                 }
             }
         }
         
-        playerFound = false;
+        return false;
     }
-    
+
+    public bool isPlayerAudible()
+    {
+        if (playerAnimator.GetBool("isRunning") || playerAnimator.GetBool("isJumping"))
+        {
+            if (Vector3.Distance(transform.position, player.position) < HearingDistance)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     private void UpdateAnimator()
     {
         animator.SetFloat("Speed", navmesh.velocity.magnitude);
