@@ -11,23 +11,27 @@ public class CameraCollision : MonoBehaviour
     private float camRotationY;
     private Vector3 rotation;
     private Vector3 rotationVelocity;
+    private Vector3 lastPosition;
     private const float rotationTime = 0.1f;
     private const float sensitivity = 3.0f;
     private const float moveSpeed = 3f;
     private const float returnSpeed = 5f;
-    private const float collisionBump = 0.3f;
-    private const float camTooClose = .4f;
+    private const float collisionBump = 0.5f;
+    private const float camTooClose = .8f;
     private const float rotationLock = 40f;
     private bool isTooClose;
 
     private void Start()
     {
         isTooClose = false;
+        lastPosition = player.position;
     }
 
     private void FixedUpdate()
     {
-        Collision(player.position - transform.forward * 1.2f + transform.up * 0.7f);
+        Vector3 adjustedTarget = player.TransformPoint(0, 2f, -1.5f);
+        
+        Collision(adjustedTarget);
 
         camRotationX += Input.GetAxis("Mouse X") * sensitivity;
         
