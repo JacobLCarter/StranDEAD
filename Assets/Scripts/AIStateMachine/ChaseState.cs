@@ -30,8 +30,10 @@ public class ChaseState : State<Enemy>
     
     public override void EnterState(Enemy enemy)
     {
-        enemy.navmesh.speed = 1.5f;
         enemy.currentStalk = enemy.stalkTime;
+        enemy.navmesh.speed = 1.5f;
+        enemy.navmesh.velocity = Vector3.zero;
+        enemy.animator.SetTrigger("isRoaring");
     }
 
     public override void ExitState(Enemy enemy)
@@ -45,13 +47,20 @@ public class ChaseState : State<Enemy>
         
         enemy.isPlayerInSight();
     }
-    
+
     private void Chase(Enemy enemy)
     {
-        if (enemy.player != null)
+        if (enemy.animator.GetCurrentAnimatorStateInfo(0).IsName("Roaring"))
         {
-            Vector3 target = enemy.player.position;
-            enemy.navmesh.SetDestination(target);
+            enemy.navmesh.velocity = Vector3.zero;
+        }
+        else
+        {
+            if (enemy.player != null)
+            {
+                Vector3 target = enemy.player.position;
+                enemy.navmesh.SetDestination(target);
+            }
         }
     }
 }
