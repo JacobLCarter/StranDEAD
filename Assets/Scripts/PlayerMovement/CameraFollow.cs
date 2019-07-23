@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 [RequireComponent(typeof(PlayerMovement))]
 public class CameraFollow : MonoBehaviour
@@ -38,12 +39,12 @@ public class CameraFollow : MonoBehaviour
         
         //move the player; called in the PlayerMovement script
         movement.MovePlayer(calculatedMove, horizontal, vertical);
-
+        
         //get the camera's rotation for the current frame
-        float camRotation = Input.GetAxis("Mouse X");
-        Vector3 rotation = new Vector3 (0, camRotation, 0) * sensitivity;
-
-        //rotate the player; called in the PlayerMovement script
-        movement.RotatePlayer(rotation);
+//        float camRotation = Input.GetAxis("Mouse X");
+//        Vector3 rotation = new Vector3 (0, camRotation, 0) * sensitivity;
+//
+//        //rotate the player; called in the PlayerMovement script
+//        movement.RotatePlayer(rotation);
     }
 }

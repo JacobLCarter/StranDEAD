@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e49a103e-b544-4ee4-aa2c-daf8615a94f4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes(Game)/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes(Game)/Level_1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes(Game)/Level_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes(Game)/Level_2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes(Game)/Materials/Textures/int_conc_wall.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes(Game)/Materials/Textures/int_conc_wall.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement/CameraFollow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement/CameraFollow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement/PlayerCollision.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement/PlayerCollision.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terrain Tools/0.1.0-preview/Terrain Assets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement/PlayerMovement.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="935">
+              <caret line="59" column="39" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
+              <folding>
+                <marker date="1563909174712" expanded="true" signature="139:6329" ph="{...}" />
+                <marker date="1563909174712" expanded="true" signature="422:588" ph="/// Start is called on the frame when a script is enabled just before ... " />
+                <marker date="1563909174712" expanded="true" signature="605:768" ph="{...}" />
+                <marker date="1563909174712" expanded="true" signature="796:890" ph="{...}" />
+                <marker date="1563909174712" expanded="true" signature="896:1289" ph="/* Name: MovePlayer ... */" />
+                <marker date="1563909174712" expanded="true" signature="1360:2089" ph="{...}" />
+                <marker date="1563909174712" expanded="true" signature="1409:1662" ph="/* if (Input.GetKeyDown(KeyCode.Space) &amp;&amp; onGround) ... */" />
+                <marker date="1563909174712" expanded="true" signature="1761:1812" ph="{...}" />
+                <marker date="1563909174712" expanded="true" signature="1822:1922" ph="/* move the player's position by adding a new vector based on ... */" />
+                <marker date="1563909174712" expanded="true" signature="2095:2359" ph="/* Name: checkSprint ... */" />
+                <marker date="1563909174712" expanded="true" signature="2390:2531" ph="{...}" />
+                <marker date="1563909174712" expanded="true" signature="2474:2525" ph="{...}" />
+                <marker date="1563909174712" expanded="true" signature="2537:2947" ph="/* Name: UpdateAnimator ... */" />
+                <marker date="1563909174712" expanded="true" signature="2989:4024" ph="{...}" />
+                <marker date="1563909174712" expanded="true" signature="3209:3339" ph="{...}" />
+                <marker date="1563909174712" expanded="true" signature="3352:3422" ph="{...}" />
+                <marker date="1563909174712" expanded="true" signature="3460:3530" ph="{...}" />
+                <marker date="1563909174712" expanded="true" signature="3543:3614" ph="{...}" />
+                <marker date="1563909174712" expanded="true" signature="3624:4018" ph="/* if (onGround &amp;&amp; Input.GetButtonDown(&quot;Jump&quot;)) ... */" />
+                <marker date="1563909174712" expanded="true" signature="4132:4645" ph="{...}" />
+                <marker date="1563909174712" expanded="true" signature="4193:4639" ph="{...}" />
+                <marker date="1563909174712" expanded="true" signature="4377:4627" ph="{...}" />
+                <marker date="1563909174712" expanded="true" signature="4651:5080" ph="/* void OnCollisionEnter(Collision other) ... */" />
+                <marker date="1563909174712" expanded="true" signature="5086:5375" ph="/* Name: isGrounded ... */" />
+                <marker date="1563909174712" expanded="true" signature="5397:5622" ph="{...}" />
+                <marker date="1563909174712" expanded="true" signature="5412:5536" ph="/* raycast directly downwards from the player's height, if the ray hits ... */" />
+                <marker date="1563909174712" expanded="true" signature="5656:6327" ph="{...}" />
+                <marker date="1563909174712" expanded="true" signature="5719:6018" ph="{...}" />
+                <marker date="1563909174712" expanded="true" signature="5742:5837" ph="/* add an impulsive jump force to the player's movement vector, in ... */" />
+                <marker date="1563909174712" expanded="true" signature="6081:6201" ph="{...}" />
+                <marker date="1563909174712" expanded="true" signature="6214:6321" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement/CameraFollow.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="44" column="10" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="75" />
+              <folding>
+                <marker date="1563903989883" expanded="true" signature="6:32" ph="..." />
+                <marker date="1563903989883" expanded="true" signature="118:1740" ph="{...}" />
+                <marker date="1563903989883" expanded="true" signature="295:443" ph="/// Start is called on the frame when a script is enabled just before ... " />
+                <marker date="1563903989883" expanded="true" signature="460:757" ph="{...}" />
+                <marker date="1563903989883" expanded="true" signature="820:1738" ph="{...}" />
+                <marker date="1563903989883" expanded="true" signature="1438:1732" ph="/* get the camera's rotation for the current frame ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement/CameraCollision.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+              <folding>
+                <marker date="1563909414637" expanded="true" signature="6:92" ph="..." />
+                <marker date="1563909414637" expanded="true" signature="138:2381" ph="{...}" />
+                <marker date="1563909414637" expanded="true" signature="696:736" ph="{...}" />
+                <marker date="1563909414637" expanded="true" signature="768:1504" ph="{...}" />
+                <marker date="1563909414637" expanded="true" signature="957:1018" ph="{...}" />
+                <marker date="1563909414637" expanded="true" signature="1031:1202" ph="{...}" />
+                <marker date="1563909414637" expanded="true" signature="1550:2379" ph="{...}" />
+                <marker date="1563909414637" expanded="true" signature="1670:2241" ph="{...}" />
+                <marker date="1563909414637" expanded="true" signature="1956:2019" ph="{...}" />
+                <marker date="1563909414637" expanded="true" signature="2036:2210" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement/CameraFollow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement/CameraCollision.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement/CameraFollow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement/CameraCollision.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/indexLayout.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="988" />
+    <option name="y" value="282" />
+    <option name="width" value="1934" />
+    <option name="height" value="1417" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="UnityExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="UnityExplorer">
+        <option name="show-hidden-items" value="false" />
+        <option name="show-project-names" value="true" />
+      </pane>
+      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e49a103e-b544-4ee4-aa2c-daf8615a94f4" name="Default Changelist" comment="" />
+      <created>1563902673061</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1563902673061</updated>
+      <workItem from="1563902677156" duration="6604000" />
+      <workItem from="1563909409721" duration="54000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6658000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="988" y="282" width="1934" height="1417" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2524013" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Performance Profiler" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Unity" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Unit Tests" order="13" />
+      <window_info anchor="bottom" id="Terminal" order="14" />
+      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="5" />
+    </layout>
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement/PlayerMovement.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="59" column="39" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
+          <folding>
+            <marker date="1563909174712" expanded="true" signature="139:6329" ph="{...}" />
+            <marker date="1563909174712" expanded="true" signature="422:588" ph="/// Start is called on the frame when a script is enabled just before ... " />
+            <marker date="1563909174712" expanded="true" signature="605:768" ph="{...}" />
+            <marker date="1563909174712" expanded="true" signature="796:890" ph="{...}" />
+            <marker date="1563909174712" expanded="true" signature="896:1289" ph="/* Name: MovePlayer ... */" />
+            <marker date="1563909174712" expanded="true" signature="1360:2089" ph="{...}" />
+            <marker date="1563909174712" expanded="true" signature="1409:1662" ph="/* if (Input.GetKeyDown(KeyCode.Space) &amp;&amp; onGround) ... */" />
+            <marker date="1563909174712" expanded="true" signature="1761:1812" ph="{...}" />
+            <marker date="1563909174712" expanded="true" signature="1822:1922" ph="/* move the player's position by adding a new vector based on ... */" />
+            <marker date="1563909174712" expanded="true" signature="2095:2359" ph="/* Name: checkSprint ... */" />
+            <marker date="1563909174712" expanded="true" signature="2390:2531" ph="{...}" />
+            <marker date="1563909174712" expanded="true" signature="2474:2525" ph="{...}" />
+            <marker date="1563909174712" expanded="true" signature="2537:2947" ph="/* Name: UpdateAnimator ... */" />
+            <marker date="1563909174712" expanded="true" signature="2989:4024" ph="{...}" />
+            <marker date="1563909174712" expanded="true" signature="3209:3339" ph="{...}" />
+            <marker date="1563909174712" expanded="true" signature="3352:3422" ph="{...}" />
+            <marker date="1563909174712" expanded="true" signature="3460:3530" ph="{...}" />
+            <marker date="1563909174712" expanded="true" signature="3543:3614" ph="{...}" />
+            <marker date="1563909174712" expanded="true" signature="3624:4018" ph="/* if (onGround &amp;&amp; Input.GetButtonDown(&quot;Jump&quot;)) ... */" />
+            <marker date="1563909174712" expanded="true" signature="4132:4645" ph="{...}" />
+            <marker date="1563909174712" expanded="true" signature="4193:4639" ph="{...}" />
+            <marker date="1563909174712" expanded="true" signature="4377:4627" ph="{...}" />
+            <marker date="1563909174712" expanded="true" signature="4651:5080" ph="/* void OnCollisionEnter(Collision other) ... */" />
+            <marker date="1563909174712" expanded="true" signature="5086:5375" ph="/* Name: isGrounded ... */" />
+            <marker date="1563909174712" expanded="true" signature="5397:5622" ph="{...}" />
+            <marker date="1563909174712" expanded="true" signature="5412:5536" ph="/* raycast directly downwards from the player's height, if the ray hits ... */" />
+            <marker date="1563909174712" expanded="true" signature="5656:6327" ph="{...}" />
+            <marker date="1563909174712" expanded="true" signature="5719:6018" ph="{...}" />
+            <marker date="1563909174712" expanded="true" signature="5742:5837" ph="/* add an impulsive jump force to the player's movement vector, in ... */" />
+            <marker date="1563909174712" expanded="true" signature="6081:6201" ph="{...}" />
+            <marker date="1563909174712" expanded="true" signature="6214:6321" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement/CameraFollow.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="44" column="10" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="75" />
+          <folding>
+            <marker date="1563903989883" expanded="true" signature="6:32" ph="..." />
+            <marker date="1563903989883" expanded="true" signature="118:1740" ph="{...}" />
+            <marker date="1563903989883" expanded="true" signature="295:443" ph="/// Start is called on the frame when a script is enabled just before ... " />
+            <marker date="1563903989883" expanded="true" signature="460:757" ph="{...}" />
+            <marker date="1563903989883" expanded="true" signature="820:1738" ph="{...}" />
+            <marker date="1563903989883" expanded="true" signature="1438:1732" ph="/* get the camera's rotation for the current frame ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement/CameraCollision.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+          <folding>
+            <marker date="1563909414637" expanded="true" signature="6:92" ph="..." />
+            <marker date="1563909414637" expanded="true" signature="138:2381" ph="{...}" />
+            <marker date="1563909414637" expanded="true" signature="696:736" ph="{...}" />
+            <marker date="1563909414637" expanded="true" signature="768:1504" ph="{...}" />
+            <marker date="1563909414637" expanded="true" signature="957:1018" ph="{...}" />
+            <marker date="1563909414637" expanded="true" signature="1031:1202" ph="{...}" />
+            <marker date="1563909414637" expanded="true" signature="1550:2379" ph="{...}" />
+            <marker date="1563909414637" expanded="true" signature="1670:2241" ph="{...}" />
+            <marker date="1563909414637" expanded="true" signature="1956:2019" ph="{...}" />
+            <marker date="1563909414637" expanded="true" signature="2036:2210" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
