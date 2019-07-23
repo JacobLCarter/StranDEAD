@@ -4,6 +4,7 @@ using GeneralStateMachine;
 public class StalkState : State<Enemy>
 {
     private static StalkState _instance;
+    private Vector3 target;
 
     private StalkState()
     {
@@ -30,19 +31,30 @@ public class StalkState : State<Enemy>
     
     public override void EnterState(Enemy enemy)
     {
-
+        enemy.currentStalk = enemy.stalkTime;
+        target = enemy.player.position;
+        enemy.navmesh.SetDestination(target);
     }
 
     public override void ExitState(Enemy enemy)
     {
-
+        
     }
 
     public override void UpdateState(Enemy enemy)
     {
-        if (enemy.currentStalk < 0)
+        if (enemy.isPlayerInSight())
         {
-            enemy.isPlayerInSight();
+            enemy.stateMachine.switchState(ChaseState.Instance);
+        }
+        else if (enemy.isPlayerAudible())
+        {
+            target = enemy.player.position;
+            enemy.navmesh.SetDestination(target);
+        }
+        else if (enemy.currentStalk < 0)
+        {
+            enemy.stateMachine.switchState(PathState.Instance);
         }
         else
         {
