@@ -10,6 +10,7 @@ TagManager:
   - key_silver
   - Playertag
   - Dialogue1
+  - Rock
   layers:
   - Default
   - TransparentFX

@@ -48,6 +48,10 @@ public class PathState : State<Enemy>
         {
             enemy.stateMachine.switchState(StalkState.Instance);
         }
+        else if (enemy.heardNoise())
+        {
+            enemy.stateMachine.switchState(DistractedState.Instance);
+        }
         else if (!enemy.navmesh.pathPending && enemy.navmesh.remainingDistance < 0.2f)
         {
             WalkPath(enemy);

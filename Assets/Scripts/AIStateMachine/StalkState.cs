@@ -52,6 +52,10 @@ public class StalkState : State<Enemy>
             target = enemy.player.position;
             enemy.navmesh.SetDestination(target);
         }
+        else if (enemy.heardNoise())
+        {
+            enemy.stateMachine.switchState(DistractedState.Instance);
+        }
         else if (enemy.currentStalk < 0)
         {
             enemy.stateMachine.switchState(PathState.Instance);

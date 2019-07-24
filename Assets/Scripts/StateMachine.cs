@@ -8,7 +8,7 @@
         public StateMachine(Object currentObject)
         {
             CurrentObject = currentObject;
-            currentState = null;////////////////////////////////////////////////////////////////////////
+            currentState = null;
         }
 
         public void switchState(State<Object> nextState)
