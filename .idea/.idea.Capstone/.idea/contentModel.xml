@@ -277,19 +277,26 @@
             <e p="Enemy.cs" t="Include" />
             <e p="PathState.cs" t="Include" />
             <e p="StalkState.cs" t="Include" />
-            <e p="StateMachine.cs" t="Include" />
           </e>
           <e p="CharacterCreator" t="Include">
             <e p="CharacterCreator.cs" t="Include" />
             <e p="LoadCharacter.cs" t="Include" />
             <e p="SkinColorChooser.cs" t="Include" />
           </e>
+          <e p="DeathScreen.cs" t="Include" />
           <e p="Dialogue1.cs" t="Include" />
           <e p="Dialogue2.cs" t="Include" />
           <e p="Hint1.cs" t="Include" />
           <e p="HUDScript.cs" t="Include" />
           <e p="Inventory.cs" t="Include" />
           <e p="InventoryItems.cs" t="Include" />
+          <e p="ItemStateMachine" t="Include">
+            <e p="GroundState.cs" t="Include" />
+            <e p="HeldState.cs" t="Include" />
+            <e p="Item.cs" t="Include" />
+            <e p="ThrowState.cs" t="Include" />
+            <e p="UseState.cs" t="Include" />
+          </e>
           <e p="KeyScript.cs" t="Include" />
           <e p="LevelDeath.cs" t="Include" />
           <e p="LoadingScreen.cs" t="Include" />
@@ -301,6 +308,8 @@
             <e p="CameraFollow.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
           </e>
+          <e p="StateMachine.cs" t="Include" />
+          <e p="ThrowObject.cs" t="Include" />
         </e>
         <e p="Standard Assets" t="Include">
           <e p="2D" t="Include">
