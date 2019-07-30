@@ -55,11 +55,9 @@ public class GroundStateRock : State<Rock>
 
         if (angle < 90.0f && Vector3.Distance(rock.transform.position, rock.player.position) <= pickupDistance)
         {
-            Debug.Log("true");
             return true;
         }
         
-        Debug.Log("false");
         return false;
     }
 }

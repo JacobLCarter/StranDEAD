@@ -1,13 +1,15 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using GeneralStateMachine;
 using UnityEngine.SocialPlatforms;
 
 public class HeldStateRock : State<Rock>
 {
     private static HeldStateRock _instance;
-    private Vector3 newPos = new Vector3(-0.054f, -0.136f, -0.029f);
-    private Vector3 newRot = new Vector3(201.038f, -207.332f, 162.065f);
-    private Vector3 newScale = Vector3.one;
+    private Vector3 newPos = new Vector3(-0.021f, -0.021f, -0.061f);
+    private Vector3 newRot = new Vector3(31.741f, -119.892f, 14.563f);
+    private Vector3 newScale = new Vector3(0.13f, 0.13f, 0.13f);
+    private bool animWait;
 
     private HeldStateRock()
     {
@@ -34,10 +36,10 @@ public class HeldStateRock : State<Rock>
     
     public override void EnterState(Rock rock)
     {
+        rock.animator.SetTrigger("heldItem");
+        animWait = true;
         rock.GetComponent<Rigidbody>().isKinematic = true;
         Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Item"), LayerMask.NameToLayer("Player"));
-        rock.transform.SetParent(rock.getHand());
-        positionObject(rock);
     }
 
     public override void ExitState(Rock rock)
@@ -47,9 +49,25 @@ public class HeldStateRock : State<Rock>
 
     public override void UpdateState(Rock rock)
     {
-        if (Input.GetMouseButtonDown(0))
+        if (animWait)
         {
-            rock.stateMachine.switchState(ThrowStateRock.Instance);
+            if (rock.animator.GetCurrentAnimatorStateInfo(0).IsName("Picking Up"))
+            {
+                animWait = false;
+            }
+        }
+        else
+        {
+            if (!rock.animator.GetCurrentAnimatorStateInfo(0).IsName("Picking Up"))
+            {
+                rock.transform.SetParent(rock.getHand());
+                positionObject(rock);
+            }
+            
+            if (Input.GetMouseButtonDown(0))
+            {
+                rock.stateMachine.switchState(ThrowStateRock.Instance);
+            }
         }
     }
     

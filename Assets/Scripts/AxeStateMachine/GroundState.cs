@@ -55,11 +55,9 @@ public class GroundState : State<Axe>
 
         if (angle < 90.0f && Vector3.Distance(axe.transform.position, axe.player.position) <= pickupDistance)
         {
-            Debug.Log("true");
             return true;
         }
         
-        Debug.Log("false");
         return false;
     }
 }
