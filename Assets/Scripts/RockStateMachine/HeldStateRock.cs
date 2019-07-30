@@ -35,6 +35,7 @@ public class HeldStateRock : State<Rock>
     public override void EnterState(Rock rock)
     {
         rock.GetComponent<Rigidbody>().isKinematic = true;
+        Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Item"), LayerMask.NameToLayer("Player"));
         rock.transform.SetParent(rock.getHand());
         positionObject(rock);
     }

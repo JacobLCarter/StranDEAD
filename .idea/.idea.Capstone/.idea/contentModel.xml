@@ -269,7 +269,6 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="AIPathing.cs" t="Include" />
           <e p="AIStateMachine" t="Include">
             <e p="AttackState.cs" t="Include" />
             <e p="ChaseState.cs" t="Include" />
@@ -304,6 +303,7 @@
           <e p="LoadScene.cs" t="Include" />
           <e p="MenuToCreateScreen.cs" t="Include" />
           <e p="Minimap.cs" t="Include" />
+          <e p="MissionObjective.cs" t="Include" />
           <e p="PlayerMovement" t="Include">
             <e p="CameraCollision.cs" t="Include" />
             <e p="CameraFollow.cs" t="Include" />
@@ -316,7 +316,6 @@
             <e p="ThrowStateRock.cs" t="Include" />
           </e>
           <e p="StateMachine.cs" t="Include" />
-          <e p="ThrowObject.cs" t="Include" />
         </e>
         <e p="Standard Assets" t="Include">
           <e p="2D" t="Include">

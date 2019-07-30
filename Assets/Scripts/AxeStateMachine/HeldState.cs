@@ -35,6 +35,7 @@ public class HeldState : State<Axe>
     public override void EnterState(Axe axe)
     {
         axe.GetComponent<Rigidbody>().isKinematic = true;
+        Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Item"), LayerMask.NameToLayer("Player"));
         axe.transform.SetParent(axe.getHand());
         positionObject(axe);
     }
