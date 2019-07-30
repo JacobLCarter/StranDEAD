@@ -82,6 +82,7 @@ public class UMAMountObject : MonoBehaviour
             return;
 
         Transform objTransform = boneObj.transform.Find(mountInfos[index].objPrefab.name);
+        
         if (objTransform == null)
         {
             GameObject newObj = GameObject.Instantiate(mountInfos[index].objPrefab);

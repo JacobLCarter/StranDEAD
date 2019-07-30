@@ -49,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
         //move the player's position by adding a new vector based on
         //input to the current position
+        //playerRB.velocity = direction * moveSpeed * Time.deltaTime;
         playerRB.transform.position += direction * moveSpeed * Time.deltaTime;
 
         //handle player movement animations

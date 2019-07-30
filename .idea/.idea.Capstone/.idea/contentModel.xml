@@ -269,21 +269,28 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="AIPathing.cs" t="Include" />
           <e p="AIStateMachine" t="Include">
             <e p="AttackState.cs" t="Include" />
             <e p="ChaseState.cs" t="Include" />
             <e p="DeathState.cs" t="Include" />
+            <e p="DistractedState.cs" t="Include" />
             <e p="Enemy.cs" t="Include" />
             <e p="PathState.cs" t="Include" />
             <e p="StalkState.cs" t="Include" />
-            <e p="StateMachine.cs" t="Include" />
+          </e>
+          <e p="AxeStateMachine" t="Include">
+            <e p="Axe.cs" t="Include" />
+            <e p="GroundState.cs" t="Include" />
+            <e p="HeldState.cs" t="Include" />
+            <e p="ThrowState.cs" t="Include" />
+            <e p="UseState.cs" t="Include" />
           </e>
           <e p="CharacterCreator" t="Include">
             <e p="CharacterCreator.cs" t="Include" />
             <e p="LoadCharacter.cs" t="Include" />
             <e p="SkinColorChooser.cs" t="Include" />
           </e>
+          <e p="DeathScreen.cs" t="Include" />
           <e p="Dialogue1.cs" t="Include" />
           <e p="Dialogue2.cs" t="Include" />
           <e p="Hint1.cs" t="Include" />
@@ -296,11 +303,19 @@
           <e p="LoadScene.cs" t="Include" />
           <e p="MenuToCreateScreen.cs" t="Include" />
           <e p="Minimap.cs" t="Include" />
+          <e p="MissionObjective.cs" t="Include" />
           <e p="PlayerMovement" t="Include">
             <e p="CameraCollision.cs" t="Include" />
             <e p="CameraFollow.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
           </e>
+          <e p="RockStateMachine" t="Include">
+            <e p="GroundStateRock.cs" t="Include" />
+            <e p="HeldStateRock.cs" t="Include" />
+            <e p="Rock.cs" t="Include" />
+            <e p="ThrowStateRock.cs" t="Include" />
+          </e>
+          <e p="StateMachine.cs" t="Include" />
         </e>
         <e p="Standard Assets" t="Include">
           <e p="2D" t="Include">

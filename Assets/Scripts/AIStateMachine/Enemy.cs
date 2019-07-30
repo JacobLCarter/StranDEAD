@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Boo.Lang;
+using UnityEngine;
 using GeneralStateMachine;
 using UnityEngine.AI;
 
@@ -11,6 +12,8 @@ public class Enemy : MonoBehaviour
     public Animator animator;
     public Animator playerAnimator;
     public Transform[] stops;
+    private GameObject[] rocks;
+    public GameObject currentRock;
     public int stop;
     public const float SightDistance = 6f;
     public const float HearingDistance = 10f;
@@ -22,6 +25,7 @@ public class Enemy : MonoBehaviour
     {
         stateMachine = new StateMachine<Enemy>(this);
         stateMachine.switchState(PathState.Instance);
+        rocks = GameObject.FindGameObjectsWithTag("Rock");
     }
 
     private void Update()
@@ -68,6 +72,20 @@ public class Enemy : MonoBehaviour
         {
             if (Vector3.Distance(transform.position, player.position) < HearingDistance)
             {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public bool heardNoise()
+    {
+        foreach (var rock in rocks)
+        {
+            if (Vector3.Distance(transform.position, rock.transform.position) < HearingDistance && rock.GetComponent<Rigidbody>().velocity != Vector3.zero)
+            {
+                currentRock = rock;
                 return true;
             }
         }
