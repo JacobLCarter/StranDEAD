@@ -7,7 +7,7 @@ using UnityStandardAssets.Characters.ThirdPerson;
 //REFERENCES: https://docs.unity3d.com/ScriptReference/Cursor-lockState.html
 public class GameControllerMenu : MonoBehaviour
 {
-    public GameObject inventory, player;
+    public GameObject inventory, player, camera;
 
     //Boolean to check if the cursor is locked or not locked
     bool CursorLocked;
@@ -65,6 +65,7 @@ public class GameControllerMenu : MonoBehaviour
     {
         Debug.Log("Hello" + flag);
         player.GetComponent<CameraFollow>().enabled = flag;
+        camera.GetComponent<CameraCollision>().enabled = flag;
     }  
 
 }
