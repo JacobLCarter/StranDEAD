@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     private float downAccel = 0.5f;
     public Inventory inventory;
 
+    public GameObject handBone;
+
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
     /// any of the Update methods is called the first time.
@@ -22,8 +24,16 @@ public class PlayerMovement : MonoBehaviour
         //get references to the necessary player components
         playerRB = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+        inventory.ItemAdded += Inventory_ItemAdded;
     }
-    
+
+    private void Inventory_ItemAdded(object sender, InventoryEventArgs e)
+    {
+        IInventoryItem item = e.Item;
+
+
+    }
+
     void FixedUpdate()
     {
         moveSpeed = 1.7f;

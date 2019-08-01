@@ -11,6 +11,7 @@ public interface IInventoryItem
     Sprite Image { get; }
     void OnPickup();
     void OnDrop();
+    void OnUse();
 }
 
 //Sets the argument that is sent to the function InventoryEventArgs to set equal to the IInventoryItem Item object.

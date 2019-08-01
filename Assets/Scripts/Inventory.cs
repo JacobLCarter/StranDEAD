@@ -16,6 +16,16 @@ public class Inventory : MonoBehaviour
 
     public event EventHandler<InventoryEventArgs> ItemRemoved;
 
+    public event EventHandler<InventoryEventArgs> Itemused;
+
+    internal void UseItem(IInventoryItem item)
+    {
+        if (Itemused != null)
+        {
+            Itemused(this, new InventoryEventArgs(item));
+        }
+    }
+
     //Adds items depending if there are slots available and 
     public void AddItem(IInventoryItem item)
     {
