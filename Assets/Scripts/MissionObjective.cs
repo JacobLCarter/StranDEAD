@@ -2,33 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/*[System.Serializable]
-public class MissionObjective
+
+public class MissionObjective : MonoBehaviour
 {
-    [SerializeField] private string mission;
-
-    public string MyMission
-    {
-        get
-        {
-            return mission;
-        }
-
-        set
-        {
-            mission = value;
-        }
-    }
-
+    public GameObject missionObject;    
+       
     // Start is called before the first frame update
     void Start()
     {
-        
+        missionObject.SetActive(false);
     }
 
+    void OnTriggerEnter(Collider Player)
+    {
+        if (Player.gameObject.tag == "Playertag")
+        {
+            missionObject.SetActive(true);
+        }
+    }
+    
     // Update is called once per frame
     void Update()
     {
         
     }
-}*/
+}
