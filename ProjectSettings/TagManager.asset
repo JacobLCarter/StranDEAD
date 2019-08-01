@@ -11,6 +11,7 @@ TagManager:
   - Playertag
   - Dialogue1
   - Rock
+  - Mission
   layers:
   - Default
   - TransparentFX
