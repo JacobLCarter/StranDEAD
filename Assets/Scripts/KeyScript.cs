@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeyScript : MonoBehaviour, IInventoryItem
+//REFERENCED: https://www.youtube.com/watch?v=Hj7AZkyojdo&list=PLboXykqtm8dynMisqs4_oKvAIZedixvtf&index=2
+public class KeyScript : InventoryItemMain
 {
-    public string Name
+    //Returns the key name of key_silver
+    public override string Name
     {
         get
         {
@@ -12,18 +14,8 @@ public class KeyScript : MonoBehaviour, IInventoryItem
         }
     }
 
-    public Sprite _Image = null;
-
-    public Sprite Image
+    public override void OnUse()
     {
-        get
-        {
-            return _Image;
-        }
-    }
-
-    public void OnPickup()
-    {
-        gameObject.SetActive(false);
+        base.OnUse();
     }
 }

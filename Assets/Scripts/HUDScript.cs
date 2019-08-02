@@ -12,25 +12,48 @@ public class HUDScript : MonoBehaviour
     void Start()
     {
         Inventory.ItemAdded += InventoryScript_ItemAdded;
+        Inventory.ItemRemoved += Inventory_ItemRemoved;
     }
 
-    private void InventoryScript_ItemAdded(object sender, InventoryEventArgs e)
+    private void InventoryScript_ItemAdded(object sender, InventoryEventArgs eventItem)
     {
         Transform inventoryPanel = transform.Find("Inventory");
         foreach(Transform slot in inventoryPanel)
         {
             Image image = slot.GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>();
+            ItemDrag itemDrag = slot.GetChild(0).GetChild(0).GetChild(0).GetComponent<ItemDrag>();
 
             if(!image.enabled)
             {
                 image.enabled = true;
-                image.sprite = e.Item.Image;
+                image.sprite = eventItem.Item.Image;
 
                 //Store refernce;
+                itemDrag.Item = eventItem.Item;
 
                 break;
             }
         }
+    }
+
+    private void Inventory_ItemRemoved(object sender, InventoryEventArgs eventItem)
+    {
+        Transform inventoryPanel = transform.Find("Inventory");
+        foreach(Transform slot in inventoryPanel)
+        {
+            Image image = slot.GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>();
+            ItemDrag itemDrag = slot.GetChild(0).GetChild(0).GetChild(0).GetComponent<ItemDrag>();
+
+            if(itemDrag.Item.Equals(eventItem.Item))
+            {
+                image.enabled = false;
+                image.sprite = null;
+                itemDrag.Item = null;
+                break;
+            }
+        }
+           
+
     }
 
 }

@@ -14,6 +14,18 @@ public class Inventory : MonoBehaviour
 
     public event EventHandler<InventoryEventArgs> ItemAdded;
 
+    public event EventHandler<InventoryEventArgs> ItemRemoved;
+
+    public event EventHandler<InventoryEventArgs> Itemused;
+
+    internal void UseItem(IInventoryItem item)
+    {
+        if (Itemused != null)
+        {
+            Itemused(this, new InventoryEventArgs(item));
+        }
+    }
+
     //Adds items depending if there are slots available and 
     public void AddItem(IInventoryItem item)
     {
@@ -31,11 +43,28 @@ public class Inventory : MonoBehaviour
 
                 item.OnPickup();
 
-                if (ItemAdded != null)
-                {
-                    ItemAdded(this, new InventoryEventArgs(item));
-                }
+                ItemAdded?.Invoke(this, new InventoryEventArgs(item));
             }
+        }
+    }
+
+    public void RemoveItem(IInventoryItem item)
+    {
+        Debug.Log("This is the remove item");
+        if (mItems.Contains(item))
+        {
+            mItems.Remove(item);
+
+            item.OnDrop();
+
+            Debug.Log("This is the ondrop");
+            Collider collider = (item as MonoBehaviour).GetComponent<Collider>();
+            if (collider != null)
+            {
+                collider.enabled = true;
+            }
+
+            ItemRemoved?.Invoke(this, new InventoryEventArgs(item));
         }
     }
 }
