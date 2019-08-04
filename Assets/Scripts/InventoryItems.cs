@@ -5,7 +5,7 @@ using UnityEngine;
 
 //REFERENCED: https://www.youtube.com/watch?v=Hj7AZkyojdo&list=PLboXykqtm8dynMisqs4_oKvAIZedixvtf&index=2
 //Interface that lets other structs or class use Name, Image, and Onpickup
-public interface IInventoryItem
+public interface TheInventoryItem
 {
     string Name { get; }
     Sprite Image { get; }
@@ -17,11 +17,11 @@ public interface IInventoryItem
 //Sets the argument that is sent to the function InventoryEventArgs to set equal to the IInventoryItem Item object.
 public class InventoryEventArgs : EventArgs
 {
-    public InventoryEventArgs(IInventoryItem item)
+    public InventoryEventArgs(TheInventoryItem e)
     {
-        Item = item;
+        Item = e;
     }
 
-    public IInventoryItem Item;
+    public TheInventoryItem Item;
 
 }

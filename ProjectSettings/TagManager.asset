@@ -10,6 +10,7 @@ TagManager:
   - key_silver
   - Playertag
   - Dialogue1
+  - Pickup
   layers:
   - Default
   - TransparentFX
