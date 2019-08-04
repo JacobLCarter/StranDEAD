@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadingScreen : MonoBehaviour
+public class LoadingScreen2 : MonoBehaviour
 {
 
-    public int loadingScreen = 3;
+    public int loadingScreen = 4;
     [SerializeField] private readonly float delayBeforeRestartingLevel = 3f;
 
 

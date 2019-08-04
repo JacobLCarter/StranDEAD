@@ -15,6 +15,7 @@ TagManager:
   - Door
   - Key
   - Car
+  - EndLevel1
   layers:
   - Default
   - TransparentFX
