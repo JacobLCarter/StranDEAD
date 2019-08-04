@@ -12,6 +12,10 @@ TagManager:
   - Dialogue1
   - Rock
   - Mission
+  - Door
+  - Key
+  - Car
+  - EndLevel1
   layers:
   - Default
   - TransparentFX
