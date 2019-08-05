@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
     public int stop;
     private const float SightDistance = 6f;
     private const float HearingDistance = 10f;
-    private const float AttackRange = 1.7f;
+    private const float AttackRange = 1f;
     private float currentStalk;
     private float stalkTime = 10f;
 
