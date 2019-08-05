@@ -69,7 +69,6 @@ public class PathState : State<Enemy>
 
         enemy.navmesh.destination = enemy.stops[enemy.stop].position;
 
-        //stop = (stop + 1) % stops.Length;
-        enemy.stop = Random.Range(0, enemy.stops.Length - 1);
+        enemy.stop = (enemy.stop + 1) % enemy.stops.Length;
     }
 }

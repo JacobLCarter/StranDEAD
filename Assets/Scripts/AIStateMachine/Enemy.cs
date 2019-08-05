@@ -1,6 +1,7 @@
 ﻿using Boo.Lang;
 using UnityEngine;
 using GeneralStateMachine;
+using JetBrains.Annotations;
 using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
@@ -13,13 +14,13 @@ public class Enemy : MonoBehaviour
     public Animator playerAnimator;
     public Transform[] stops;
     private GameObject[] rocks;
-    public GameObject currentRock;
+    private GameObject currentRock;
     public int stop;
-    public const float SightDistance = 6f;
-    public const float HearingDistance = 10f;
-    public float AttackRange = 1.7f;
-    public float currentStalk;
-    public float stalkTime = 10f;
+    private const float SightDistance = 6f;
+    private const float HearingDistance = 10f;
+    private const float AttackRange = 1.7f;
+    private float currentStalk;
+    private float stalkTime = 10f;
 
     private void Start()
     {
@@ -100,14 +101,25 @@ public class Enemy : MonoBehaviour
     private void UpdateAnimator()
     {
         animator.SetFloat("Speed", navmesh.velocity.magnitude);
-        
-        /*if (stateMachine.currentState != AttackState.Instance)
-        {
-            animator.SetFloat("Speed", navmesh.velocity.magnitude);
-        }
-        else
-        {
-            animator.SetFloat("Speed", 0.0f);
-        }*/
+    }
+
+    public float getAttackRange()
+    {
+        return AttackRange;
+    }
+
+    public float getStalkTime()
+    {
+        return currentStalk;
+    }
+
+    public void setCurrentStalk(float stalk)
+    {
+        currentStalk = stalk;
+    }
+
+    public GameObject getCurrentRock()
+    {
+        return currentRock;
     }
 }
