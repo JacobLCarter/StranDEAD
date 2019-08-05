@@ -7,7 +7,6 @@ public class CameraFollow : MonoBehaviour
     private Transform cam;
     private Vector3 forwardCam;
     private Vector3 calculatedMove;
-    private float sensitivity = 3f;
     private PlayerMovement movement;
 
 

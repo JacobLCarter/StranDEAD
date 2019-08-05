@@ -17,6 +17,7 @@ TagManager:
   - Car
   - EndLevel1
   - Enemy
+  - HeldItem
   layers:
   - Default
   - TransparentFX

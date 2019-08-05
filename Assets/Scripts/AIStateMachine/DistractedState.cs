@@ -55,7 +55,7 @@ public class DistractedState : State<Enemy>
         }
         else if (enemy.navmesh.remainingDistance < 0.2f)
         {
-            enemy.stateMachine.switchState(StalkState.Instance);
+            enemy.stateMachine.switchState(PathState.Instance);
         }
     }
 }

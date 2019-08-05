@@ -8,19 +8,15 @@ public class Axe : MonoBehaviour
     public Animator animator;
     public Transform player;
     public LayerMask collisionMask;
-    protected Transform playerHand;
+    private Transform playerHand;
     private Rigidbody objectRB;
     public StateMachine<Axe> stateMachine { get; set; }
-    
-    
-    bool hasPlayer = false;
-    bool beingCarried = false;
-    private bool touched = false;
-    
+    private AudioSource audioSource;
 
     private void Start()
     {
         objectRB = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
         stateMachine = new StateMachine<Axe>(this);
         stateMachine.switchState(GroundState.Instance);
     }
@@ -29,7 +25,7 @@ public class Axe : MonoBehaviour
     {
         if (playerHand == null)
         {
-            playerHand = animator.GetBoneTransform(HumanBodyBones.RightMiddleIntermediate);
+            playerHand = animator.GetBoneTransform(HumanBodyBones.RightMiddleDistal);
         }
 
         stateMachine.Update();
@@ -53,7 +49,7 @@ public class Axe : MonoBehaviour
        {
            if (other.relativeVelocity.magnitude > 3)
            {
-               Debug.Log("Enemy takes 20 damage...");
+               audioSource.Play();
            }
        }
    }

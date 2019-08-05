@@ -20,7 +20,6 @@ public class Enemy : MonoBehaviour
     private const float HearingDistance = 10f;
     private const float AttackRange = 1f;
     private float currentStalk;
-    private float stalkTime = 10f;
 
     private void Start()
     {
@@ -36,11 +35,6 @@ public class Enemy : MonoBehaviour
         stateMachine.Update();
     }
 
-    private bool isSameState(State<Enemy> nextState)
-    {
-        return stateMachine.currentState == nextState;
-    }
-    
     public bool isPlayerInSight()
     {
         Vector3 target = player.position - transform.position;
@@ -82,19 +76,18 @@ public class Enemy : MonoBehaviour
 
     public bool heardNoise()
     {
-        foreach (var rock in rocks)
+        if (currentRock == null)
         {
-            if (Vector3.Distance(transform.position, rock.transform.position) < HearingDistance)
+            foreach (var rock in rocks)
             {
-                currentRock = rock;
-
-                if (currentRock.GetComponent<AudioSource>().isPlaying)
+                if (Vector3.Distance(transform.position, rock.transform.position) < HearingDistance && rock.GetComponent<AudioSource>().isPlaying)
                 {
+                    currentRock = rock;
                     return true;
                 }
             }
         }
-
+        
         return false;
     }
 
