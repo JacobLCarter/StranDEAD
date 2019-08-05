@@ -299,7 +299,9 @@
           <e p="InventoryItems.cs" t="Include" />
           <e p="KeyScript.cs" t="Include" />
           <e p="LevelDeath.cs" t="Include" />
+          <e p="LevelEnd.cs" t="Include" />
           <e p="LoadingScreen.cs" t="Include" />
+          <e p="LoadingScreen2.cs" t="Include" />
           <e p="LoadScene.cs" t="Include" />
           <e p="MenuToCreateScreen.cs" t="Include" />
           <e p="Minimap.cs" t="Include" />

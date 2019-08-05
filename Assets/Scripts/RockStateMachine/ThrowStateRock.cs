@@ -31,7 +31,11 @@ public class ThrowStateRock : State<Rock>
     
     public override void EnterState(Rock rock)
     {
-        rock.animator.SetTrigger("isUsing");
+        rock.GetComponent<Rigidbody>().isKinematic = false;
+        rock.transform.parent = null;
+        rock.GetComponent<Rigidbody>().AddForce(rock.player.forward * throwForce + rock.player.up * throwForce);
+        
+        rock.stateMachine.switchState(GroundStateRock.Instance);
     }
 
     public override void ExitState(Rock rock)
@@ -41,13 +45,6 @@ public class ThrowStateRock : State<Rock>
 
     public override void UpdateState(Rock rock)
     {
-        if (!rock.animator.GetCurrentAnimatorStateInfo(0).IsName("Throw Object"))
-        {
-            rock.GetComponent<Rigidbody>().isKinematic = false;
-            rock.transform.parent = null;
-            rock.GetComponent<Rigidbody>().AddForce(rock.player.forward * throwForce + rock.player.up * throwForce);
-        
-            rock.stateMachine.switchState(GroundStateRock.Instance);
-        }
+
     }
 }
