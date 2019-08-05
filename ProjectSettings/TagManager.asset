@@ -10,8 +10,12 @@ TagManager:
   - key_silver
   - Playertag
   - Dialogue1
+HEAD
   - Rock
   - Mission
+
+  - Pickup
+3fcc67dd5ae7f60bdbc5dafc75debc7c01ca1987
   layers:
   - Default
   - TransparentFX

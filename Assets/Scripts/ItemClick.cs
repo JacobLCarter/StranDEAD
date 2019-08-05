@@ -11,23 +11,12 @@ public class ItemClick : MonoBehaviour
         ItemDrag dragHandler = 
         gameObject.transform.Find("Image").GetComponent<ItemDrag>();
 
-        IInventoryItem item = dragHandler.Item;
+        TheInventoryItem item = dragHandler.Item;
 
         Debug.Log(item.Name);
 
         daInventory.UseItem(item);
 
         item.OnUse();
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

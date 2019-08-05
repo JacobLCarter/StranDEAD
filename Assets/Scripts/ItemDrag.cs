@@ -14,7 +14,7 @@ public class ItemDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     Vector3 temp;
 
     public static GameObject itemBeingDragged;
-    public IInventoryItem Item { get; set; }
+    public TheInventoryItem Item { get; set; }
 
     public void OnBeginDrag(PointerEventData eventData)
     {

@@ -7,21 +7,22 @@ using UnityEngine.UI;
 public class HUDScript : MonoBehaviour
 {
     public Inventory Inventory;
+    public GameObject PickupPanel;
 
     // Start is called before the first frame update
     void Start()
     {
-        Inventory.ItemAdded += InventoryScript_ItemAdded;
-        Inventory.ItemRemoved += Inventory_ItemRemoved;
+        Inventory.ItemAdd += InventoryScriptItemAdd;
+        Inventory.ItemRemove += InventoryItemRemove;
     }
 
-    private void InventoryScript_ItemAdded(object sender, InventoryEventArgs eventItem)
+    private void InventoryScriptItemAdd(object sender, InventoryEventArgs eventItem)
     {
         Transform inventoryPanel = transform.Find("Inventory");
-        foreach(Transform slot in inventoryPanel)
+        foreach(Transform slot in inventoryPanel.GetChild(0))
         {
-            Image image = slot.GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>();
-            ItemDrag itemDrag = slot.GetChild(0).GetChild(0).GetChild(0).GetComponent<ItemDrag>();
+            Image image = slot.GetChild(0).GetChild(0).GetComponent<Image>();
+            ItemDrag itemDrag = slot.GetChild(0).GetChild(0).GetComponent<ItemDrag>();
 
             if(!image.enabled)
             {
@@ -36,13 +37,13 @@ public class HUDScript : MonoBehaviour
         }
     }
 
-    private void Inventory_ItemRemoved(object sender, InventoryEventArgs eventItem)
+    private void InventoryItemRemove(object sender, InventoryEventArgs eventItem)
     {
         Transform inventoryPanel = transform.Find("Inventory");
-        foreach(Transform slot in inventoryPanel)
+        foreach(Transform slot in inventoryPanel.GetChild(0))
         {
-            Image image = slot.GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>();
-            ItemDrag itemDrag = slot.GetChild(0).GetChild(0).GetChild(0).GetComponent<ItemDrag>();
+            Image image = slot.GetChild(0).GetChild(0).GetComponent<Image>();
+            ItemDrag itemDrag = slot.GetChild(0).GetChild(0).GetComponent<ItemDrag>();
 
             if(itemDrag.Item.Equals(eventItem.Item))
             {
@@ -52,8 +53,16 @@ public class HUDScript : MonoBehaviour
                 break;
             }
         }
-           
+    }
 
+    public void PickupTextOn(string e)
+    {
+        PickupPanel.SetActive(true);
+    }
+
+    public void PickupTextOff()
+    {
+        PickupPanel.SetActive(false);
     }
 
 }

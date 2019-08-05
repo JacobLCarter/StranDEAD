@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //REFERENCED: https://www.youtube.com/watch?v=fAk5ZRevKs8&list=PLboXykqtm8dynMisqs4_oKvAIZedixvtf&index=5
-public class InventoryItemMain : MonoBehaviour, IInventoryItem
+public class InventoryItemMain : MonoBehaviour, TheInventoryItem
 {
     public virtual string Name
     {
@@ -25,7 +25,8 @@ public class InventoryItemMain : MonoBehaviour, IInventoryItem
 
     public virtual void OnUse()
     {
-
+        transform.localPosition = PickPosition;
+        transform.localEulerAngles = PickRotation;
     }
     public virtual void OnDrop()
     {
@@ -37,6 +38,7 @@ public class InventoryItemMain : MonoBehaviour, IInventoryItem
             Debug.Log("Raycast worked");
             gameObject.SetActive(true);
             gameObject.transform.position = hit.point;
+            gameObject.transform.eulerAngles = DropRotation;
         }
     }
 
@@ -44,5 +46,11 @@ public class InventoryItemMain : MonoBehaviour, IInventoryItem
     {
         gameObject.SetActive(false);
     }
+
+    public Vector3 PickPosition;
+
+    public Vector3 PickRotation;
+
+    public Vector3 DropRotation;
 
 }
