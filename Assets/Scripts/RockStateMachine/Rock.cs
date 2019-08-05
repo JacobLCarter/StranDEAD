@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using GeneralStateMachine;
@@ -11,16 +12,12 @@ public class Rock : MonoBehaviour
     protected Transform playerHand;
     private Rigidbody objectRB;
     public StateMachine<Rock> stateMachine { get; set; }
+    private AudioSource audioSource;
     
-    
-    bool hasPlayer = false;
-    bool beingCarried = false;
-    private bool touched = false;
-    
-
     private void Start()
     {
         objectRB = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
         stateMachine = new StateMachine<Rock>(this);
         stateMachine.switchState(GroundStateRock.Instance);
     }
@@ -45,5 +42,13 @@ public class Rock : MonoBehaviour
     public Transform getHand()
     {
         return playerHand;
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.relativeVelocity.magnitude > 1)
+        {
+            audioSource.Play();
+        }
     }
 }

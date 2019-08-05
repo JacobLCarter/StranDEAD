@@ -83,10 +83,14 @@ public class Enemy : MonoBehaviour
     {
         foreach (var rock in rocks)
         {
-            if (Vector3.Distance(transform.position, rock.transform.position) < HearingDistance && rock.GetComponent<Rigidbody>().velocity != Vector3.zero)
+            if (Vector3.Distance(transform.position, rock.transform.position) < HearingDistance)
             {
                 currentRock = rock;
-                return true;
+
+                if (currentRock.GetComponent<AudioSource>().isPlaying)
+                {
+                    return true;
+                }
             }
         }
 
