@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private float playerHeight = 0.45f;
     private float downAccel = 0.5f;
     public Inventory inventory;
+    
 
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
@@ -49,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
 
         //move the player's position by adding a new vector based on
         //input to the current position
-        //playerRB.velocity = direction * moveSpeed * Time.deltaTime;
+
         playerRB.transform.position += direction * moveSpeed * Time.deltaTime;
 
         //handle player movement animations

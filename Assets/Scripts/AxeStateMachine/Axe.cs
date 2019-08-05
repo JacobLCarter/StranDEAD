@@ -46,4 +46,15 @@ public class Axe : MonoBehaviour
    {
        return playerHand;
    }
+   
+   private void OnCollisionEnter(Collision other)
+   {
+       if (other.gameObject.tag == "Enemy")
+       {
+           if (other.relativeVelocity.magnitude > 3)
+           {
+               Debug.Log("Enemy takes 20 damage...");
+           }
+       }
+   }
 }
