@@ -42,7 +42,7 @@ public class ChaseState : State<Enemy>
     {
         if (enemy.isPlayerInSight())
         {
-            if (Vector3.Distance(enemy.transform.position, enemy.player.position) < enemy.AttackRange)
+            if (Vector3.Distance(enemy.transform.position, enemy.player.position) < enemy.getAttackRange())
             {
                 enemy.stateMachine.switchState(AttackState.Instance);
             }

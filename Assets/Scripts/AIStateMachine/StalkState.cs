@@ -31,7 +31,7 @@ public class StalkState : State<Enemy>
     
     public override void EnterState(Enemy enemy)
     {
-        enemy.currentStalk = enemy.stalkTime;
+        enemy.setCurrentStalk(10f);
         target = enemy.player.position;
         enemy.navmesh.SetDestination(target);
     }
@@ -56,13 +56,15 @@ public class StalkState : State<Enemy>
         {
             enemy.stateMachine.switchState(DistractedState.Instance);
         }
-        else if (enemy.currentStalk < 0)
+        else if (enemy.getStalkTime() < 0)
         {
             enemy.stateMachine.switchState(PathState.Instance);
         }
         else
         {
-            enemy.currentStalk -= Time.deltaTime;
+            float temp = enemy.getStalkTime();
+            
+            enemy.setCurrentStalk(temp -= Time.deltaTime);
         }
     }
 }
