@@ -278,6 +278,7 @@
             <e p="PathState.cs" t="Include" />
             <e p="StalkState.cs" t="Include" />
           </e>
+          <e p="AnimationEventHandler.cs" t="Include" />
           <e p="AxeStateMachine" t="Include">
             <e p="Axe.cs" t="Include" />
             <e p="GroundState.cs" t="Include" />

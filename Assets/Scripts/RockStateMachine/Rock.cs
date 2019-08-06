@@ -26,7 +26,7 @@ public class Rock : MonoBehaviour
     {
         if (playerHand == null)
         {
-            playerHand = animator.GetBoneTransform(HumanBodyBones.RightMiddleIntermediate);
+            playerHand = animator.GetBoneTransform(HumanBodyBones.RightMiddleDistal);
         }
 
         stateMachine.Update();

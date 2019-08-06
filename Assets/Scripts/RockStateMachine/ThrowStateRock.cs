@@ -4,7 +4,6 @@ using GeneralStateMachine;
 public class ThrowStateRock : State<Rock>
 {
     private static ThrowStateRock _instance;
-    private const float throwForce = 100f;
 
     private ThrowStateRock()
     {
@@ -31,9 +30,7 @@ public class ThrowStateRock : State<Rock>
     
     public override void EnterState(Rock rock)
     {
-        rock.GetComponent<Rigidbody>().isKinematic = false;
-        rock.transform.parent = null;
-        rock.GetComponent<Rigidbody>().AddForce(rock.player.forward * throwForce + rock.player.up * throwForce);
+        rock.animator.SetTrigger("isThrowing");
         
         rock.stateMachine.switchState(GroundStateRock.Instance);
     }

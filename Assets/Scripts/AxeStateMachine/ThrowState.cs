@@ -4,8 +4,7 @@
  public class ThrowState : State<Axe>
  {
      private static ThrowState _instance;
-     private const float throwForce = 100f;
- 
+
      private ThrowState()
      {
          if (_instance != null)
@@ -31,10 +30,8 @@
      
      public override void EnterState(Axe axe)
      {
-         axe.GetComponent<Rigidbody>().isKinematic = false;
-         axe.transform.parent = null;
-         axe.GetComponent<Rigidbody>().AddForce(axe.player.forward * throwForce  + axe.player.up * throwForce);
-         
+         axe.animator.SetTrigger("isThrowing");
+
          axe.stateMachine.switchState(GroundState.Instance);
      }
  
