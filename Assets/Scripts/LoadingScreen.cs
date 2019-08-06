@@ -4,8 +4,9 @@ using UnityEngine.SceneManagement;
 public class LoadingScreen : MonoBehaviour
 {
 
-    public static int loadingScreen = 1;
+    public int loadingScreen = 3;
     [SerializeField] private readonly float delayBeforeRestartingLevel = 3f;
+
 
     private float timeElapsed;
 
@@ -17,7 +18,7 @@ public class LoadingScreen : MonoBehaviour
         if (timeElapsed > delayBeforeRestartingLevel)
         {
             //load level_1
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(loadingScreen);
         }
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class AttackState : State<Enemy>
 {
     private static AttackState _instance;
-    private Vector3 animationOffset = new Vector3(.3f,0,0);
+    //private Vector3 animationOffset = new Vector3(.3f,0,0);
 
     private AttackState()
     {
@@ -45,7 +45,7 @@ public class AttackState : State<Enemy>
     {
         if (enemy.isPlayerInSight())
         {
-            enemy.transform.LookAt(enemy.player.position + animationOffset);
+            //enemy.transform.LookAt(enemy.player.position);
             enemy.navmesh.velocity = Vector3.zero;
             enemy.animator.SetTrigger("isAttacking");
         }
