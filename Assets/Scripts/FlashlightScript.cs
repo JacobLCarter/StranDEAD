@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //REFERENCED: https://www.youtube.com/watch?v=Hj7AZkyojdo&list=PLboXykqtm8dynMisqs4_oKvAIZedixvtf&index=2
-public class KeyScript : InventoryItemMain
+public class FlashlightScript : InventoryItemMain
 {
-    //Returns the key name of key_silver
+    //Returns the key name of flashlight
     public override string Name
     {
         get
         {
-            return "Key";
+            return "Flashlight";
         }
     }
 
