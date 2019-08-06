@@ -7,10 +7,12 @@ public class FlashlightToggle : MonoBehaviour
 {
     public GameObject lightGO; //light gameObject to work with
     private bool isOn = false; //is flashlight on or off?
+    private AudioSource audioSource;
 
     // Use this for initialization
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         //set default off
         lightGO.SetActive(isOn);
     }
@@ -21,6 +23,7 @@ public class FlashlightToggle : MonoBehaviour
         //toggle flashlight on key down
         if (Input.GetKeyDown(KeyCode.X))
         {
+            audioSource.Play();
             //toggle light
             isOn = !isOn;
             //turn light on
