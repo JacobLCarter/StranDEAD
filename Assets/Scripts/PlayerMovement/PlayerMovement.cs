@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private float playerHeight = 0.45f;
     private float downAccel = 0.5f;
     public Inventory inventory;
+    public HUDScript HUD;
 
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
@@ -22,12 +23,42 @@ public class PlayerMovement : MonoBehaviour
         //get references to the necessary player components
         playerRB = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+        inventory.ItemUse += InventoryItemUse;
+        inventory.ItemRemove += InventoryItemRemove;
     }
-    
+
+    private void InventoryItemRemove(object sender, InventoryEventArgs e)
+    {
+        TheInventoryItem item = e.Item;
+
+        GameObject goItem = (item as MonoBehaviour).gameObject;
+        goItem.SetActive(true);
+
+        goItem.transform.parent = null;
+    }
+
+    private void InventoryItemUse(object sender, InventoryEventArgs e)
+    {
+        TheInventoryItem item = e.Item;
+
+        GameObject goItem = (item as MonoBehaviour).gameObject;
+        Debug.Log("What is this" + goItem.name);
+        Destroy(goItem.GetComponentInChildren<Rigidbody>());
+        goItem.SetActive(true);
+
+        goItem.transform.parent = animator.GetBoneTransform(HumanBodyBones.RightHand);
+
+    }
     void FixedUpdate()
     {
         moveSpeed = 1.7f;
         checkSprint();
+        if (pickupItem != null && Input.GetKeyDown(KeyCode.E))
+        {
+            inventory.AddItem(pickupItem);
+            pickupItem.OnPickup();
+            HUD.PickupTextOff();
+        }
     }
 
     /***************************************************************************
@@ -103,22 +134,34 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private TheInventoryItem pickupItem = null;
+
     //Adding pickup deactivate items and place them into inventory
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("key_silver"))
+        if (other.gameObject.CompareTag("Pickup"))
         {
             //This is to place item into the inventory made.
-            IInventoryItem item = other.gameObject.GetComponent<IInventoryItem>();
+            TheInventoryItem item = other.gameObject.GetComponent<TheInventoryItem>();
             if (item != null)
             {
-                //Testing to make sure object is called correctly.
-                Debug.Log("Item is successfully picked up.");
-
-                inventory.AddItem(item);
-                other.gameObject.SetActive(false);
+                pickupItem = item;
+                //inventory.AddItem(item);
+                //other.gameObject.SetActive(false);
+                HUD.PickupTextOn("");
             }
         }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        TheInventoryItem item = other.GetComponent<TheInventoryItem>();
+        if (item != null)
+        {
+            HUD.PickupTextOff();
+            pickupItem = null;
+        }
+
     }
 
     /***************************************************************************
