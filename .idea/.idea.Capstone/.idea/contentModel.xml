@@ -294,10 +294,15 @@
           <e p="DeathScreen.cs" t="Include" />
           <e p="Dialogue1.cs" t="Include" />
           <e p="Dialogue2.cs" t="Include" />
+          <e p="FlashlightScript.cs" t="Include" />
           <e p="Hint1.cs" t="Include" />
           <e p="HUDScript.cs" t="Include" />
           <e p="Inventory.cs" t="Include" />
+          <e p="InventoryItemMain.cs" t="Include" />
           <e p="InventoryItems.cs" t="Include" />
+          <e p="ItemClick.cs" t="Include" />
+          <e p="ItemDrag.cs" t="Include" />
+          <e p="ItemDrop.cs" t="Include" />
           <e p="KeyScript.cs" t="Include" />
           <e p="LevelDeath.cs" t="Include" />
           <e p="LevelEnd.cs" t="Include" />
@@ -307,6 +312,7 @@
           <e p="MenuToCreateScreen.cs" t="Include" />
           <e p="Minimap.cs" t="Include" />
           <e p="MissionObjective.cs" t="Include" />
+          <e p="MoveCrane.cs" t="Include" />
           <e p="PlayerMovement" t="Include">
             <e p="CameraCollision.cs" t="Include" />
             <e p="CameraFollow.cs" t="Include" />
