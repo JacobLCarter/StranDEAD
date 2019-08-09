@@ -18,6 +18,9 @@ TagManager:
   - EndLevel1
   - Enemy
   - HeldItem
+  - Pickup
+  - itemNotUsed
+  - attackWeapon
   layers:
   - Default
   - TransparentFX

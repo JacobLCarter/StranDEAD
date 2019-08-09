@@ -296,17 +296,22 @@ PrefabInstance:
     - target: {fileID: 108003487599132438, guid: 0ddea81a21def2441b61569e0a44ca14,
         type: 3}
       propertyPath: m_Intensity
-      value: 10
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 108003487599132438, guid: 0ddea81a21def2441b61569e0a44ca14,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108003487599132438, guid: 0ddea81a21def2441b61569e0a44ca14,
         type: 3}
       propertyPath: m_Range
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 108003487599132438, guid: 0ddea81a21def2441b61569e0a44ca14,
+        type: 3}
+      propertyPath: m_BounceIntensity
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ddea81a21def2441b61569e0a44ca14, type: 3}
@@ -2315,6 +2320,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1044803325150076, guid: a3ff17b350465904fbd62b8a7802bfbf, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 4574348834537664, guid: a3ff17b350465904fbd62b8a7802bfbf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.1868
@@ -2385,6 +2394,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mass
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 54257427288162764, guid: a3ff17b350465904fbd62b8a7802bfbf,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1826253578352784, guid: a3ff17b350465904fbd62b8a7802bfbf, type: 3}
       propertyPath: m_Layer
@@ -23412,6 +23426,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b968ec8df71e147b85abd1b4946f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _Image: {fileID: 0}
+  PickPosition: {x: -0.061, y: -0.153, z: -0.08}
+  PickRotation: {x: 11.405, y: 256.354, z: -16.661}
+  DropRotation: {x: 0, y: 0, z: 0}
   animator: {fileID: 5100517021050873927}
   player: {fileID: 5100517021041704581}
   collisionMask:
@@ -23513,6 +23531,32 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &1790119615
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790119608}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.047647286, y: 1.0320398, z: 0.35733712}
+  m_Center: {x: 0.000000016763808, y: 0.3329052, z: -0.043073416}
+--- !u!65 &1790119617
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790119608}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.047647286, y: 1.0320398, z: 0.35733712}
+  m_Center: {x: 0.000000016763808, y: 0.3329052, z: -0.043073416}
 --- !u!1001 &1795853522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26579,6 +26623,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: key_silver
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653643295036235749, guid: 03f8437bb7ddaa04fb96f82fab8f104a,
+        type: 3}
+      propertyPath: m_TagString
+      value: itemNotUsed
       objectReference: {fileID: 0}
     - target: {fileID: 8524489647679350495, guid: 03f8437bb7ddaa04fb96f82fab8f104a,
         type: 3}
@@ -66589,6 +66638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crosshair: {fileID: 0}
+  inventory: {fileID: 0}
 --- !u!4 &5100517021041704581 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3584895329089611575, guid: 3ad2c42eadc216b408b818ea6661c85b,

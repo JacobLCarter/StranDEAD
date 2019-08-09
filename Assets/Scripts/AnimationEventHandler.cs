@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class AnimationEventHandler : MonoBehaviour
 {
     private AudioSource audioSource;
     private Animator animator;
     public GameObject crosshair;
-    
+
+    public Inventory inventory;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,12 +25,14 @@ public class AnimationEventHandler : MonoBehaviour
 
     private void ThrowPoint()
     {
-        var item = animator.GetBoneTransform(HumanBodyBones.RightMiddleDistal).GetChild(0);
-        
+        var item = animator.GetBoneTransform(HumanBodyBones.RightHand).GetChild(5);
+        //TheInventoryItem myItem = gameObject.GetComponent<ItemClick>().Item;
+
         item.GetComponent<Rigidbody>().isKinematic = false;
         item.transform.parent = null;
         item.GetComponent<Rigidbody>().AddForce(transform.forward * 100f  + transform.up * 100f);
         crosshair.SetActive(false);
+        //inventory.RemoveItem(myItem);
     }
 
     private void PickupPoint()
