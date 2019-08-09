@@ -37,15 +37,15 @@ public class GroundState : State<Axe>
 
     public override void ExitState(Axe axe)
     {
-        
+
     }
 
     public override void UpdateState(Axe axe)
     {
-        if (isObjectReachable(axe) && Input.GetKey(KeyCode.E))
-        {
-            axe.stateMachine.switchState(HeldState.Instance);
-        }
+
+            //axe.stateMachine.switchState(HeldState.Instance);
+            //Debug.Log("what is this hot mess you dumb mofo");
+
     }
     
     public bool isObjectReachable(Axe axe)

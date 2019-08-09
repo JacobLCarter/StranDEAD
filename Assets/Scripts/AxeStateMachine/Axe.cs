@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using GeneralStateMachine;
 
-public class Axe : MonoBehaviour
+public class Axe : InventoryItemMain
 {
     public Animator animator;
     public Transform player;
@@ -23,20 +23,23 @@ public class Axe : MonoBehaviour
 
     void Update()
     {
-        if (playerHand == null)
-        {
-            playerHand = animator.GetBoneTransform(HumanBodyBones.RightMiddleDistal);
-        }
+
+        //if (playerHand == null)
+        //{
+        //    playerHand = animator.GetBoneTransform(HumanBodyBones.RightMiddleDistal);
+        //}
+ 
 
         stateMachine.Update();
+        
     }
 
-    public void setPosition(Vector3 pos, Vector3 rot, Vector3 scale)
+   /* public void setPosition(Vector3 pos, Vector3 rot, Vector3 scale)
    {
        objectRB.transform.localPosition = pos;
        objectRB.transform.localEulerAngles = rot;
        objectRB.transform.localScale = scale;
-   }
+   }*/
 
    public Transform getHand()
    {
@@ -53,4 +56,18 @@ public class Axe : MonoBehaviour
            }
        }
    }
+
+    public override string Name
+    {
+        get
+        {
+            return "Fire Axe";
+        }
+    }
+
+    public override void OnUse()
+    {
+        base.OnUse();
+        this.stateMachine.switchState(HeldState.Instance);
+    }
 }
