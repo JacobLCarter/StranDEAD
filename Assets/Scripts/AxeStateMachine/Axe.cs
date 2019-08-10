@@ -31,7 +31,6 @@ public class Axe : InventoryItemMain
  
 
         stateMachine.Update();
-        
     }
 
    /* public void setPosition(Vector3 pos, Vector3 rot, Vector3 scale)
@@ -50,9 +49,10 @@ public class Axe : InventoryItemMain
    {
        if (other.gameObject.tag == "Enemy")
        {
-           if (other.relativeVelocity.magnitude > 3)
+           if (other.relativeVelocity.magnitude > 2)
            {
                audioSource.Play();
+               other.gameObject.GetComponent<Enemy>().takeDamage(20);
            }
        }
    }
