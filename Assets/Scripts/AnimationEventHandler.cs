@@ -25,7 +25,7 @@ public class AnimationEventHandler : MonoBehaviour
 
     private void ThrowPoint()
     {
-        var item = animator.GetBoneTransform(HumanBodyBones.RightHand).GetChild(5);
+        var item = animator.GetBoneTransform(HumanBodyBones.LeftMiddleDistal).GetChild(0);
         //TheInventoryItem myItem = gameObject.GetComponent<ItemClick>().Item;
 
         item.GetComponent<Rigidbody>().isKinematic = false;
@@ -39,9 +39,9 @@ public class AnimationEventHandler : MonoBehaviour
     {
         var item = GameObject.FindGameObjectWithTag("HeldItem");
         
-        item.transform.SetParent(animator.GetBoneTransform(HumanBodyBones.RightMiddleDistal));
-        item.transform.localPosition = new Vector3(-0.021f, -0.021f, -0.061f);
-        item.transform.localEulerAngles = new Vector3(31.741f, -119.892f, 14.563f);
+        item.transform.SetParent(animator.GetBoneTransform(HumanBodyBones.LeftMiddleDistal));
+        //item.transform.localPosition = new Vector3(-0.021f, -0.021f, -0.061f);
+        //item.transform.localEulerAngles = new Vector3(31.741f, -119.892f, 14.563f);
         
         crosshair.SetActive(true);
     }

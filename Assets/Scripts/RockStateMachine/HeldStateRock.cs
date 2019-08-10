@@ -7,9 +7,9 @@ using UnityEngine.SocialPlatforms;
 public class HeldStateRock : State<Rock>
 {
     private static HeldStateRock _instance;
-    private Vector3 newPos = new Vector3(-0.021f, -0.021f, -0.061f);
-    private Vector3 newRot = new Vector3(31.741f, -119.892f, 14.563f);
-    private Vector3 newScale = new Vector3(0.13f, 0.13f, 0.13f);
+    private Vector3 newPos = new Vector3(0.0254f, 0.017f, -0.024f);
+    private Vector3 newRot = new Vector3(49.253f, 184.153f, -67.47601f);
+    private Vector3 newScale = new Vector3(0.1f, 0.1f, 0.1f);
 
     private HeldStateRock()
     {

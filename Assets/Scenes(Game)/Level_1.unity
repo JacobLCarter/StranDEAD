@@ -2322,7 +2322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1044803325150076, guid: a3ff17b350465904fbd62b8a7802bfbf, type: 3}
       propertyPath: m_TagString
-      value: Pickup
+      value: attackWeapon
       objectReference: {fileID: 0}
     - target: {fileID: 4574348834537664, guid: a3ff17b350465904fbd62b8a7802bfbf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23427,8 +23427,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Image: {fileID: 0}
-  PickPosition: {x: -0.061, y: -0.153, z: -0.08}
-  PickRotation: {x: 11.405, y: 256.354, z: -16.661}
+  PickPosition: {x: -0.039, y: 0.29, z: 0.064}
+  PickRotation: {x: 21.989, y: -2.271, z: 192.659}
   DropRotation: {x: 0, y: 0, z: 0}
   animator: {fileID: 5100517021050873927}
   player: {fileID: 5100517021041704581}

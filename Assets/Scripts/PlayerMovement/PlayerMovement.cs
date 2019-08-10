@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         GameObject goItem = (item as MonoBehaviour).gameObject;
         Debug.Log("What is this" + goItem.name);
 
-        if (goItem.tag == "Pickup")
+        if (goItem.tag == "Pickup" || goItem.tag == "attackWeapon")
         {
             //Destroy(goItem.GetComponentInChildren<Rigidbody>());
 
@@ -64,7 +64,15 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        goItem.transform.parent = animator.GetBoneTransform(HumanBodyBones.RightHand);
+        if (goItem.tag == "attackWeapon")
+        {
+            goItem.transform.parent = animator.GetBoneTransform(HumanBodyBones.LeftMiddleDistal);
+        }
+        else
+        {
+            goItem.transform.parent = animator.GetBoneTransform(HumanBodyBones.RightHand);
+        }
+        
 
 
 
