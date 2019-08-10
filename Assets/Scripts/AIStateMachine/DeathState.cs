@@ -30,7 +30,8 @@ public class DeathState : State<Enemy>
     
     public override void EnterState(Enemy enemy)
     {
-        
+        enemy.animator.SetTrigger("isDead");
+        enemy.navmesh.isStopped = true;
     }
 
     public override void ExitState(Enemy enemy)

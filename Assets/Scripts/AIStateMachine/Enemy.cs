@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour
     private const float HearingDistance = 10f;
     private const float AttackRange = 1f;
     private float currentStalk;
+    private int health = 100;
 
     private void Start()
     {
@@ -30,6 +31,11 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+        if (health <= 0)
+        {
+            stateMachine.switchState(DeathState.Instance);
+        }
+        
         UpdateAnimator();
         
         stateMachine.Update();
@@ -89,6 +95,11 @@ public class Enemy : MonoBehaviour
         }
         
         return false;
+    }
+
+    public void takeDamage(int damage)
+    {
+        health -= damage;
     }
 
     private void UpdateAnimator()

@@ -36,7 +36,7 @@ public class Rock : MonoBehaviour
     {
         objectRB.transform.localPosition = pos;
         objectRB.transform.localEulerAngles = rot;
-        //objectRB.transform.localScale = scale;
+        objectRB.transform.localScale = scale;
     }
 
     public Transform getHand()
