@@ -21,6 +21,7 @@ TagManager:
   - Pickup
   - itemNotUsed
   - attackWeapon
+  - RoofLight
   layers:
   - Default
   - TransparentFX
