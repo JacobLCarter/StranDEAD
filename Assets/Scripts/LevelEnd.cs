@@ -11,4 +11,9 @@ public class LevelEnd : MonoBehaviour
         //starts loading screen
         SceneManager.LoadScene(6);
     }
+
+    private void Start()
+    {
+        gameObject.SetActive(false);
+    }
 }
