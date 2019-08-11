@@ -7,15 +7,12 @@ public class Axe : InventoryItemMain
 {
     public Animator animator;
     public Transform player;
-    public LayerMask collisionMask;
     private Transform playerHand;
-    private Rigidbody objectRB;
     public StateMachine<Axe> stateMachine { get; set; }
     private AudioSource audioSource;
 
     private void Start()
     {
-        objectRB = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
         stateMachine = new StateMachine<Axe>(this);
         stateMachine.switchState(GroundState.Instance);
@@ -33,14 +30,7 @@ public class Axe : InventoryItemMain
         stateMachine.Update();
     }
 
-   /* public void setPosition(Vector3 pos, Vector3 rot, Vector3 scale)
-   {
-       objectRB.transform.localPosition = pos;
-       objectRB.transform.localEulerAngles = rot;
-       objectRB.transform.localScale = scale;
-   }*/
-
-   public Transform getHand()
+    public Transform getHand()
    {
        return playerHand;
    }
@@ -49,10 +39,10 @@ public class Axe : InventoryItemMain
    {
        if (other.gameObject.tag == "Enemy")
        {
-           if (other.relativeVelocity.magnitude > 2)
+           if (other.relativeVelocity.magnitude > 3)
            {
                audioSource.Play();
-               other.gameObject.GetComponent<Enemy>().takeDamage(20);
+               other.gameObject.GetComponent<Enemy>().takeDamage(100);
            }
        }
    }

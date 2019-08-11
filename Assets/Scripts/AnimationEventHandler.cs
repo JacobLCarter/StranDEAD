@@ -40,8 +40,8 @@ public class AnimationEventHandler : MonoBehaviour
         var item = GameObject.FindGameObjectWithTag("HeldItem");
         
         item.transform.SetParent(animator.GetBoneTransform(HumanBodyBones.LeftMiddleDistal));
-        //item.transform.localPosition = new Vector3(-0.021f, -0.021f, -0.061f);
-        //item.transform.localEulerAngles = new Vector3(31.741f, -119.892f, 14.563f);
+        item.transform.localPosition = new Vector3(0.054f, 0.017f, -0.024f);
+        item.transform.localEulerAngles = new Vector3(49.253f, 184.153f, -67.47601f);
         
         crosshair.SetActive(true);
     }
