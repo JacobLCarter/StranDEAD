@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MissionObjective : MonoBehaviour
 {
     public GameObject missionObject;
+    //public GameObject missionTriggerKey;
     public Text missionCar;
     public Text missionDam;
     public Text missionDoor;
@@ -19,6 +20,7 @@ public class MissionObjective : MonoBehaviour
         missionDam.enabled = false;
         missionDoor.enabled = false;
         missionKey.enabled = false;
+
     }
 
     void OnTriggerEnter(Collider Player)
