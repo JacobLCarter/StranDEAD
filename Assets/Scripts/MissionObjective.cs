@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class MissionObjective : MonoBehaviour
 {
     public GameObject missionObject;
-    //public GameObject missionTriggerKey;
+    public GameObject key;
     public Text missionCar;
     public Text missionDam;
     public Text missionDoor;
@@ -38,16 +38,16 @@ public class MissionObjective : MonoBehaviour
         }
         else if (!missionDoor.enabled && gameObject.tag == "Door")
         {
-            // TODO: check if key in inventory
+            key.SetActive(true);
             missionDoor.enabled = true;
             missionDoor.color = Color.white;
             missionDam.color = Color.red;
         }
-        else if (!missionKey.enabled && gameObject.tag == "Key")
-        {
-            missionKey.enabled = true;
-            missionKey.color = Color.white;
-            missionDoor.color = Color.red;
-        }
+        //else if (!missionKey.enabled && gameObject.tag == "Key")
+        //{
+        //    missionKey.enabled = true;
+        //    missionKey.color = Color.white;
+        //    missionDoor.color = Color.red;
+        //}
     }
 }
