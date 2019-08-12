@@ -8,6 +8,8 @@ public class RoofLightButton : MonoBehaviour
     private bool lightsOn = false;
     private int lightIdx = 0;
     private float timeElapsed = 0;
+    public GameObject player;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +36,7 @@ public class RoofLightButton : MonoBehaviour
             {
                 return;
             }
-
+            
             // turn on row of lights every 500 ms
             timeElapsed += Time.deltaTime;
             if (timeElapsed < 0.5f)
@@ -60,7 +62,24 @@ public class RoofLightButton : MonoBehaviour
         else
         {
             // enter lights-on mode
-            lightsOn = Input.GetKeyDown(KeyCode.F);
+            if (Input.GetKeyDown(KeyCode.E) && isObjectReachable())
+            {
+                player.GetComponent<Animator>().SetTrigger("isPressing");
+                lightsOn = true;
+            }
         }
+    }
+    
+    public bool isObjectReachable()
+    {
+        Vector3 target = player.transform.position - transform.position;
+        float angle = Vector3.Angle(target, transform.position);
+
+        if (angle < 90.0f && Vector3.Distance(transform.position, player.transform.position) <= 0.5f)
+        {
+            return true;
+        }
+        
+        return false;
     }
 }
