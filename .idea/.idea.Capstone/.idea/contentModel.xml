@@ -325,6 +325,7 @@
             <e p="Rock.cs" t="Include" />
             <e p="ThrowStateRock.cs" t="Include" />
           </e>
+          <e p="RoofLightButton.cs" t="Include" />
           <e p="StateMachine.cs" t="Include" />
         </e>
         <e p="Standard Assets" t="Include">
