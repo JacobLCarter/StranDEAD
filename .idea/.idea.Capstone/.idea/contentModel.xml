@@ -295,6 +295,7 @@
           <e p="Dialogue1.cs" t="Include" />
           <e p="Dialogue2.cs" t="Include" />
           <e p="FlashlightScript.cs" t="Include" />
+          <e p="ForceDeath.cs" t="Include" />
           <e p="Hint1.cs" t="Include" />
           <e p="HUDScript.cs" t="Include" />
           <e p="Inventory.cs" t="Include" />
