@@ -66357,7 +66357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crosshair: {fileID: 0}
-  inventory: {fileID: 0}
+  inventory: {fileID: 793911016}
 --- !u!4 &5100517021041704581 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3584895329089611575, guid: 3ad2c42eadc216b408b818ea6661c85b,
