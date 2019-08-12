@@ -12,7 +12,6 @@
         <e p="ColorfulButtons" t="Include">
           <e p="Credits.txt" t="Include" />
         </e>
-        <e p="GameControllerMenu.cs" t="Include" />
         <e p="Models" t="Include">
           <e p="Key" t="Include">
             <e p="readME keys.txt" t="Include" />
@@ -294,8 +293,27 @@
           <e p="DeathScreen.cs" t="Include" />
           <e p="Dialogue1.cs" t="Include" />
           <e p="Dialogue2.cs" t="Include" />
+          <e p="DialogueScene2" t="Include">
+            <e p="D1.cs" t="Include" />
+            <e p="D10.cs" t="Include" />
+            <e p="D11.cs" t="Include" />
+            <e p="D12.cs" t="Include" />
+            <e p="D13.cs" t="Include" />
+            <e p="D14.cs" t="Include" />
+            <e p="D15.cs" t="Include" />
+            <e p="D16.cs" t="Include" />
+            <e p="D2.cs" t="Include" />
+            <e p="D3.cs" t="Include" />
+            <e p="D4.cs" t="Include" />
+            <e p="D5.cs" t="Include" />
+            <e p="D6.cs" t="Include" />
+            <e p="D7.cs" t="Include" />
+            <e p="D8.cs" t="Include" />
+            <e p="D9.cs" t="Include" />
+          </e>
           <e p="FlashlightScript.cs" t="Include" />
           <e p="ForceDeath.cs" t="Include" />
+          <e p="GameControllerMenu.cs" t="Include" />
           <e p="Hint1.cs" t="Include" />
           <e p="HUDScript.cs" t="Include" />
           <e p="Inventory.cs" t="Include" />

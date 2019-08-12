@@ -12,13 +12,15 @@ public class ForceDeath : MonoBehaviour
     {
         animator = GetComponent<Animator>();
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    private void OnCollisionEnter(Collision other)
     {
-        if (Vector3.Distance(transform.position, player.position) < 0.5f)
+        if (other.gameObject.tag == "attackWeapon")
         {
-            animator.SetBool("isDead", true);
+            if (other.relativeVelocity.magnitude > 3)
+            {
+                animator.SetBool("isDead", true);
+            }
         }
     }
 }

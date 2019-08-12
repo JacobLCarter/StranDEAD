@@ -39,7 +39,7 @@ public class Axe : InventoryItemMain
    {
        if (other.gameObject.tag == "Enemy")
        {
-           if (other.relativeVelocity.magnitude > 3)
+           if (other.relativeVelocity.magnitude > 1)
            {
                audioSource.Play();
                other.gameObject.GetComponent<Enemy>().takeDamage(20);
