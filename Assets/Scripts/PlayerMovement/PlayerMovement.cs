@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using GeneralStateMachine;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Animator))]
@@ -11,8 +12,11 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private float playerHeight = 0.45f;
     private float downAccel = 0.5f;
+    private TheInventoryItem myCurrentItem = null;
     public Inventory inventory;
     public HUDScript HUD;
+
+    public StateMachine<Axe> stateMachine;
 
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
@@ -43,10 +47,34 @@ public class PlayerMovement : MonoBehaviour
 
         GameObject goItem = (item as MonoBehaviour).gameObject;
         Debug.Log("What is this" + goItem.name);
-        Destroy(goItem.GetComponentInChildren<Rigidbody>());
-        goItem.SetActive(true);
 
-        goItem.transform.parent = animator.GetBoneTransform(HumanBodyBones.RightHand);
+        if (goItem.tag == "Pickup" || goItem.tag == "attackWeapon")
+        {
+            //Destroy(goItem.GetComponentInChildren<Rigidbody>());
+
+            if (goItem.activeSelf == false)
+            {
+                goItem.SetActive(true);
+            }
+
+            else
+            {
+                goItem.SetActive(false);
+            }
+
+        }
+
+        if (goItem.tag == "attackWeapon")
+        {
+            goItem.transform.parent = animator.GetBoneTransform(HumanBodyBones.LeftMiddleDistal);
+        }
+        else
+        {
+            goItem.transform.parent = animator.GetBoneTransform(HumanBodyBones.RightHand);
+        }
+        
+
+
 
     }
     void FixedUpdate()
@@ -139,15 +167,13 @@ public class PlayerMovement : MonoBehaviour
     //Adding pickup deactivate items and place them into inventory
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Pickup"))
+        if (other.gameObject.CompareTag("Pickup") || other.gameObject.CompareTag("itemNotUsed") || other.gameObject.CompareTag("attackWeapon"))
         {
             //This is to place item into the inventory made.
             TheInventoryItem item = other.gameObject.GetComponent<TheInventoryItem>();
             if (item != null)
             {
                 pickupItem = item;
-                //inventory.AddItem(item);
-                //other.gameObject.SetActive(false);
                 HUD.PickupTextOn("");
             }
         }

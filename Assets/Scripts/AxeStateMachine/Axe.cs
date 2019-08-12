@@ -3,19 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using GeneralStateMachine;
 
-public class Axe : MonoBehaviour
+public class Axe : InventoryItemMain
 {
     public Animator animator;
     public Transform player;
-    public LayerMask collisionMask;
     private Transform playerHand;
-    private Rigidbody objectRB;
     public StateMachine<Axe> stateMachine { get; set; }
     private AudioSource audioSource;
 
     private void Start()
     {
-        objectRB = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
         stateMachine = new StateMachine<Axe>(this);
         stateMachine.switchState(GroundState.Instance);
@@ -23,22 +20,17 @@ public class Axe : MonoBehaviour
 
     void Update()
     {
-        if (playerHand == null)
-        {
-            playerHand = animator.GetBoneTransform(HumanBodyBones.RightMiddleDistal);
-        }
+
+        //if (playerHand == null)
+        //{
+        //    playerHand = animator.GetBoneTransform(HumanBodyBones.RightMiddleDistal);
+        //}
+ 
 
         stateMachine.Update();
     }
 
-    public void setPosition(Vector3 pos, Vector3 rot, Vector3 scale)
-   {
-       objectRB.transform.localPosition = pos;
-       objectRB.transform.localEulerAngles = rot;
-       objectRB.transform.localScale = scale;
-   }
-
-   public Transform getHand()
+    public Transform getHand()
    {
        return playerHand;
    }
@@ -50,7 +42,22 @@ public class Axe : MonoBehaviour
            if (other.relativeVelocity.magnitude > 3)
            {
                audioSource.Play();
+               other.gameObject.GetComponent<Enemy>().takeDamage(100);
            }
        }
    }
+
+    public override string Name
+    {
+        get
+        {
+            return "Fire Axe";
+        }
+    }
+
+    public override void OnUse()
+    {
+        base.OnUse();
+        this.stateMachine.switchState(HeldState.Instance);
+    }
 }

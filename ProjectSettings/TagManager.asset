@@ -18,6 +18,10 @@ TagManager:
   - EndLevel1
   - Enemy
   - HeldItem
+  - Pickup
+  - itemNotUsed
+  - attackWeapon
+  - RoofLight
   layers:
   - Default
   - TransparentFX

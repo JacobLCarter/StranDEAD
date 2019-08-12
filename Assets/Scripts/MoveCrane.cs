@@ -7,9 +7,7 @@ public class MoveCrane : MonoBehaviour
 {
     public GameObject crane;
     public Transform player;
-    private const float useDistance = 3f;
-    private const float moveSpeed = .01f;
-    private const float lerpTime = 500f;
+    private const float lerpTime = 5000f;
     private float currentLerp = 0f;
     private bool hasMoved = false;
     private bool currentlyMoving = false;
@@ -27,7 +25,11 @@ public class MoveCrane : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
+            print(hasMoved);
             StartCoroutine(moveCrane());
+            hasMoved = !hasMoved;
+            currentLerp = 0f;
+            //crane.GetComponent<AudioSource>().Play();
         }
     }
 
@@ -42,7 +44,6 @@ public class MoveCrane : MonoBehaviour
 
         while (currentLerp < lerpTime)
         {
-            //crane.GetComponent<AudioSource>().Play();
             currentLerp += Time.deltaTime;
             
             if (hasMoved)
@@ -53,12 +54,10 @@ public class MoveCrane : MonoBehaviour
             {
                 crane.transform.position = Vector3.Lerp(crane.transform.position, movePosition, currentLerp / lerpTime);
             }
-
+            
             yield return null;
         }
-
-        hasMoved = !hasMoved;
-
+        
         currentlyMoving = false;
     }
 }
