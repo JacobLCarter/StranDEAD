@@ -30,7 +30,7 @@ public class DistractedState : State<Enemy>
     
     public override void EnterState(Enemy enemy)
     {
-        enemy.navmesh.speed = .75f;
+        enemy.navmesh.speed = 1f;
         enemy.navmesh.destination = enemy.getCurrentRock().transform.position;
     }
 

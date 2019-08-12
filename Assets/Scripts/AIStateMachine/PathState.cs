@@ -30,7 +30,7 @@ public class PathState : State<Enemy>
     
     public override void EnterState(Enemy enemy)
     {
-        enemy.navmesh.speed = .375f;
+        enemy.navmesh.speed = .5f;
     }
 
     public override void ExitState(Enemy enemy)

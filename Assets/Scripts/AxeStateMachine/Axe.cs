@@ -42,7 +42,7 @@ public class Axe : InventoryItemMain
            if (other.relativeVelocity.magnitude > 3)
            {
                audioSource.Play();
-               other.gameObject.GetComponent<Enemy>().takeDamage(100);
+               other.gameObject.GetComponent<Enemy>().takeDamage(20);
            }
        }
    }

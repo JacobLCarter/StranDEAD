@@ -30,7 +30,7 @@ public class ChaseState : State<Enemy>
     
     public override void EnterState(Enemy enemy)
     {
-        enemy.navmesh.speed = .75f;
+        enemy.navmesh.speed = 1f;
     }
 
     public override void ExitState(Enemy enemy)
