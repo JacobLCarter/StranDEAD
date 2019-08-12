@@ -4,15 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/Assets/Scripts/ThrowObject.cs" line="34" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c409860d-43ca-46f4-86d6-52b510ffe52d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes(Game)/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes(Game)/Level_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes(Game)/Level_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes(Game)/Level_2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AIStateMachine/ChaseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AIStateMachine/ChaseState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AIStateMachine/DistractedState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AIStateMachine/DistractedState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AIStateMachine/PathState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AIStateMachine/PathState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AxeStateMachine/Axe.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AxeStateMachine/Axe.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UMA/InternalDataStore/InEditor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UMA/InternalDataStore/InEditor.meta" afterDir="false" />
-    </list>
+    <list default="true" id="c409860d-43ca-46f4-86d6-52b510ffe52d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +175,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/AIStateMachine/PathState.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="527">
@@ -210,7 +202,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/AIStateMachine/StalkState.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1156">
@@ -476,12 +468,12 @@
       <workItem from="1565129424655" duration="3314000" />
       <workItem from="1565464985837" duration="7018000" />
       <workItem from="1565552216082" duration="4043000" />
-      <workItem from="1565629129445" duration="66000" />
+      <workItem from="1565629129445" duration="665000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94743000" />
+    <option name="totallyTimeSpent" value="95342000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1259,6 +1251,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/AIStateMachine/StalkState.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="69" column="1" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
+          <folding>
+            <marker date="1565566945967" expanded="false" signature="6:45" ph="..." />
+            <marker date="1565566945967" expanded="true" signature="85:1510" ph="{...}" />
+            <marker date="1565566945967" expanded="true" signature="182:292" ph="{...}" />
+            <marker date="1565566945967" expanded="true" signature="219:259" ph="{...}" />
+            <marker date="1565566945967" expanded="true" signature="331:503" ph="{...}" />
+            <marker date="1565566945967" expanded="true" signature="349:497" ph="{...}" />
+            <marker date="1565566945967" expanded="true" signature="394:456" ph="{...}" />
+            <marker date="1565566945967" expanded="true" signature="557:691" ph="{...}" />
+            <marker date="1565566945967" expanded="true" signature="740:761" ph="{...}" />
+            <marker date="1565566945967" expanded="true" signature="812:1508" ph="{...}" />
+            <marker date="1565566945967" expanded="true" signature="855:940" ph="{...}" />
+            <marker date="1565566945967" expanded="true" signature="982:1096" ph="{...}" />
+            <marker date="1565566945967" expanded="true" signature="1133:1223" ph="{...}" />
+            <marker date="1565566945967" expanded="true" signature="1266:1350" ph="{...}" />
+            <marker date="1565566945967" expanded="true" signature="1363:1502" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/AIStateMachine/PathState.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -1280,30 +1296,6 @@
             <marker date="1565629183570" expanded="true" signature="1161:1210" ph="{...}" />
             <marker date="1565629183570" expanded="true" signature="1256:1477" ph="{...}" />
             <marker date="1565629183570" expanded="true" signature="1299:1339" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/AIStateMachine/StalkState.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="69" column="1" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
-          <folding>
-            <marker date="1565566945967" expanded="false" signature="6:45" ph="..." />
-            <marker date="1565566945967" expanded="true" signature="85:1510" ph="{...}" />
-            <marker date="1565566945967" expanded="true" signature="182:292" ph="{...}" />
-            <marker date="1565566945967" expanded="true" signature="219:259" ph="{...}" />
-            <marker date="1565566945967" expanded="true" signature="331:503" ph="{...}" />
-            <marker date="1565566945967" expanded="true" signature="349:497" ph="{...}" />
-            <marker date="1565566945967" expanded="true" signature="394:456" ph="{...}" />
-            <marker date="1565566945967" expanded="true" signature="557:691" ph="{...}" />
-            <marker date="1565566945967" expanded="true" signature="740:761" ph="{...}" />
-            <marker date="1565566945967" expanded="true" signature="812:1508" ph="{...}" />
-            <marker date="1565566945967" expanded="true" signature="855:940" ph="{...}" />
-            <marker date="1565566945967" expanded="true" signature="982:1096" ph="{...}" />
-            <marker date="1565566945967" expanded="true" signature="1133:1223" ph="{...}" />
-            <marker date="1565566945967" expanded="true" signature="1266:1350" ph="{...}" />
-            <marker date="1565566945967" expanded="true" signature="1363:1502" ph="{...}" />
           </folding>
         </state>
       </provider>
