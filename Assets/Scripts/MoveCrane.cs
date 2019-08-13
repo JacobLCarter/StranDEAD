@@ -7,29 +7,29 @@ public class MoveCrane : MonoBehaviour
 {
     public GameObject crane;
     public Transform player;
-    private const float lerpTime = 5000f;
+    private const float lerpTime = 8f;
     private float currentLerp = 0f;
-    private bool hasMoved = false;
+    private bool hasMoved = true;
     private bool currentlyMoving = false;
     private Vector3 originalPosition;
     private Vector3 movePosition;
+    private Vector3 velocity;
 
     private void Start()
     {
         originalPosition = crane.transform.position;
-        movePosition = originalPosition + Vector3.forward * 15f;
+        movePosition = originalPosition + Vector3.forward * 8f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (isObjectReachable() && Input.GetKeyDown(KeyCode.E))
         {
-            print(hasMoved);
+            player.GetComponent<Animator>().SetTrigger("isPressing");
             StartCoroutine(moveCrane());
             hasMoved = !hasMoved;
             currentLerp = 0f;
-            //crane.GetComponent<AudioSource>().Play();
         }
     }
 
@@ -42,22 +42,36 @@ public class MoveCrane : MonoBehaviour
 
         currentlyMoving = true;
 
+        crane.GetComponent<AudioSource>().Play();
+        
         while (currentLerp < lerpTime)
         {
             currentLerp += Time.deltaTime;
             
             if (hasMoved)
             {
-                crane.transform.position = Vector3.Lerp(crane.transform.position, originalPosition, currentLerp / lerpTime);
+                crane.transform.position = Vector3.SmoothDamp(crane.transform.position, originalPosition, ref velocity, lerpTime);
             }
             else
             {
-                crane.transform.position = Vector3.Lerp(crane.transform.position, movePosition, currentLerp / lerpTime);
+                crane.transform.position = Vector3.SmoothDamp(crane.transform.position, movePosition, ref velocity, lerpTime);
             }
             
             yield return null;
         }
         
+        
+        crane.GetComponent<AudioSource>().Stop();
         currentlyMoving = false;
+    }
+    
+    public bool isObjectReachable()
+    {
+        if (Vector3.Distance(transform.position, player.transform.position) <= 0.5f)
+        {
+            return true;
+        }
+        
+        return false;
     }
 }
