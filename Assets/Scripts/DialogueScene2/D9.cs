@@ -34,6 +34,6 @@ public class D9 : MonoBehaviour
 
         //Setting it to setactive false instead of destroy since destroy takes longer
         DialogueNumberNine.SetActive(false);
-        gameObject.SetActive(false);
+        gameObject.GetComponent<BoxCollider>().enabled = false;
     }
 }
