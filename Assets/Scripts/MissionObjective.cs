@@ -1,6 +1,7 @@
 ﻿//using System.Collections;
 //using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 
 
@@ -10,7 +11,7 @@ public class MissionObjective : MonoBehaviour
     public GameObject key;
     public GameObject zombie;
     public GameObject blood;
-    public AudioSource audio;
+    public GameObject mutant;
     public Text missionCar;
     public Text missionDam;
     public Text missionDoor;
@@ -26,6 +27,7 @@ public class MissionObjective : MonoBehaviour
         zombie.gameObject.SetActive(true);
         key.SetActive(false);
         blood.SetActive(false);
+        mutant.SetActive(false);
 
     }
 
@@ -46,9 +48,10 @@ public class MissionObjective : MonoBehaviour
         {
             key.SetActive(true);
             blood.SetActive(true);
+            mutant.SetActive(true);
+            mutant.GetComponent<NavMeshAgent>().SetDestination(new Vector3(-16.15351f, 44.069f, 25.528f));
             zombie.gameObject.transform.position = blood.transform.Find("trailEnd").gameObject.transform.position;
-            audio.Play();
-            //zombie.gameObject.SetActive(false);
+            mutant.GetComponent<AudioSource>().Play();
             missionDoor.enabled = true;
             missionDoor.color = Color.white;
             missionDam.color = Color.red;
