@@ -11,6 +11,7 @@ public class D1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Idk
         //Sets dialogue panel to false intially
         DialogueNumberOne.SetActive(false);
 

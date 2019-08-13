@@ -22,6 +22,7 @@ TagManager:
   - itemNotUsed
   - attackWeapon
   - RoofLight
+  - instantTouch
   layers:
   - Default
   - TransparentFX

@@ -13,7 +13,7 @@ public class KeyScript : InventoryItemMain
 
     void Start()
     {
-        gameObject.SetActive(false);
+        gameObject.SetActive(true);
     }
 
     //Returns the key name of key_silver

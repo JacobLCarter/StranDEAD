@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
 
     public StateMachine<Axe> stateMachine;
 
+    public GameObject zombie;
+
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
     /// any of the Update methods is called the first time.
@@ -48,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
         GameObject goItem = (item as MonoBehaviour).gameObject;
         Debug.Log("What is this" + goItem.name);
 
-        if (goItem.tag == "Pickup" || goItem.tag == "attackWeapon")
+        if (goItem.tag == "Pickup" || goItem.tag == "attackWeapon" || goItem.tag == "instantTouch")
         {
             //Destroy(goItem.GetComponentInChildren<Rigidbody>());
 
@@ -167,15 +169,32 @@ public class PlayerMovement : MonoBehaviour
     //Adding pickup deactivate items and place them into inventory
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Pickup") || other.gameObject.CompareTag("itemNotUsed") || other.gameObject.CompareTag("attackWeapon"))
+        if (other.gameObject.CompareTag("Pickup") || other.gameObject.CompareTag("itemNotUsed") || other.gameObject.CompareTag("attackWeapon") || other.gameObject.CompareTag("instantTouch"))
         {
             //This is to place item into the inventory made.
             TheInventoryItem item = other.gameObject.GetComponent<TheInventoryItem>();
-            if (item != null)
+            if (item != null && !other.gameObject.CompareTag("instantTouch"))
             {
                 pickupItem = item;
                 HUD.PickupTextOn("");
+
+                if (other.gameObject.CompareTag("itemNotUsed"))
+                {
+                    if (zombie.gameObject)
+                    {
+                        zombie.gameObject.SetActive(false);
+                    }
+                }
             }
+
+            if (other.gameObject.CompareTag("instantTouch"))
+            {
+                inventory.AddItem(item);
+            }
+
+ 
+
+
         }
     }
 
