@@ -338,6 +338,7 @@
             <e p="CameraFollow.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
           </e>
+          <e p="RandomIdleAnimation.cs" t="Include" />
           <e p="RockStateMachine" t="Include">
             <e p="GroundStateRock.cs" t="Include" />
             <e p="HeldStateRock.cs" t="Include" />
