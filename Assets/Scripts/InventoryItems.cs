@@ -14,7 +14,7 @@ public interface TheInventoryItem
     void OnUse();
 }
 
-//Sets the argument that is sent to the function InventoryEventArgs to set equal to the IInventoryItem Item object.
+//Sets the argument that is sent to the function InventoryEventArgs to set equal to the TheInventoryItem Item object.
 public class InventoryEventArgs : EventArgs
 {
     public InventoryEventArgs(TheInventoryItem e)
