@@ -180,10 +180,10 @@ public class PlayerMovement : MonoBehaviour
 
                 if (other.gameObject.CompareTag("itemNotUsed"))
                 {
-                    if (zombie.gameObject)
-                    {
-                        zombie.gameObject.SetActive(false);
-                    }
+                    //if (zombie.gameObject)
+                    //{
+                    //    zombie.gameObject.SetActive(false);
+                    //}
                 }
             }
 
