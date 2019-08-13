@@ -10,6 +10,7 @@ public class MissionObjective : MonoBehaviour
     public GameObject key;
     public GameObject zombie;
     public GameObject blood;
+    public AudioSource audio;
     public Text missionCar;
     public Text missionDam;
     public Text missionDoor;
@@ -46,6 +47,7 @@ public class MissionObjective : MonoBehaviour
             key.SetActive(true);
             blood.SetActive(true);
             zombie.gameObject.transform.position = blood.transform.Find("trailEnd").gameObject.transform.position;
+            audio.Play();
             //zombie.gameObject.SetActive(false);
             missionDoor.enabled = true;
             missionDoor.color = Color.white;
