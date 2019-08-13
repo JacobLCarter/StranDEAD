@@ -9,6 +9,7 @@ public class MissionObjective : MonoBehaviour
     public GameObject missionObject;
     public GameObject key;
     public GameObject zombie;
+    public GameObject blood;
     public Text missionCar;
     public Text missionDam;
     public Text missionDoor;
@@ -22,6 +23,8 @@ public class MissionObjective : MonoBehaviour
         missionDoor.enabled = false;
         missionKey.enabled = false;
         zombie.gameObject.SetActive(true);
+        key.SetActive(false);
+        blood.SetActive(false);
 
     }
 
@@ -41,7 +44,9 @@ public class MissionObjective : MonoBehaviour
         else if (!missionDoor.enabled && gameObject.tag == "Door")
         {
             key.SetActive(true);
-            zombie.gameObject.SetActive(false);
+            blood.SetActive(true);
+            zombie.gameObject.transform.position = blood.transform.Find("trailEnd").gameObject.transform.position;
+            //zombie.gameObject.SetActive(false);
             missionDoor.enabled = true;
             missionDoor.color = Color.white;
             missionDam.color = Color.red;
