@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (other.gameObject.tag == "zombieHand")
         {
+            other.GetComponent<AudioSource>().Play();
             health -= 20;
             
             if (health <= 0)

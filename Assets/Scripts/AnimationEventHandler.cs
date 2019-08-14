@@ -54,6 +54,6 @@ public class AnimationEventHandler : MonoBehaviour
 
     private void Reload()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(4);
     }
 }
