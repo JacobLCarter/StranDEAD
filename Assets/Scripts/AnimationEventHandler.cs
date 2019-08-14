@@ -9,6 +9,7 @@ public class AnimationEventHandler : MonoBehaviour
     private AudioSource audioSource;
     private Animator animator;
     public GameObject crosshair;
+    public GameObject weapon;
 
     public Inventory inventory;
 
@@ -55,5 +56,15 @@ public class AnimationEventHandler : MonoBehaviour
     private void Reload()
     {
         SceneManager.LoadScene(4);
+    }
+    
+    private void EnableDamage()
+    {
+        weapon.SetActive(true);
+    }
+
+    private void DisableDamage()
+    {
+        weapon.SetActive(false);
     }
 }

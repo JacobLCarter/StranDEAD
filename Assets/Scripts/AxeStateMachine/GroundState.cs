@@ -43,21 +43,5 @@ public class GroundState : State<Axe>
     public override void UpdateState(Axe axe)
     {
 
-            //axe.stateMachine.switchState(HeldState.Instance);
-            //Debug.Log("what is this hot mess you dumb mofo");
-
-    }
-    
-    public bool isObjectReachable(Axe axe)
-    {
-        Vector3 target = axe.player.position - axe.transform.position;
-        float angle = Vector3.Angle(target, axe.transform.position);
-
-        if (angle < 90.0f && Vector3.Distance(axe.transform.position, axe.player.position) <= pickupDistance)
-        {
-            return true;
-        }
-        
-        return false;
     }
 }

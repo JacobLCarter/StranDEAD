@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
@@ -13,21 +14,18 @@ public class PlayerHealth : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void TakeDamage(int damage, Collider collider)
     {
-        if (other.gameObject.tag == "zombieHand")
+        print(health);
+        health -= damage;
+        
+        if (health <= 0)
         {
-            other.GetComponent<AudioSource>().Play();
-            health -= 20;
-            
-            if (health <= 0)
-            {
-                other.gameObject.SetActive(false);
-                StartCoroutine(Die());
-            }
+            collider.gameObject.SetActive(false);
+            StartCoroutine(Die());
         }
     }
-
+    
     private IEnumerator Die()
     {
         gameObject.GetComponent<Rigidbody>().freezeRotation = false;
