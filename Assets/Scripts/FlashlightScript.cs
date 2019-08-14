@@ -14,6 +14,7 @@ public class FlashlightScript : InventoryItemMain
         }
     }
 
+    //Function to override on use
     public override void OnUse()
     {
         base.OnUse();

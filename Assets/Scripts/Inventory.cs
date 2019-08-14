@@ -41,6 +41,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    //Use item function that calls the itemuse funciton
     internal void UseItem(TheInventoryItem item)
     {
         if (ItemUse != null)
@@ -49,16 +50,17 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    //Removes the item from the inventory list then drops the item. Turns on colliders to make it the same as it was before. Activating the object in the view
     public void RemoveItem(TheInventoryItem item)
     {
-        Debug.Log("This is the remove item");
+        //Debug.Log("This is the remove item");
         if (myItems.Contains(item))
         {
             myItems.Remove(item);
 
             item.OnDrop();
 
-            Debug.Log("This is the ondrop");
+            //Debug.Log("This is the ondrop");
             Collider collider = (item as MonoBehaviour).GetComponent<Collider>();
             if (collider != null)
             {

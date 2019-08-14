@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//REFERENCED: https://www.youtube.com/watch?v=CNNeD9oT4DY
 public class D9 : MonoBehaviour
 {
     public GameObject DialogueNumberNine;
@@ -27,13 +28,15 @@ public class D9 : MonoBehaviour
 
     }
 
-    //Enumerator waits for 7 seconds after activating the dialogue then disables the dialogue and the cube so player won't retrigger it.
+    //Enumerator waits for 5 seconds after activating the dialogue then disables the dialogue and the cube so player won't retrigger it.
     IEnumerator tempDialogue()
     {
         yield return new WaitForSeconds(5);
 
         //Setting it to setactive false instead of destroy since destroy takes longer
         DialogueNumberNine.SetActive(false);
+
+        //Disables the boxcollider component instead of gameobject because gameobject is a part of the zombie itself.
         gameObject.GetComponent<BoxCollider>().enabled = false;
     }
 }

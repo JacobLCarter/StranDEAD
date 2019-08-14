@@ -13,6 +13,7 @@ public class Dialogue2 : MonoBehaviour
         secondDialogue.SetActive(false);
     }
 
+    //Checks if player collides with the object if so then the dialogue UI is activated
     private void OnTriggerEnter(Collider player)
     {
         if (player.gameObject.tag == "Playertag")
@@ -22,6 +23,7 @@ public class Dialogue2 : MonoBehaviour
         }
     }
 
+    //Deactivates the UI after a certain amount of time and the gameobject itself to disallow repeated collisions
     IEnumerator tempDialogue()
     {
         yield return new WaitForSeconds(5);

@@ -16,6 +16,7 @@ public class HUDScript : MonoBehaviour
         Inventory.ItemRemove += InventoryItemRemove;
     }
 
+    //Grabs the image in the inventory UI created on the canvas then puts the item image of said image picked up into that slot.
     private void InventoryScriptItemAdd(object sender, InventoryEventArgs eventItem)
     {
         Transform inventoryPanel = transform.Find("Inventory");
@@ -37,6 +38,7 @@ public class HUDScript : MonoBehaviour
         }
     }
 
+    //Removes the item image from the inventory UI slot by grabbing the child of the image and finding the item
     private void InventoryItemRemove(object sender, InventoryEventArgs eventItem)
     {
         Transform inventoryPanel = transform.Find("Inventory");
@@ -55,11 +57,13 @@ public class HUDScript : MonoBehaviour
         }
     }
 
+    //Turns on the pickuptext
     public void PickupTextOn(string e)
     {
         PickupPanel.SetActive(true);
     }
 
+    //Turns off the pickuptext panel
     public void PickupTextOff()
     {
         PickupPanel.SetActive(false);

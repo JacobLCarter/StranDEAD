@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//REFERENCED: https://www.youtube.com/watch?v=CNNeD9oT4DY
 public class D4 : MonoBehaviour
 {
     public GameObject DialogueNumberFour;
@@ -27,7 +28,7 @@ public class D4 : MonoBehaviour
 
     }
 
-    //Enumerator waits for 7 seconds after activating the dialogue then disables the dialogue and the cube so player won't retrigger it.
+    //Enumerator waits for 2 seconds after activating the dialogue then disables the dialogue and the cube so player won't retrigger it.
     IEnumerator tempDialogue()
     {
         yield return new WaitForSeconds(2);

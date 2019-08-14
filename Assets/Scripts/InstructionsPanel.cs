@@ -27,7 +27,7 @@ public class InstructionsPanel : MonoBehaviour
 
     }
 
-    //Enumerator waits for 7 seconds after activating the dialogue then disables the dialogue and the cube so player won't retrigger it.
+    //Enumerator waits for 10 seconds after activating the dialogue then disables the dialogue and the cube so player won't retrigger it.
     IEnumerator tempDialogue()
     {
         yield return new WaitForSeconds(10);

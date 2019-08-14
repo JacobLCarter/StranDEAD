@@ -7211,8 +7211,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 122.20001, y: -89.699005}
-  m_SizeDelta: {x: 244.40002, y: 128.79999}
+  m_AnchoredPosition: {x: 147.7, y: 108.6}
+  m_SizeDelta: {x: 244.4, y: 217.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &560108601 stripped
 Transform:
@@ -14452,10 +14452,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8442845353478600147}
     m_Modifications:
-    - target: {fileID: 1000011073071200, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
-      propertyPath: m_Name
-      value: chainlink_barbwire-1 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 4000010947026576, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.908
@@ -14511,6 +14507,10 @@ PrefabInstance:
     - target: {fileID: 4000010947026576, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.5135039
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011073071200, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
+      propertyPath: m_Name
+      value: chainlink_barbwire-1 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
@@ -22031,10 +22031,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8442845353478600147}
     m_Modifications:
-    - target: {fileID: 1000011073071200, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
-      propertyPath: m_Name
-      value: chainlink_barbwire-1 (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 4000010947026576, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -24.276
@@ -22090,6 +22086,10 @@ PrefabInstance:
     - target: {fileID: 4000010947026576, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.5135039
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011073071200, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
+      propertyPath: m_Name
+      value: chainlink_barbwire-1 (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
@@ -22694,8 +22694,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000085831, y: -0.000061035}
-  m_SizeDelta: {x: 194.79, y: 685.9}
+  m_AnchoredPosition: {x: 0.000020981, y: 0.0000042915}
+  m_SizeDelta: {x: 244.4, y: 217.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1639722684
 MonoBehaviour:
@@ -27086,6 +27086,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: d1c384b29b8dcd5448444b4adf8e8f39,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: bd3c25f30bb64894797bfbb3eab54ffd, type: 2}
     - target: {fileID: -4216859302048453862, guid: d1c384b29b8dcd5448444b4adf8e8f39,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27141,11 +27146,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: d1c384b29b8dcd5448444b4adf8e8f39,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: bd3c25f30bb64894797bfbb3eab54ffd, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1c384b29b8dcd5448444b4adf8e8f39, type: 3}
 --- !u!4 &1909791377 stripped
@@ -27236,10 +27236,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8442845353478600147}
     m_Modifications:
-    - target: {fileID: 1000011073071200, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
-      propertyPath: m_Name
-      value: chainlink_barbwire-1
-      objectReference: {fileID: 0}
     - target: {fileID: 4000010947026576, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.377001
@@ -27295,6 +27291,10 @@ PrefabInstance:
     - target: {fileID: 4000010947026576, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.5287824
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011073071200, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
+      propertyPath: m_Name
+      value: chainlink_barbwire-1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
@@ -43575,16 +43575,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 859714142}
     m_Modifications:
-    - target: {fileID: 1672503288954806139, guid: 9f066a0d115e7554a8195ba102f8e867,
-        type: 3}
-      propertyPath: m_Name
-      value: HintOne
-      objectReference: {fileID: 0}
-    - target: {fileID: 1672503288954806139, guid: 9f066a0d115e7554a8195ba102f8e867,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1672503288954806148, guid: 9f066a0d115e7554a8195ba102f8e867,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -43689,6 +43679,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672503288954806139, guid: 9f066a0d115e7554a8195ba102f8e867,
+        type: 3}
+      propertyPath: m_Name
+      value: HintOne
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672503288954806139, guid: 9f066a0d115e7554a8195ba102f8e867,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1672503289891963975, guid: 9f066a0d115e7554a8195ba102f8e867,
         type: 3}
@@ -46841,16 +46841,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 859714142}
     m_Modifications:
-    - target: {fileID: 2090282576718108395, guid: be21fc0953c82254f9a903b9837fcd56,
-        type: 3}
-      propertyPath: m_Name
-      value: DialgoueOne
-      objectReference: {fileID: 0}
-    - target: {fileID: 2090282576718108395, guid: be21fc0953c82254f9a903b9837fcd56,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2090282576718108388, guid: be21fc0953c82254f9a903b9837fcd56,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -46955,6 +46945,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2090282576718108395, guid: be21fc0953c82254f9a903b9837fcd56,
+        type: 3}
+      propertyPath: m_Name
+      value: DialgoueOne
+      objectReference: {fileID: 0}
+    - target: {fileID: 2090282576718108395, guid: be21fc0953c82254f9a903b9837fcd56,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2090282577654911393, guid: be21fc0953c82254f9a903b9837fcd56,
         type: 3}
@@ -96092,11 +96092,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 859714142}
     m_Modifications:
-    - target: {fileID: 8315342774109345525, guid: 2d80dc15ae7603f40b98694e457fb2c2,
-        type: 3}
-      propertyPath: m_Name
-      value: DialogueTwo
-      objectReference: {fileID: 0}
     - target: {fileID: 8315342774109345520, guid: 2d80dc15ae7603f40b98694e457fb2c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -96201,6 +96196,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315342774109345525, guid: 2d80dc15ae7603f40b98694e457fb2c2,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogueTwo
       objectReference: {fileID: 0}
     - target: {fileID: 8315342774238467086, guid: 2d80dc15ae7603f40b98694e457fb2c2,
         type: 3}
