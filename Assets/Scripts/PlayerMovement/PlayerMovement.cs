@@ -33,6 +33,8 @@ public class PlayerMovement : MonoBehaviour
         inventory.ItemRemove += InventoryItemRemove;
     }
 
+    //Removes object item and places it in a location active
+    //REFERENCED: https://www.youtube.com/watch?v=Pc8K_DVPgVM&list=PLboXykqtm8dynMisqs4_oKvAIZedixvtf&index=3
     private void InventoryItemRemove(object sender, InventoryEventArgs e)
     {
         TheInventoryItem item = e.Item;
@@ -43,6 +45,10 @@ public class PlayerMovement : MonoBehaviour
         goItem.transform.parent = null;
     }
 
+    //Checks tag to either have the item go active to be used as a general pickup item. Instant touch which is made to instantly pickup the flashlight
+    //in order to simulate carrying items over to the next level. If attackWeapon it will place the item in hand using inventory scripts then calls upon
+    //the item script states in order to utilize the other movements
+    //REFERENCED: https://www.youtube.com/watch?v=twjrs4u_5bc&list=PLboXykqtm8dynMisqs4_oKvAIZedixvtf&index=6
     private void InventoryItemUse(object sender, InventoryEventArgs e)
     {
         TheInventoryItem item = e.Item;
@@ -52,8 +58,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (goItem.tag == "Pickup" || goItem.tag == "attackWeapon" || goItem.tag == "instantTouch")
         {
-            //Destroy(goItem.GetComponentInChildren<Rigidbody>());
-
             if (goItem.activeSelf == false)
             {
                 goItem.SetActive(true);
@@ -74,11 +78,9 @@ public class PlayerMovement : MonoBehaviour
         {
             goItem.transform.parent = animator.GetBoneTransform(HumanBodyBones.RightHand);
         }
-        
-
-
-
     }
+
+    //Gets the keycode for the key E to pickup items with certain tags. Also turns off the pickup text after pickup is made
     void FixedUpdate()
     {
         moveSpeed = 1.7f;
@@ -167,6 +169,8 @@ public class PlayerMovement : MonoBehaviour
     private TheInventoryItem pickupItem = null;
 
     //Adding pickup deactivate items and place them into inventory
+    //REFERENCED: https://www.youtube.com/watch?v=Hj7AZkyojdo&list=PLboXykqtm8dynMisqs4_oKvAIZedixvtf
+    //REFERENCED: https://www.youtube.com/watch?v=90OiysC4j5Y&list=PLboXykqtm8dynMisqs4_oKvAIZedixvtf&index=11
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Pickup") || other.gameObject.CompareTag("itemNotUsed") || other.gameObject.CompareTag("attackWeapon") || other.gameObject.CompareTag("instantTouch"))
@@ -177,14 +181,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 pickupItem = item;
                 HUD.PickupTextOn("");
-
-                if (other.gameObject.CompareTag("itemNotUsed"))
-                {
-                    //if (zombie.gameObject)
-                    //{
-                    //    zombie.gameObject.SetActive(false);
-                    //}
-                }
             }
 
             if (other.gameObject.CompareTag("instantTouch"))
@@ -192,12 +188,10 @@ public class PlayerMovement : MonoBehaviour
                 inventory.AddItem(item);
             }
 
- 
-
-
         }
     }
 
+    //When out of the trigger field the pickuptext UI will be turned off
     void OnTriggerExit(Collider other)
     {
         TheInventoryItem item = other.GetComponent<TheInventoryItem>();

@@ -11,6 +11,7 @@ public class KeyScript : InventoryItemMain
     public Text missionKey;
 
 
+    //Set game Object to true at the start of the game.
     void Start()
     {
         gameObject.SetActive(true);
@@ -25,11 +26,13 @@ public class KeyScript : InventoryItemMain
         }
     }
 
+    //Overrids onuse
     public override void OnUse()
     {
         base.OnUse();
     }
 
+    //Overrides onpickup
     public override void OnPickup()
     {
         base.OnPickup();
