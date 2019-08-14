@@ -20,6 +20,7 @@ public class ForceDeath : MonoBehaviour
             if (other.relativeVelocity.magnitude > 1)
             {
                 animator.SetBool("isDead", true);
+                gameObject.GetComponent<CapsuleCollider>().direction = 2;
             }
         }
     }

@@ -294,6 +294,7 @@
             <e p="LoadCharacter.cs" t="Include" />
             <e p="SkinColorChooser.cs" t="Include" />
           </e>
+          <e p="CheckDamage.cs" t="Include" />
           <e p="DeathScreen.cs" t="Include" />
           <e p="Dialogue1.cs" t="Include" />
           <e p="Dialogue2.cs" t="Include" />
@@ -352,6 +353,7 @@
           </e>
           <e p="RoofLightButton.cs" t="Include" />
           <e p="StateMachine.cs" t="Include" />
+          <e p="ZombieEventHandler.cs" t="Include" />
         </e>
         <e p="Standard Assets" t="Include">
           <e p="2D" t="Include">

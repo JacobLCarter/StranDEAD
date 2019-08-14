@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using GeneralStateMachine;
@@ -20,13 +21,6 @@ public class Axe : InventoryItemMain
 
     void Update()
     {
-
-        //if (playerHand == null)
-        //{
-        //    playerHand = animator.GetBoneTransform(HumanBodyBones.RightMiddleDistal);
-        //}
- 
-
         stateMachine.Update();
     }
 
@@ -34,20 +28,17 @@ public class Axe : InventoryItemMain
    {
        return playerHand;
    }
-   
-   private void OnCollisionEnter(Collision other)
+    
+    private void OnTriggerEnter(Collider other)
    {
        if (other.gameObject.tag == "Enemy")
        {
-           if (other.relativeVelocity.magnitude > 1)
-           {
-               audioSource.Play();
-               other.gameObject.GetComponent<Enemy>().takeDamage(20);
-           }
+           audioSource.Play();
+           other.gameObject.GetComponent<Enemy>().takeDamage(35);
        }
    }
 
-    public override string Name
+   public override string Name
     {
         get
         {

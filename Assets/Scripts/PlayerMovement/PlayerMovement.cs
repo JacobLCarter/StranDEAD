@@ -67,7 +67,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 goItem.SetActive(false);
             }
-
         }
 
         if (goItem.tag == "attackWeapon")
@@ -226,12 +225,7 @@ public class PlayerMovement : MonoBehaviour
             //the y direction
             playerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             animator.SetBool("isJumping", true);
-            //animator.SetBool("isGrounded", false);
         }
-        //else if (!Input.GetKey(KeyCode.Space) && isGrounded())
-        //{
-            //animator.SetBool("isGrounded", true);
-        //}
         else
         {
             animator.SetBool("isJumping", false);
