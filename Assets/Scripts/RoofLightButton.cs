@@ -9,7 +9,8 @@ public class RoofLightButton : MonoBehaviour
     private int lightIdx = 0;
     private float timeElapsed = 0;
     public GameObject player;
-    
+    public GameObject levelEnd2;
+
 
     // Start is called before the first frame update
     void Start()
@@ -66,6 +67,7 @@ public class RoofLightButton : MonoBehaviour
             {
                 player.GetComponent<Animator>().SetTrigger("isPressing");
                 lightsOn = true;
+                levelEnd2.SetActive(true);
             }
         }
     }
