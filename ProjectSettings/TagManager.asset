@@ -23,6 +23,17 @@ TagManager:
   - attackWeapon
   - RoofLight
   - instantTouch
+  - Maze
+  - Crane
+  - CraneMove
+  - Stairs
+  - Floor3
+  - Control
+  - Power
+  - Override
+  - Radio
+  - Escape
+  - ControlEntrance
   layers:
   - Default
   - TransparentFX
