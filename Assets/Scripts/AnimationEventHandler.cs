@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class AnimationEventHandler : MonoBehaviour
 {
@@ -44,5 +45,15 @@ public class AnimationEventHandler : MonoBehaviour
         item.transform.localEulerAngles = new Vector3(49.253f, 184.153f, -67.47601f);
         
         crosshair.SetActive(true);
+    }
+
+    private void SwapCollider()
+    {
+        gameObject.GetComponent<CapsuleCollider>().direction = 2;
+    }
+
+    private void Reload()
+    {
+        SceneManager.LoadScene(5);
     }
 }
