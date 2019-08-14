@@ -1,18 +1,12 @@
 ﻿//using System.Collections;
 //using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.UI;
 
 
 public class MissionObjectiveLvl2 : MonoBehaviour
 {
     public GameObject missionObject;
-    public GameObject levelEnd2;
-    //public GameObject key;
-    //public GameObject zombie;
-    //public GameObject blood;
-    //public GameObject mutant;
     public Text missionMaze;
     public Text missionCrane;
     public Text missionCraneMove;
@@ -22,7 +16,6 @@ public class MissionObjectiveLvl2 : MonoBehaviour
     public Text missionControlEntrance;
     public Text missionPower;
     public Text missionOverride;
-    public Text missionRadio;
     public Text missionEscape;
 
     // Start is called before the first frame update
@@ -37,12 +30,7 @@ public class MissionObjectiveLvl2 : MonoBehaviour
         missionControlEntrance.enabled = false;
         missionPower.enabled = false;
         missionOverride.enabled = false;
-        missionRadio.enabled = false;
         missionEscape.enabled = false;
-        //zombie.gameObject.SetActive(true);
-        //key.SetActive(false);
-        //blood.SetActive(false);
-        //mutant.SetActive(false);
     }
 
     void OnTriggerEnter(Collider Player)
@@ -100,18 +88,11 @@ public class MissionObjectiveLvl2 : MonoBehaviour
             missionOverride.color = Color.white;
             missionPower.color = Color.red;
         }
-        else if (!missionRadio.enabled && gameObject.tag == "Radio")
-        {
-            missionRadio.enabled = true;
-            missionRadio.color = Color.white;
-            missionOverride.color = Color.red;
-        }
         else if (!missionEscape.enabled && gameObject.tag == "Escape")
         {
             missionEscape.enabled = true;
             missionEscape.color = Color.white;
-            missionRadio.color = Color.red;
-            levelEnd2.SetActive(true);
+            missionOverride.color = Color.red;
         }
     }
 }
