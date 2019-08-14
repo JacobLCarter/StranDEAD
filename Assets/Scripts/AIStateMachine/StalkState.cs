@@ -63,8 +63,9 @@ public class StalkState : State<Enemy>
         else
         {
             float temp = enemy.getStalkTime();
+            temp -= Time.deltaTime;
             
-            enemy.setCurrentStalk(temp -= Time.deltaTime);
+            enemy.setCurrentStalk(temp);
         }
     }
 }

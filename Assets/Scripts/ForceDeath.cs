@@ -17,7 +17,7 @@ public class ForceDeath : MonoBehaviour
     {
         if (other.gameObject.tag == "attackWeapon")
         {
-            if (other.relativeVelocity.magnitude > 3)
+            if (other.relativeVelocity.magnitude > 1)
             {
                 animator.SetBool("isDead", true);
             }
