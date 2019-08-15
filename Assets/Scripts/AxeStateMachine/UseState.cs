@@ -4,7 +4,6 @@ using GeneralStateMachine;
 public class UseState : State<Axe>
 {
     private static UseState _instance;
-    private const float throwForce = 200f;
 
     private UseState()
     {

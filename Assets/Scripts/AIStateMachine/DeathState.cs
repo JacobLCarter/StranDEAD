@@ -31,7 +31,8 @@ public class DeathState : State<Enemy>
     public override void EnterState(Enemy enemy)
     {
         enemy.animator.SetTrigger("isDead");
-        enemy.navmesh.velocity = Vector3.zero;
+        enemy.navmesh.enabled = false;
+        enemy.GetComponent<Rigidbody>().velocity = Vector3.zero;
         enemy.GetComponent<Rigidbody>().freezeRotation = false;
         enemy.GetComponent<CapsuleCollider>().direction = 2;
     }
