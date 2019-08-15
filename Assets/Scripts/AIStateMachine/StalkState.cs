@@ -43,6 +43,8 @@ public class StalkState : State<Enemy>
 
     public override void UpdateState(Enemy enemy)
     {
+        float temp = enemy.getStalkTime();
+        
         if (enemy.isPlayerInSight())
         {
             enemy.stateMachine.switchState(ChaseState.Instance);
@@ -51,20 +53,21 @@ public class StalkState : State<Enemy>
         {
             target = enemy.player.position;
             enemy.navmesh.SetDestination(target);
+            
+            temp -= Time.deltaTime;
+            enemy.setCurrentStalk(temp);
         }
         else if (enemy.heardNoise())
         {
             enemy.stateMachine.switchState(DistractedState.Instance);
         }
-        else if (enemy.getStalkTime() < 0)
+        else if (enemy.getStalkTime() <= 0)
         {
             enemy.stateMachine.switchState(PathState.Instance);
         }
         else
         {
-            float temp = enemy.getStalkTime();
             temp -= Time.deltaTime;
-            
             enemy.setCurrentStalk(temp);
         }
     }

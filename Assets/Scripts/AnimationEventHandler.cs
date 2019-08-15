@@ -28,13 +28,11 @@ public class AnimationEventHandler : MonoBehaviour
     private void ThrowPoint()
     {
         var item = animator.GetBoneTransform(HumanBodyBones.LeftMiddleDistal).GetChild(0);
-        //TheInventoryItem myItem = gameObject.GetComponent<ItemClick>().Item;
 
         item.GetComponent<Rigidbody>().isKinematic = false;
         item.transform.parent = null;
         item.GetComponent<Rigidbody>().AddForce(transform.forward * 100f  + transform.up * 100f);
         crosshair.SetActive(false);
-        //inventory.RemoveItem(myItem);
     }
 
     private void PickupPoint()
