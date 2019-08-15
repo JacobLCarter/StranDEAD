@@ -229,6 +229,14 @@
             </e>
           </e>
         </e>
+        <e p="Real-Time Procedural Cable Simple" t="Include">
+          <e p="ReadmeSimpleCable.txt" t="Include" />
+          <e p="ReadmeStaticCable.txt" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="Cable_Procedural_Simple.cs" t="Include" />
+            <e p="Cable_Procedural_Static.cs" t="Include" />
+          </e>
+        </e>
         <e p="Rocks and Boulders 2" t="Include">
           <e p="Shaders" t="Include">
             <e p="Blend SM2.shader" t="Include" />

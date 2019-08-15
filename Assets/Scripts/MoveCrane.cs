@@ -67,7 +67,7 @@ public class MoveCrane : MonoBehaviour
     
     public bool isObjectReachable()
     {
-        if (Vector3.Distance(transform.position, player.transform.position) <= 0.5f)
+        if (Vector3.Distance(transform.position, player.transform.position) <= 1f)
         {
             return true;
         }
