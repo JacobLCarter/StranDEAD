@@ -1,37 +1,36 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    private int health;
+    private float health;
+    public Image healthBar;
 
     private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
-        health = 100;
+        health = 100f;
         animator = GetComponent<Animator>();
     }
 
-    public void TakeDamage(int damage, Collider collider)
+    public void TakeDamage(float damage, Collider collider)
     {
-        print(health);
         health -= damage;
-        //animator.SetTrigger("isDamaged");
-        
-        if (health <= 0)
+        healthBar.fillAmount = health / 100f;
+
+        if (health <= 0f)
         {
             collider.gameObject.SetActive(false);
-            StartCoroutine(Die());
+            Die();
         }
     }
     
-    private IEnumerator Die()
+    private void Die()
     {
         gameObject.GetComponent<Rigidbody>().freezeRotation = false;
         animator.SetTrigger("isDead");
-
-        yield return null;
     }
 }
