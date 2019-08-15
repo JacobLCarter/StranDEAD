@@ -5,21 +5,20 @@ using UnityEngine;
 
 public class CheckDamage : MonoBehaviour
 {
-//    private void OnCollisionEnter(Collision other)
-//    {
-//        if (other.gameObject.CompareTag("Playertag"))
-//        {
-//            gameObject.GetComponent<AudioSource>().Play();
-//            other.gameObject.GetComponent<PlayerHealth>().TakeDamage(10, other);
-//        }
-//    }
+    public LayerMask ignore;
 
     private void OnTriggerEnter(Collider other)
     {
+        gameObject.GetComponent<AudioSource>().Play();
+        other.gameObject.GetComponent<Animator>().SetTrigger("isDamaged");
+        
         if (other.gameObject.CompareTag("Playertag"))
         {
-            gameObject.GetComponent<AudioSource>().Play();
-            other.gameObject.GetComponent<PlayerHealth>().TakeDamage(10, other);
+            other.gameObject.GetComponent<PlayerHealth>().TakeDamage(15, other);
+        }
+        else if (other.gameObject.CompareTag("Enemy"))
+        {
+            other.gameObject.GetComponent<Enemy>().TakeDamage(25);
         }
     }
 }

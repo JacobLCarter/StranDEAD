@@ -28,17 +28,8 @@ public class Axe : InventoryItemMain
    {
        return playerHand;
    }
-    
-    private void OnTriggerEnter(Collider other)
-   {
-       if (other.gameObject.tag == "Enemy")
-       {
-           audioSource.Play();
-           other.gameObject.GetComponent<Enemy>().takeDamage(35);
-       }
-   }
 
-   public override string Name
+    public override string Name
     {
         get
         {
