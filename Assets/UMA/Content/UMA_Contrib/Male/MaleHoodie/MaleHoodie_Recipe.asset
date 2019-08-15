@@ -17,6 +17,8 @@ MonoBehaviour:
   compatibleRaces:
   - HumanMale
   - HumanMaleDCS
+  - HumanFemale
+  - HumanFemaleDCS
   wardrobeRecipeThumbs:
   - race: HumanMale
     filename: 
@@ -24,8 +26,15 @@ MonoBehaviour:
   - race: HumanMaleDCS
     filename: 
     thumb: {fileID: 0}
+  - race: HumanFemale
+    filename: 
+    thumb: {fileID: 0}
+  - race: HumanFemaleDCS
+    filename: 
+    thumb: {fileID: 0}
   wardrobeSlot: Chest
-  Hides: []
+  Hides:
+  - FemaleTorso
   suppressWardrobeSlots: []
   activeWardrobeSet: []
   MeshHideAssets:
