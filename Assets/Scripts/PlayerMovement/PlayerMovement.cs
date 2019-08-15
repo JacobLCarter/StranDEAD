@@ -54,7 +54,6 @@ public class PlayerMovement : MonoBehaviour
         TheInventoryItem item = e.Item;
 
         GameObject goItem = (item as MonoBehaviour).gameObject;
-        Debug.Log("What is this" + goItem.name);
 
         if (goItem.tag == "Pickup" || goItem.tag == "attackWeapon" || goItem.tag == "instantTouch")
         {
