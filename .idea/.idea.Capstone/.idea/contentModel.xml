@@ -313,6 +313,7 @@
             <e p="D8.cs" t="Include" />
             <e p="D9.cs" t="Include" />
           </e>
+          <e p="EndGameMessage.cs" t="Include" />
           <e p="FlashlightScript.cs" t="Include" />
           <e p="ForceDeath.cs" t="Include" />
           <e p="GameControllerMenu.cs" t="Include" />
