@@ -31,6 +31,7 @@ public class DistractedState : State<Enemy>
     public override void EnterState(Enemy enemy)
     {
         enemy.navmesh.speed = 1f;
+        Debug.Log(enemy.getCurrentRock().name);
         enemy.navmesh.destination = enemy.getCurrentRock().transform.position;
     }
 
@@ -44,14 +45,7 @@ public class DistractedState : State<Enemy>
         
         if (enemy.isPlayerInSight())
         {
-            if (Vector3.Distance(enemy.transform.position, enemy.player.position) < enemy.getAttackRange())
-            {
-                enemy.stateMachine.switchState(AttackState.Instance);
-            }
-            else
-            {
-                enemy.stateMachine.switchState(ChaseState.Instance);
-            }
+            enemy.stateMachine.switchState(ChaseState.Instance);
         }
         else if (enemy.navmesh.remainingDistance < 0.2f)
         {

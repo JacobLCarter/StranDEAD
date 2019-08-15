@@ -31,6 +31,7 @@ public class ThrowStateRock : State<Rock>
     public override void EnterState(Rock rock)
     {
         rock.animator.SetTrigger("isThrowing");
+        rock.gameObject.tag = "Rock";
         
         rock.stateMachine.switchState(GroundStateRock.Instance);
     }

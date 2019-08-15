@@ -16,8 +16,8 @@ public class Enemy : MonoBehaviour
     private GameObject[] rocks;
     private GameObject currentRock;
     public int stop;
-    private const float SightDistance = 6f;
-    private const float HearingDistance = 10f;
+    private const float SightDistance = 5f;
+    private const float HearingDistance = 7f;
     private const float AttackRange = 0.5f;
     private float currentStalk;
     private int health = 100;
@@ -84,11 +84,14 @@ public class Enemy : MonoBehaviour
     {
         if (currentRock == null)
         {
+            rocks = GameObject.FindGameObjectsWithTag("Rock");
+            
             foreach (var rock in rocks)
             {
                 if (Vector3.Distance(transform.position, rock.transform.position) < HearingDistance && rock.GetComponent<AudioSource>().isPlaying)
                 {
                     currentRock = rock;
+                    print(gameObject.name + currentRock.name);
                     return true;
                 }
             }
@@ -99,9 +102,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        print(health);
         health -= damage;
-        //animator.SetTrigger("isDamaged");
     }
 
     private void UpdateAnimator()
