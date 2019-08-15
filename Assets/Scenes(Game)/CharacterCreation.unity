@@ -2031,10 +2031,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 160156, guid: fe29e3c90ef88194184c6f3656db5ec5, type: 3}
-      propertyPath: m_Name
-      value: UMA_DCS
-      objectReference: {fileID: 0}
     - target: {fileID: 433544, guid: fe29e3c90ef88194184c6f3656db5ec5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2090,6 +2086,10 @@ PrefabInstance:
     - target: {fileID: 433544, guid: fe29e3c90ef88194184c6f3656db5ec5, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.0000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 160156, guid: fe29e3c90ef88194184c6f3656db5ec5, type: 3}
+      propertyPath: m_Name
+      value: UMA_DCS
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe29e3c90ef88194184c6f3656db5ec5, type: 3}
@@ -27622,23 +27622,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &4485824404674970469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4485824404674970470}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b919db827b6a584a810dd3052866214, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rootNode: {fileID: 0}
-  DrawAsBones: 0
-  DrawAdjustBones: 0
-  BoneMesh: {fileID: 4300000, guid: e4d8ea710507f2b40b99b122b39885a3, type: 3}
-  Filter: 
 --- !u!1 &4485824404674970470
 GameObject:
   m_ObjectHideFlags: 0
@@ -27652,10 +27635,6 @@ GameObject:
   - component: {fileID: 4485824404671858486}
   - component: {fileID: 4485824404678478694}
   - component: {fileID: 4485824404674970471}
-  - component: {fileID: 8685320196261648126}
-  - component: {fileID: 8685320196261648125}
-  - component: {fileID: 8685320196261648124}
-  - component: {fileID: 4485824404674970469}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -27727,18 +27706,26 @@ MonoBehaviour:
       _compatibleRaces:
       - HumanMale
       - HumanMaleDCS
+      - HumanFemale
+      - HumanFemaleDCS
     - _recipeName: MaleSweatPants_Recipe
       _compatibleRaces:
       - HumanMale
       - HumanMaleDCS
-    - _recipeName: F_TrackTop_GreyPink
-      _compatibleRaces:
-      - HumanFemaleDCS
-      - HumanFemale
     - _recipeName: FemaleSportPants_Recipe
       _compatibleRaces:
       - HumanFemale
       - HumanFemaleDCS
+    - _recipeName: FemaleTallShoes_Black
+      _compatibleRaces:
+      - HumanFemale
+      - HumanFemaleDCS
+      - HumanFemaleHighPoly
+    - _recipeName: TallShoes_Black_Recipe
+      _compatibleRaces:
+      - HumanMale
+      - HumanMaleDCS
+      - HumanMaleHighPoly
   raceAnimationControllers:
     defaultAnimationController: {fileID: 9100000, guid: eb280940c811fab4a9e3ddf09381c343,
       type: 2}
@@ -38554,46 +38541,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6449522899946286070}
   m_Mesh: {fileID: 6201109975151383845, guid: 218075892904474498d49d6814b08753, type: 3}
---- !u!114 &8685320196261648124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4485824404674970470}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 515a8984d6d3fae4cb90d2f1e270bd17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerRB: {fileID: 4485824404671858486}
-  inventory: {fileID: 0}
---- !u!114 &8685320196261648125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4485824404674970470}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8828302bd5e1264aaad9934fe58c5ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8685320196261648126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4485824404674970470}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 174dd0a153f42cf48895b728d0b0e046, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  customChar: 
-  player: {fileID: 4485824404674970471}
 --- !u!4 &8691468339706252715
 Transform:
   m_ObjectHideFlags: 0
