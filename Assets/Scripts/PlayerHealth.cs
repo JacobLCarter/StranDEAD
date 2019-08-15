@@ -18,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
     {
         print(health);
         health -= damage;
+        //animator.SetTrigger("isDamaged");
         
         if (health <= 0)
         {

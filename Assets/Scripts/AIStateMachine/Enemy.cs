@@ -97,9 +97,11 @@ public class Enemy : MonoBehaviour
         return false;
     }
 
-    public void takeDamage(int damage)
+    public void TakeDamage(int damage)
     {
+        print(health);
         health -= damage;
+        //animator.SetTrigger("isDamaged");
     }
 
     private void UpdateAnimator()
