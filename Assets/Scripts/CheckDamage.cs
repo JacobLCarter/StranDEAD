@@ -10,8 +10,7 @@ public class CheckDamage : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         gameObject.GetComponent<AudioSource>().Play();
-        other.gameObject.GetComponent<Animator>().SetTrigger("isDamaged");
-        
+
         if (other.gameObject.CompareTag("Playertag"))
         {
             other.gameObject.GetComponent<PlayerHealth>().TakeDamage(15f, gameObject.GetComponent<Collider>());

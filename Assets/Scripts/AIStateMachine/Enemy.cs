@@ -102,6 +102,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        animator.SetTrigger("isDamaged");
         health -= damage;
     }
 
