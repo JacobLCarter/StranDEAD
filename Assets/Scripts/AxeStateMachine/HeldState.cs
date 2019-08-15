@@ -36,8 +36,6 @@ public class HeldState : State<Axe>
     {
         axe.GetComponent<Rigidbody>().isKinematic = true;
         Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Item"), LayerMask.NameToLayer("Player"));
-        //axe.transform.SetParent(axe.getHand());
-        //positionObject(axe);
     }
 
     public override void ExitState(Axe axe)
@@ -56,9 +54,4 @@ public class HeldState : State<Axe>
             axe.stateMachine.switchState(ThrowState.Instance);
         }
     }
-    
-    /*private void positionObject(Axe axe)
-    {
-        axe.setPosition(newPos, newRot, newScale);
-    }*/
 }
