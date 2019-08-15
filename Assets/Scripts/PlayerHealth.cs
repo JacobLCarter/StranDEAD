@@ -20,6 +20,7 @@ public class PlayerHealth : MonoBehaviour
     {
         health -= damage;
         healthBar.fillAmount = health / 100f;
+        animator.SetTrigger("isDamaged");
 
         if (health <= 0f)
         {

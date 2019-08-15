@@ -37,7 +37,7 @@ public class GroundStateRock : State<Rock>
 
     public override void ExitState(Rock rock)
     {
-        rock.HUD.PickupTextOff();
+        //rock.HUD.PickupTextOff();
     }
 
     public override void UpdateState(Rock rock)
@@ -55,11 +55,11 @@ public class GroundStateRock : State<Rock>
 
         if (angle < 90.0f && Vector3.Distance(rock.transform.position, rock.player.position) <= pickupDistance)
         {
-            rock.HUD.PickupTextOn("");
+            //rock.HUD.PickupTextOn("");
             return true;
         }
         
-        rock.HUD.PickupTextOff();
+        //rock.HUD.PickupTextOff();
         return false;
     }
 }
