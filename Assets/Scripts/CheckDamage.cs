@@ -14,7 +14,7 @@ public class CheckDamage : MonoBehaviour
         
         if (other.gameObject.CompareTag("Playertag"))
         {
-            other.gameObject.GetComponent<PlayerHealth>().TakeDamage(15, other);
+            other.gameObject.GetComponent<PlayerHealth>().TakeDamage(15f, gameObject.GetComponent<Collider>());
         }
         else if (other.gameObject.CompareTag("Enemy"))
         {
