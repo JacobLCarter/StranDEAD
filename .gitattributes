@@ -51,3 +51,8 @@
 *.meta linguist-generated
 *.prefab linguist-generated
 *.unity linguist-generated
+*.resS filter=lfs diff=lfs merge=lfs -text
+*.assets filter=lfs diff=lfs merge=lfs -text
+*.asset filter=lfs diff=lfs merge=lfs -text
+*.dll filter=lfs diff=lfs merge=lfs -text
+.resource filter=lfs diff=lfs merge=lfs -text
