@@ -30,7 +30,18 @@ public class MoveCrane : MonoBehaviour
             StartCoroutine(moveCrane());
             hasMoved = !hasMoved;
             currentLerp = 0f;
+            GameObject.FindGameObjectWithTag("Playertag").GetComponent<CameraFollow>().enabled = false;
+            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraCollision>().enabled = false;
+            StartCoroutine(CoroutineTest());
         }
+    }
+
+    private IEnumerator CoroutineTest()
+    {
+        yield return new WaitForSeconds(2.4f);
+        GameObject.FindGameObjectWithTag("Playertag").GetComponent<CameraFollow>().enabled = true;
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraCollision>().enabled = true;
+
     }
 
     IEnumerator moveCrane()

@@ -13,6 +13,7 @@ public class Rock : MonoBehaviour
     private Rigidbody objectRB;
     public StateMachine<Rock> stateMachine { get; set; }
     private AudioSource audioSource;
+    public GameObject playerGame;
     //public HUDScript HUD;
     
     private void Start()

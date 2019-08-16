@@ -44,8 +44,11 @@ public class GroundStateRock : State<Rock>
     {
         if (isObjectReachable(rock) && Input.GetKey(KeyCode.E))
         {
+            GameObject.FindGameObjectWithTag("Playertag").GetComponent<CameraFollow>().enabled = false;
+            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraCollision>().enabled = false;
             rock.stateMachine.switchState(HeldStateRock.Instance);
         }
+
     }
     
     public bool isObjectReachable(Rock rock)
