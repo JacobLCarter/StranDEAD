@@ -51,6 +51,7 @@ public class HeldState : State<Axe>
         }
         else if (Input.GetMouseButtonDown(1))
         {
+            GameObject.FindGameObjectWithTag("Playertag").GetComponent<CameraFollow>().enabled = false;
             axe.stateMachine.switchState(ThrowState.Instance);
         }
     }
