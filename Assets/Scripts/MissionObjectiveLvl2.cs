@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class MissionObjectiveLvl2 : MonoBehaviour
 {
     public GameObject missionObject;
+    public GameObject Floor3;
+    public Light craneRemoteLight;
     public Text missionMaze;
     public Text missionCrane;
     public Text missionCraneMove;
@@ -31,6 +33,8 @@ public class MissionObjectiveLvl2 : MonoBehaviour
         missionPower.enabled = false;
         missionOverride.enabled = false;
         missionEscape.enabled = false;
+        Floor3.SetActive(false);
+        craneRemoteLight.enabled = false;
     }
 
     void OnTriggerEnter(Collider Player)
@@ -42,6 +46,7 @@ public class MissionObjectiveLvl2 : MonoBehaviour
         }
         else if (!missionCrane.enabled && gameObject.tag == "Crane")
         {
+            craneRemoteLight.enabled = true;
             missionCrane.enabled = true;
             missionCrane.color = Color.white;
             missionMaze.color = Color.red;
@@ -57,9 +62,11 @@ public class MissionObjectiveLvl2 : MonoBehaviour
             missionStairs.enabled = true;
             missionStairs.color = Color.white;
             missionCraneMove.color = Color.red;
+            
         }
         else if (!missionFloor3.enabled && gameObject.tag == "Floor3")
         {
+            Floor3.SetActive(true);
             missionFloor3.enabled = true;
             missionFloor3.color = Color.white;
             missionStairs.color = Color.red;
