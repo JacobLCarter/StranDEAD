@@ -8,6 +8,7 @@ public class RoofLightButton : MonoBehaviour
     private bool lightsOn = false;
     private int lightIdx = 0;
     private float timeElapsed = 0;
+    private AudioSource audio;
     public GameObject player;
     public GameObject levelEnd2;
 
@@ -15,6 +16,8 @@ public class RoofLightButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audio = GetComponent<AudioSource>();
+        
         if (roofLights == null)
         {
             roofLights = GameObject.FindGameObjectsWithTag("RoofLight");
@@ -58,6 +61,7 @@ public class RoofLightButton : MonoBehaviour
                 // go in reverse order (from control room towards start of level)
                 lightIdx--;
                 roofLights[lightIdx].SetActive(true);
+                audio.Play();
             }
         }
         else
