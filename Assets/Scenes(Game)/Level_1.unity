@@ -7211,8 +7211,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 147.7, y: 108.6}
-  m_SizeDelta: {x: 244.4, y: 217.2}
+  m_AnchoredPosition: {x: 147.7, y: 131.3}
+  m_SizeDelta: {x: 244.4, y: 262.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &560108601 stripped
 Transform:
@@ -11656,6 +11656,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 7421108590956038971, guid: 9217c792e7eddc341816d5d289e323be,
+        type: 3}
+      propertyPath: m_Text
+      value: The door is locked, find the key that will open it.
+      objectReference: {fileID: 0}
     - target: {fileID: 7421108590956038969, guid: 9217c792e7eddc341816d5d289e323be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11760,11 +11765,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7421108590956038971, guid: 9217c792e7eddc341816d5d289e323be,
-        type: 3}
-      propertyPath: m_Text
-      value: The door is locked, find the key that will open it.
       objectReference: {fileID: 0}
     - target: {fileID: 6944981431832967299, guid: 9217c792e7eddc341816d5d289e323be,
         type: 3}
@@ -14452,10 +14452,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8442845353478600147}
     m_Modifications:
-    - target: {fileID: 1000011073071200, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
-      propertyPath: m_Name
-      value: chainlink_barbwire-1 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 4000010947026576, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.908
@@ -14511,6 +14507,10 @@ PrefabInstance:
     - target: {fileID: 4000010947026576, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.5135039
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011073071200, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
+      propertyPath: m_Name
+      value: chainlink_barbwire-1 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
@@ -22127,10 +22127,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8442845353478600147}
     m_Modifications:
-    - target: {fileID: 1000011073071200, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
-      propertyPath: m_Name
-      value: chainlink_barbwire-1 (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 4000010947026576, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -24.276
@@ -22186,6 +22182,10 @@ PrefabInstance:
     - target: {fileID: 4000010947026576, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.5135039
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011073071200, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
+      propertyPath: m_Name
+      value: chainlink_barbwire-1 (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
@@ -22788,10 +22788,10 @@ RectTransform:
   m_Father: {fileID: 555089923}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000020981, y: 0.0000042915}
-  m_SizeDelta: {x: 244.4, y: 217.2}
+  m_AnchorMin: {x: 0.5, y: 0.4308717}
+  m_AnchorMax: {x: 0.5, y: 0.51983786}
+  m_AnchoredPosition: {x: 0, y: 6.4686995}
+  m_SizeDelta: {x: 244.4, y: 239.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1639722684
 MonoBehaviour:
@@ -22832,8 +22832,15 @@ MonoBehaviour:
     Press I to toggle inventory
 
 
-    Press X to activate
-    items
+    Left click on item
+    in inventory to use
+
+
+    Right click to throw throwable items
+
+
+    Press X
+    to activate items
 
 
     Press E for interactable items
@@ -22842,8 +22849,11 @@ MonoBehaviour:
     Hold shift to run
 
 
-    Space
-    Bar to jump
+    Hold
+    C to crouch
+
+
+    Space Bar to jump
 
 
 '
@@ -23478,6 +23488,16 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 7421108590956038971, guid: 9217c792e7eddc341816d5d289e323be,
+        type: 3}
+      propertyPath: m_Text
+      value: Cross the dam and find the entrance to the power plant.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421108590956038971, guid: 9217c792e7eddc341816d5d289e323be,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7421108590956038969, guid: 9217c792e7eddc341816d5d289e323be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23582,16 +23602,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7421108590956038971, guid: 9217c792e7eddc341816d5d289e323be,
-        type: 3}
-      propertyPath: m_Text
-      value: Cross the dam and find the entrance to the power plant.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7421108590956038971, guid: 9217c792e7eddc341816d5d289e323be,
-        type: 3}
-      propertyPath: m_FontData.m_VerticalOverflow
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6944981431832967299, guid: 9217c792e7eddc341816d5d289e323be,
         type: 3}
@@ -24311,6 +24321,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 7421108590956038971, guid: 9217c792e7eddc341816d5d289e323be,
+        type: 3}
+      propertyPath: m_Text
+      value: You found the key, return to the power plant entrance.
+      objectReference: {fileID: 0}
     - target: {fileID: 7421108590956038969, guid: 9217c792e7eddc341816d5d289e323be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24415,11 +24430,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7421108590956038971, guid: 9217c792e7eddc341816d5d289e323be,
-        type: 3}
-      propertyPath: m_Text
-      value: You found the key, return to the power plant entrance.
       objectReference: {fileID: 0}
     - target: {fileID: 6944981431832967299, guid: 9217c792e7eddc341816d5d289e323be,
         type: 3}
@@ -25665,6 +25675,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 7421108590956038971, guid: 9217c792e7eddc341816d5d289e323be,
+        type: 3}
+      propertyPath: m_Text
+      value: Make your way down the road to the start of the dam.
+      objectReference: {fileID: 0}
     - target: {fileID: 7421108590956038969, guid: 9217c792e7eddc341816d5d289e323be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25769,11 +25784,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7421108590956038971, guid: 9217c792e7eddc341816d5d289e323be,
-        type: 3}
-      propertyPath: m_Text
-      value: Make your way down the road to the start of the dam.
       objectReference: {fileID: 0}
     - target: {fileID: 6944981431832967299, guid: 9217c792e7eddc341816d5d289e323be,
         type: 3}
@@ -26140,7 +26150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99db3f608d530b74f853c17c30217722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Image: {fileID: 21300000, guid: 006034e0355d591499c57231e228d2a4, type: 3}
+  _Image: {fileID: 21300000, guid: b338aed110dc61b4abdea4d00f570ea6, type: 3}
   PickPosition: {x: -0.061, y: -0.153, z: -0.08}
   PickRotation: {x: 11.405, y: 256.354, z: -16.661}
   DropRotation: {x: 95.59198, y: 180, z: -0.00001525879}
@@ -27347,10 +27357,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8442845353478600147}
     m_Modifications:
-    - target: {fileID: 1000011073071200, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
-      propertyPath: m_Name
-      value: chainlink_barbwire-1
-      objectReference: {fileID: 0}
     - target: {fileID: 4000010947026576, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.377001
@@ -27406,6 +27412,10 @@ PrefabInstance:
     - target: {fileID: 4000010947026576, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.5287824
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011073071200, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
+      propertyPath: m_Name
+      value: chainlink_barbwire-1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bf1a4b26f0d5e7419b64deced1cecd3, type: 3}
@@ -34366,7 +34376,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.033333335
+  m_VoxelSize: 0.026666665
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: 09d20722be70ac5488b949ab2058ca40, type: 2}
 --- !u!33 &471271284261700309
@@ -43686,16 +43696,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 859714142}
     m_Modifications:
-    - target: {fileID: 1672503288954806139, guid: 9f066a0d115e7554a8195ba102f8e867,
-        type: 3}
-      propertyPath: m_Name
-      value: HintOne
-      objectReference: {fileID: 0}
-    - target: {fileID: 1672503288954806139, guid: 9f066a0d115e7554a8195ba102f8e867,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1672503288954806148, guid: 9f066a0d115e7554a8195ba102f8e867,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -43800,6 +43800,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672503288954806139, guid: 9f066a0d115e7554a8195ba102f8e867,
+        type: 3}
+      propertyPath: m_Name
+      value: HintOne
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672503288954806139, guid: 9f066a0d115e7554a8195ba102f8e867,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1672503289891963975, guid: 9f066a0d115e7554a8195ba102f8e867,
         type: 3}
@@ -46952,16 +46962,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 859714142}
     m_Modifications:
-    - target: {fileID: 2090282576718108395, guid: be21fc0953c82254f9a903b9837fcd56,
-        type: 3}
-      propertyPath: m_Name
-      value: DialgoueOne
-      objectReference: {fileID: 0}
-    - target: {fileID: 2090282576718108395, guid: be21fc0953c82254f9a903b9837fcd56,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2090282576718108388, guid: be21fc0953c82254f9a903b9837fcd56,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -47066,6 +47066,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2090282576718108395, guid: be21fc0953c82254f9a903b9837fcd56,
+        type: 3}
+      propertyPath: m_Name
+      value: DialgoueOne
+      objectReference: {fileID: 0}
+    - target: {fileID: 2090282576718108395, guid: be21fc0953c82254f9a903b9837fcd56,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2090282577654911393, guid: be21fc0953c82254f9a903b9837fcd56,
         type: 3}
@@ -71309,6 +71319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crosshair: {fileID: 0}
+  weapon: {fileID: 0}
   inventory: {fileID: 793911016}
 --- !u!4 &5100517021041704581 stripped
 Transform:
@@ -96203,11 +96214,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 859714142}
     m_Modifications:
-    - target: {fileID: 8315342774109345525, guid: 2d80dc15ae7603f40b98694e457fb2c2,
-        type: 3}
-      propertyPath: m_Name
-      value: DialogueTwo
-      objectReference: {fileID: 0}
     - target: {fileID: 8315342774109345520, guid: 2d80dc15ae7603f40b98694e457fb2c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -96312,6 +96318,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315342774109345525, guid: 2d80dc15ae7603f40b98694e457fb2c2,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogueTwo
       objectReference: {fileID: 0}
     - target: {fileID: 8315342774238467086, guid: 2d80dc15ae7603f40b98694e457fb2c2,
         type: 3}
