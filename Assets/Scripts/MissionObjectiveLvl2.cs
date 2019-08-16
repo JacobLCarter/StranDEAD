@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class MissionObjectiveLvl2 : MonoBehaviour
 {
     public GameObject missionObject;
-    public GameObject Floor3;
+    //public GameObject Floor3;
     public Light craneRemoteLight;
     public Text missionMaze;
     public Text missionCrane;
@@ -33,73 +33,117 @@ public class MissionObjectiveLvl2 : MonoBehaviour
         missionPower.enabled = false;
         missionOverride.enabled = false;
         missionEscape.enabled = false;
-        Floor3.SetActive(false);
+        //Floor3.SetActive(false);
         craneRemoteLight.enabled = false;
     }
 
     void OnTriggerEnter(Collider Player)
     {
-        if (!missionMaze.enabled && gameObject.tag == "Maze")
+        if (Player.tag == "Enemy")
         {
-            missionMaze.enabled = true;
-            missionMaze.color = Color.white;
+            return;
         }
-        else if (!missionCrane.enabled && gameObject.tag == "Crane")
+
+        if (!missionMaze.enabled)
         {
-            craneRemoteLight.enabled = true;
-            missionCrane.enabled = true;
-            missionCrane.color = Color.white;
-            missionMaze.color = Color.red;
+            if (gameObject.tag == "Maze")
+            {
+                missionMaze.enabled = true;
+                missionMaze.color = Color.white;
+            }
+            return;
         }
-        else if (!missionCraneMove.enabled && gameObject.tag == "CraneMove")
+        if (!missionCrane.enabled)
         {
-            missionCraneMove.enabled = true;
-            missionCraneMove.color = Color.white;
-            missionCrane.color = Color.red;
+            if (gameObject.tag == "Crane")
+            {
+                craneRemoteLight.enabled = true;
+                missionCrane.enabled = true;
+                missionCrane.color = Color.white;
+                missionMaze.color = Color.red;
+            }
+            return;
         }
-        else if (!missionStairs.enabled && gameObject.tag == "Stairs")
+        if (!missionCraneMove.enabled)
         {
-            missionStairs.enabled = true;
-            missionStairs.color = Color.white;
-            missionCraneMove.color = Color.red;
-            
+            if (gameObject.tag == "CraneMove")
+            {
+                missionCraneMove.enabled = true;
+                missionCraneMove.color = Color.white;
+                missionCrane.color = Color.red;
+            }
+            return;
         }
-        else if (!missionFloor3.enabled && gameObject.tag == "Floor3")
+        if (!missionStairs.enabled)
         {
-            Floor3.SetActive(true);
-            missionFloor3.enabled = true;
-            missionFloor3.color = Color.white;
-            missionStairs.color = Color.red;
+            if (gameObject.tag == "Stairs")
+            {
+                missionStairs.enabled = true;
+                missionStairs.color = Color.white;
+                missionCraneMove.color = Color.red;
+            }
+            return;
         }
-        else if (!missionControl.enabled && gameObject.tag == "Control")
+        if (!missionFloor3.enabled)
         {
-            missionControl.enabled = true;
-            missionControl.color = Color.white;
-            missionFloor3.color = Color.red;
+            if (gameObject.tag == "Floor3")
+            {
+                //Floor3.SetActive(true);
+                missionFloor3.enabled = true;
+                missionFloor3.color = Color.white;
+                missionStairs.color = Color.red;
+            }
+            return;
         }
-        else if (!missionControlEntrance.enabled && gameObject.tag == "ControlEntrance")
+        if (!missionControl.enabled)
         {
-            missionControlEntrance.enabled = true;
-            missionControlEntrance.color = Color.white;
-            missionControl.color = Color.red;
+            if (gameObject.tag == "Control")
+            {
+                missionControl.enabled = true;
+                missionControl.color = Color.white;
+                missionFloor3.color = Color.red;
+            }
+            return;
         }
-        else if (!missionPower.enabled && gameObject.tag == "Power")
+        if (!missionControlEntrance.enabled)
         {
-            missionPower.enabled = true;
-            missionPower.color = Color.white;
-            missionControlEntrance.color = Color.red;
+            if (gameObject.tag == "ControlEntrance")
+            {
+                missionControlEntrance.enabled = true;
+                missionControlEntrance.color = Color.white;
+                missionControl.color = Color.red;
+            }
+            return;
         }
-        else if (!missionOverride.enabled && gameObject.tag == "Override")
+        if (!missionPower.enabled)
         {
-            missionOverride.enabled = true;
-            missionOverride.color = Color.white;
-            missionPower.color = Color.red;
+            if (gameObject.tag == "Power")
+            {
+                missionPower.enabled = true;
+                missionPower.color = Color.white;
+                missionControlEntrance.color = Color.red;
+            }
+            return;
         }
-        else if (!missionEscape.enabled && gameObject.tag == "Escape")
+        if (!missionOverride.enabled)
         {
-            missionEscape.enabled = true;
-            missionEscape.color = Color.white;
-            missionOverride.color = Color.red;
+            if (gameObject.tag == "Override")
+            {
+                missionOverride.enabled = true;
+                missionOverride.color = Color.white;
+                missionPower.color = Color.red;
+            }
+            return;
+        }
+        if (!missionEscape.enabled)
+        {
+            if (gameObject.tag == "Escape")
+            {
+                missionEscape.enabled = true;
+                missionEscape.color = Color.white;
+                missionOverride.color = Color.red;
+            }
+            return;
         }
     }
 }
